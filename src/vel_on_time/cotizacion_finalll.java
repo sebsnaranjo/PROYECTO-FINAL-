@@ -43,6 +43,7 @@ private int base_lug;
      */
     public cotizacion_finalll() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
