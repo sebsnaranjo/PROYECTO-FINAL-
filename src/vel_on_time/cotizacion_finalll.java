@@ -68,6 +68,8 @@ private int base_lug;
         rev_fecha = new javax.swing.JTextField();
         finalizar_cliente = new javax.swing.JButton();
         otra_cot = new javax.swing.JButton();
+        final_cot = new javax.swing.JTextField();
+        tit_final = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -115,10 +117,10 @@ private int base_lug;
         tit_fecha.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         tit_fecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tit_fecha.setText("Fecha del evento");
-        getContentPane().add(tit_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 180, 20));
+        getContentPane().add(tit_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 180, 20));
 
         rev_fecha.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
-        getContentPane().add(rev_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 178, -1));
+        getContentPane().add(rev_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 178, -1));
 
         finalizar_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         finalizar_cliente.setText("Finalizar");
@@ -127,6 +129,10 @@ private int base_lug;
         otra_cot.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         otra_cot.setText("Hacer otra cotización");
         getContentPane().add(otra_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, 30));
+        getContentPane().add(final_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 180, -1));
+
+        tit_final.setText("FINAL");
+        getContentPane().add(tit_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 380));
@@ -194,7 +200,13 @@ private int base_lug;
         rev_tot_lug.setText(lug_fin);
         String fecha=dia_fin+"/"+mes_fin+"/"+ano_fin+"/";
         rev_fecha.setText(fecha);
-              
+          
+        
+        int tot_fin;
+        String tot_fin2;
+        tot_fin=gastro2+deco2+serv2+lug2;
+        tot_fin2 = Integer.toString(tot_fin);
+        final_cot.setText(tot_fin2);
     }
     
     /**
@@ -248,6 +260,7 @@ private int base_lug;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField final_cot;
     private javax.swing.JButton finalizar_cliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton otra_cot;
@@ -259,6 +272,7 @@ private int base_lug;
     private javax.swing.JLabel tit_cot;
     private javax.swing.JLabel tit_deco;
     private javax.swing.JLabel tit_fecha;
+    private javax.swing.JLabel tit_final;
     private javax.swing.JLabel tit_gastro;
     private javax.swing.JLabel tit_lug;
     private javax.swing.JLabel tit_serv;

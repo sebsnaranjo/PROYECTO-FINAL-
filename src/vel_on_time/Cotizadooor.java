@@ -1189,7 +1189,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
-                      c=id2+","+name+";"+prec;
+                      c=id2+","+name+","+prec;
                       combo_lugar.addItem(c);
                     }
                      
