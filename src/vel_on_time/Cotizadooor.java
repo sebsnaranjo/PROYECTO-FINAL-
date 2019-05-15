@@ -170,12 +170,12 @@ int prec_lug;
         lugar.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         lugar.setText("Lugar");
         lugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/location_map_directions_geography_gps_icon-icons.com_55988.png"))); // NOI18N
-        getContentPane().add(lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, 120, -1));
+        getContentPane().add(lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 120, -1));
 
         servicios.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         servicios.setText("Servicios");
         servicios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
-        getContentPane().add(servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 130, 60));
+        getContentPane().add(servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 130, 60));
 
         decoracion.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         decoracion.setText("Decoración");

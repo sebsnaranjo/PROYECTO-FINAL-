@@ -311,10 +311,12 @@ public class crear_prov extends javax.swing.JFrame {
     void gastronomia(){
         gastronomia = true;
         obj_proveedor.setText("GASTRONOMIA");
+     
   
     }
     
     void gastronomia2(){   
+        
         archivoos ob14 = new archivoos();
         boolean provedor_gastro = true;
         int id;
@@ -324,6 +326,7 @@ public class crear_prov extends javax.swing.JFrame {
         String art;
         int precart;
          
+        
         if(rev_activo.isSelected()){
            provedor_gastro = true;
         }
@@ -333,7 +336,14 @@ public class crear_prov extends javax.swing.JFrame {
         
         id= Integer.parseInt(rev_id.getText());
         nombre= rev_nom_prov.getText();
+        int prec2=0; 
+        
         prec= Integer.parseInt(rev_prec_base.getText());
+        prec2=prec+((prec+60)/100);
+        String numI2 = Integer.toString(prec2);
+       rev_prec_base.setText(numI2);
+        
+        
         serv=rev_servicio.getText();
         art=rev_nomb_art.getText();
         precart=Integer.parseInt(rev_prec_uni.getText());
@@ -342,7 +352,8 @@ public class crear_prov extends javax.swing.JFrame {
         gastropol = true;
     }
     
-     void gastronomiapol(){   
+     void gastronomiapol(){ 
+        
         archivoos ob14 = new archivoos();
         boolean provedor_gastro = true;
         String nombre;
