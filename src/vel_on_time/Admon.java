@@ -14,6 +14,7 @@ public final class Admon extends javax.swing.JFrame {
     /**
      * Creates new form Admon
      */
+    
     public Admon() {
         initComponents();
         transparenciaBotones();

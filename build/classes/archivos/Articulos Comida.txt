@@ -1,0 +1,4 @@
+;45;pollo y carne;5200;true;
+;45;vino;95800;true;
+;89;arroz y pizza;9600;true;
+;89;cerveza;9580;true;

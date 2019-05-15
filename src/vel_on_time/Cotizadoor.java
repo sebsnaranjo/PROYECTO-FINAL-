@@ -39,6 +39,10 @@ String deocr="";
 String servi="";
 String lrgs="";
 String numI2=" ";
+int prec_gastro;
+int prec_deco;
+int prec_serv;
+int prec_lug;
     /**
      * Creates new form Cotizador
      */
@@ -346,6 +350,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
           numI2 = Integer.toString(numIn);
           mutiplicado.setText(numI2);
           
+          
       }
       
     }//GEN-LAST:event_enviar_cotizarMouseClicked
@@ -354,7 +359,12 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
        
         cotizacion_finall ob28 = new cotizacion_finall();
         ob28.setVisible(true);
+        cont=cont*numIn;
+        cont2=cont2*numIn;
+        cont3=cont3*numIn;
+        cont4=cont4*numIn;
         ob28.llegada_final(cont, cont2, cont3, cont4, dia2, mes2, ano2);
+        
         this.setVisible(false);
     }//GEN-LAST:event_env_finalMouseClicked
     
@@ -371,7 +381,10 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         String gastro_rev_uni = (String) combo_gastro.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
+        String prec[] = gastro_rev_uni.split(",");
         String id2 = id[0];
+        prec_gastro= Integer.parseInt(prec[2]);
+       this.prec_gastro=prec_gastro;
         ob27.archprovar(1,nme[1], id2);
         gastronomia(id2);
     }//GEN-LAST:event_elec_gastroMouseClicked
@@ -394,6 +407,9 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
         String id2 = id[0];
+         String prec[] = gastro_rev_uni.split(",");
+        prec_deco= Integer.parseInt(prec[2]);
+       this.prec_deco=prec_deco;
         ob27.archprovar(2,nme[1], id2);
         decoracion(id2);
         
@@ -405,6 +421,9 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
         String id2 = id[0];
+         String prec[] = gastro_rev_uni.split(",");
+        prec_serv= Integer.parseInt(prec[2]);
+       this.prec_serv=prec_serv;
         ob27.archprovar(3,nme[1], id2);
         servicio(id2);
     }//GEN-LAST:event_elec_servMouseClicked
@@ -415,6 +434,9 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
         String id2 = id[0];
+         String prec[] = gastro_rev_uni.split(",");
+        prec_lug= Integer.parseInt(prec[2]);
+       this.prec_lug=prec_lug;
         ob27.archprovar(4,nme[1], id2);
         lugar(id2);
     }//GEN-LAST:event_elec_lugarMouseClicked
@@ -459,7 +481,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         BufferedReader linea = null; //accede linea a linea al contenido
 
         try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Articulos Comida.txt");
+            archivo = new File("src\\archivos\\Articulos Comida.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -518,7 +540,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         BufferedReader linea = null; //accede linea a linea al contenido
 
         try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Articulos Comida.txt");
+            archivo = new File("src\\archivos\\Articulos Comida.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -566,7 +588,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
         try {
            
-            archivo2 = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Comida.txt");
+            archivo2 = new File("src\\archivos\\Provedores Comida.txt");
             contenido2 = new FileReader(archivo2);
             linea2 = new BufferedReader(contenido2);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -597,7 +619,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
-                      c=id2+","+name;
+                      c=id2+","+name+","+prec;
                       combo_gastro.addItem(c);
                       
                     }
@@ -632,7 +654,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         BufferedReader linea = null; //accede linea a linea al contenido
 
         try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Articulos Decoración y ambientación.txt");
+            archivo = new File("src\\archivos\\Articulos Decoración y ambientación.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -689,7 +711,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         BufferedReader linea = null; //accede linea a linea al contenido
 
         try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Articulos Decoración y ambientación.txt");
+            archivo = new File("src\\archivos\\Articulos Decoración y ambientación.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -737,7 +759,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
         try {
            
-            archivo2 = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Decoración y ambientación.txt");
+            archivo2 = new File("src\\archivos\\Provedores Decoración y ambientación.txt");
             contenido2 = new FileReader(archivo2);
             linea2 = new BufferedReader(contenido2);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -767,7 +789,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
-                      c=id2+","+name;
+                      c=id2+","+name+","+prec;
                       combo_deco.addItem(c);
                       
                     }
@@ -801,7 +823,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         BufferedReader linea = null; //accede linea a linea al contenido
 
         try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Articulos servicios.txt");
+            archivo = new File("src\\archivos\\Articulos servicios.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -857,7 +879,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         BufferedReader linea = null; //accede linea a linea al contenido
 
         try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Articulos servicios.txt");
+            archivo = new File("src\\archivos\\Articulos servicios.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -905,7 +927,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
         try {
            
-            archivo2 = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores servicios.txt");
+            archivo2 = new File("src\\archivos\\Provedores servicios.txt");
             contenido2 = new FileReader(archivo2);
             linea2 = new BufferedReader(contenido2);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -934,7 +956,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
-                       c=id2+","+name;
+                       c=id2+","+name+","+prec;
                       combo_serv.addItem(c);
                       
                     }
@@ -966,7 +988,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         BufferedReader linea = null; //accede linea a linea al contenido
 
         try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\lugar.txt");
+            archivo = new File("src\\archivos\\lugar.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -1020,7 +1042,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         BufferedReader linea = null; //accede linea a linea al contenido
 
         try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\lugar.txt");
+            archivo = new File("src\\archivos\\lugar.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -1067,7 +1089,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
         try {
            
-            archivo2 = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores lugar.txt");
+            archivo2 = new File("src\\archivos\\Provedores lugar.txt");
             contenido2 = new FileReader(archivo2);
             linea2 = new BufferedReader(contenido2);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -1096,7 +1118,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
-                      c=id2+","+name;
+                      c=id2+","+name+";"+prec;
                       combo_lugar.addItem(c);
                     }
                      

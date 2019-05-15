@@ -225,7 +225,7 @@ boolean lugar;
         FileReader contenido = null;  //acceder a todo el contenido del archivo
         BufferedReader linea = null; //accede linea a linea al contenido
             try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Comida.txt");
+            archivo = new File("src\\archivos\\Provedores Comida.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -269,7 +269,7 @@ boolean lugar;
         FileReader contenido = null;  //acceder a todo el contenido del archivo
         BufferedReader linea = null; //accede linea a linea al contenido
             try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Decoración y ambientación.txt");
+            archivo = new File("src\\archivos\\Provedores Decoración y ambientación.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -312,7 +312,7 @@ boolean lugar;
         FileReader contenido = null;  //acceder a todo el contenido del archivo
         BufferedReader linea = null; //accede linea a linea al contenido
             try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores servicios.txt");
+            archivo = new File("src\\archivos\\Provedores servicios.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -355,7 +355,7 @@ boolean lugar;
         FileReader contenido = null;  //acceder a todo el contenido del archivo
         BufferedReader linea = null; //accede linea a linea al contenido
             try {
-            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores lugar.txt");
+            archivo = new File("src\\archivos\\Provedores lugar.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -425,7 +425,7 @@ boolean lugar;
            band=false;
        }
          archivoos obj26 = new archivoos();
-        File fNuevo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Comida.txt");
+        File fNuevo = new File("src\\archivos\\Provedores Comida.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
        
@@ -458,7 +458,7 @@ boolean lugar;
            band=false;
        }
          archivoos obj26 = new archivoos();
-        File fNuevo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Decoración y ambientación.txt");
+        File fNuevo = new File("src\\archivos\\Provedores Decoración y ambientación.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
         
@@ -488,7 +488,7 @@ boolean lugar;
            band=false;
        }
          archivoos obj26 = new archivoos();
-        File fNuevo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores servicios.txt");
+        File fNuevo = new File("src\\archivos\\Provedores servicios.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
     }
@@ -517,7 +517,7 @@ boolean lugar;
            band=false;
        }
          archivoos obj26 = new archivoos();
-        File fNuevo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores lugar.txt");
+        File fNuevo = new File("src\\archivos\\Provedores lugar.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
         

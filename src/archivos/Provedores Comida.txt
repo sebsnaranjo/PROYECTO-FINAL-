@@ -1,0 +1,4 @@
+;45;wils;458664;meseros;true;
+;45;wils;0; ;true;
+;89;pizzeta;895566;meseros y manteles;true;
+;89;pizzeta;0; ;true;

@@ -18,6 +18,10 @@ private int lug2;
 private int dia2;
 private int mes2;
 private int ano2;
+private int base_gastro;
+private int base_deco;
+private int base_serv;
+private int base_lug;
 
  String gastro_fin;
  String deco_fin;
@@ -26,6 +30,10 @@ private int ano2;
  String dia_fin;
  String mes_fin;
  String ano_fin;
+ String base_gastro_fin;
+ String base_deco_fin;
+ String base_serv_fin;
+ String base_lug_fin;
 
 
     /**
@@ -157,7 +165,7 @@ private int ano2;
         // TODO add your handling code here:
     }//GEN-LAST:event_rev_tot_decoActionPerformed
     
-    public void llegada_final(int gastro,int deco,int serv,int lug,int dia,int mes,int ano){
+    public void llegada_final(int prec_gastro, int prec_deco,int prec_serv,int prec_lug,int gastro,int deco,int serv,int lug,int dia,int mes,int ano){
         
          gastro2= gastro;
          deco2=deco;

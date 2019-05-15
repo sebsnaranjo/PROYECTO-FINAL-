@@ -32,7 +32,7 @@ public class archivoos {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Datos Cliente.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Datos Cliente.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -66,7 +66,7 @@ public class archivoos {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Comida.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Provedores Comida.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -99,7 +99,7 @@ public class archivoos {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Comida.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Provedores Comida.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -132,7 +132,7 @@ public class archivoos {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Articulos Comida.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Articulos Comida.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -167,7 +167,7 @@ public class archivoos {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Decoración y ambientación.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Provedores Decoración y ambientación.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -200,7 +200,7 @@ public class archivoos {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Decoración y ambientación.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Provedores Decoración y ambientación.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -235,7 +235,7 @@ public class archivoos {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Articulos Decoración y ambientación.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Articulos Decoración y ambientación.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -271,7 +271,7 @@ public class archivoos {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Provedores servicios.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Provedores servicios.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -304,7 +304,7 @@ public class archivoos {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Provedores servicios.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Provedores servicios.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -340,7 +340,7 @@ void artserv(int id,String art, int precart, boolean provedor_deco) {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Articulos servicios.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Articulos servicios.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -375,7 +375,7 @@ void arcprovlug(int id, String nombre, int prec, String serv,boolean provedor_de
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Provedores lugar.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Provedores lugar.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -408,7 +408,7 @@ void arcprovlug(int id, String nombre, int prec, String serv,boolean provedor_de
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Provedores lugar.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Provedores lugar.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -446,7 +446,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\lugar.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\lugar.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -597,7 +597,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Cotizaciones.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Cotizaciones.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             
@@ -640,7 +640,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
         PrintWriter linea = null;  
         
         try{
-            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Phantom.txt",true); //crea el archivo 
+            fichero = new FileWriter("src\\archivos\\Phantom.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); //
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             

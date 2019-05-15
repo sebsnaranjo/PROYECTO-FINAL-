@@ -1,0 +1,3 @@
+;456;quimical;78965;recogedoras;true;
+;49;icalistanmo;12345;recoge basura y hbh;true;
+;49;icalistanmo;0; ;true;
