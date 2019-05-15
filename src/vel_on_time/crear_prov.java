@@ -301,7 +301,7 @@ public class crear_prov extends javax.swing.JFrame {
     }
     
     void gastronomia2(){   
-        archivos ob14 = new archivos();
+        archivoos ob14 = new archivoos();
         boolean provedor_gastro = true;
         int id;
         String nombre;
@@ -329,7 +329,7 @@ public class crear_prov extends javax.swing.JFrame {
     }
     
      void gastronomiapol(){   
-        archivos ob14 = new archivos();
+        archivoos ob14 = new archivoos();
         boolean provedor_gastro = true;
         String nombre;
         int id;
@@ -365,7 +365,7 @@ public class crear_prov extends javax.swing.JFrame {
     
     void decoracion2(){
         
-         archivos ob14 = new archivos();
+         archivoos ob14 = new archivoos();
         
         
         boolean provedor_deco = true;
@@ -395,7 +395,7 @@ public class crear_prov extends javax.swing.JFrame {
         decopol=true;
     }
     void decopol(){   
-        archivos ob14 = new archivos();
+        archivoos ob14 = new archivoos();
         boolean provedor_gastro = true;
         String nombre;
         int id;
@@ -428,7 +428,7 @@ public class crear_prov extends javax.swing.JFrame {
         obj_proveedor.setText("SERVICIOS");
     }
     void servicios2(){
-        archivos ob14 = new archivos();
+        archivoos ob14 = new archivoos();
         
         
         boolean provedor_deco = true;
@@ -458,7 +458,7 @@ public class crear_prov extends javax.swing.JFrame {
         servpol=true;
     }
     void servpol(){   
-        archivos ob14 = new archivos();
+        archivoos ob14 = new archivoos();
         boolean provedor_gastro = true;
         String nombre;
         int id;
@@ -491,7 +491,7 @@ public class crear_prov extends javax.swing.JFrame {
         obj_proveedor.setText("LUGAR");
     }
     void lugar2(){
-        archivos ob14 = new archivos();
+        archivoos ob14 = new archivoos();
         
         
         boolean provedor_deco = true;
@@ -521,7 +521,7 @@ public class crear_prov extends javax.swing.JFrame {
         lugarpol=true;
     }
     void lugarpol(){   
-        archivos ob14 = new archivos();
+        archivoos ob14 = new archivoos();
         boolean provedor_gastro = true;
         String nombre;
         int id;

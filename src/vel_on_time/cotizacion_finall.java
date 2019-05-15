@@ -9,7 +9,7 @@ package vel_on_time;
  *
  * @author jose noel mantilla
  */
-public class cotizacion_final extends javax.swing.JFrame {
+public class cotizacion_finall extends javax.swing.JFrame {
 
 private int gastro2;
 private int deco2;
@@ -31,7 +31,7 @@ private int ano2;
     /**
      * Creates new form cotizacion_final
      */
-    public cotizacion_final() {
+    public cotizacion_finall() {
         initComponents();
     }
 
@@ -212,21 +212,23 @@ private int ano2;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(cotizacion_final.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cotizacion_finall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(cotizacion_final.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cotizacion_finall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(cotizacion_final.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cotizacion_finall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(cotizacion_final.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(cotizacion_finall.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new cotizacion_final().setVisible(true);
+                new cotizacion_finall().setVisible(true);
             }
         });
     }

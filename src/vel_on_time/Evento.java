@@ -78,14 +78,21 @@ public class Evento extends javax.swing.JFrame {
         id_cliente.setText("Id del cliente:");
         getContentPane().add(id_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 85, 34));
 
+        rev_id.setText("454");
         rev_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rev_idActionPerformed(evt);
             }
         });
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 103, -1));
+
+        rev_nombre.setText("saraaaa");
         getContentPane().add(rev_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 160, -1));
+
+        rev_presupuesto.setText("4548");
         getContentPane().add(rev_presupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 103, -1));
+
+        rev_invitados.setText("4848");
         getContentPane().add(rev_invitados, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 130, -1));
 
         enviar_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
@@ -120,8 +127,14 @@ public class Evento extends javax.swing.JFrame {
         DIA.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         DIA.setText("DIA:");
         getContentPane().add(DIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 36, 34));
+
+        rev_dia.setText("12");
         getContentPane().add(rev_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 60, -1));
+
+        rev_mes.setText("2");
         getContentPane().add(rev_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 61, -1));
+
+        rev_ano.setText("2019");
         getContentPane().add(rev_ano, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 68, -1));
 
         VOLVER.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
@@ -147,7 +160,7 @@ public class Evento extends javax.swing.JFrame {
 
     private void enviar_clienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviar_clienteMouseClicked
      
-       archivos ob4= new archivos();
+       archivoos ob4= new archivoos();
        int id;
        String name;
        int pres;
@@ -170,10 +183,10 @@ public class Evento extends javax.swing.JFrame {
        ob4.archCli(id,name,pres,numI,fecha);
        
        
-       Cotizador ob25= new Cotizador();
-       ob25.llegada(id,name,pres,numI,dia,mes,ano);
+       Cotizadoor ob29= new Cotizadoor();
+       ob29.llegada(id,name,pres,numI,dia,mes,ano);
    
-       ob25.setVisible(true);
+       ob29.setVisible(true);
        this.setVisible(false);
   
     }//GEN-LAST:event_enviar_clienteMouseClicked

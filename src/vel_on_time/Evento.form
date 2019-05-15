@@ -107,6 +107,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="rev_id">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="454"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rev_idActionPerformed"/>
       </Events>
@@ -117,6 +120,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="rev_nombre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="saraaaa"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="80" width="160" height="-1"/>
@@ -124,6 +130,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="rev_presupuesto">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="4548"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="140" y="130" width="103" height="-1"/>
@@ -131,6 +140,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="rev_invitados">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="4848"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="410" y="130" width="130" height="-1"/>
@@ -218,6 +230,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="rev_dia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="12"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="140" y="180" width="60" height="-1"/>
@@ -225,6 +240,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="rev_mes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="2"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="240" y="180" width="61" height="-1"/>
@@ -232,6 +250,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="rev_ano">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="2019"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="340" y="180" width="68" height="-1"/>

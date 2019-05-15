@@ -306,7 +306,7 @@ boolean lugar;
             }
         }
         }
-       /////////////////////////////Leyendo archivos de servicios ///////////////////////////////
+       /////////////////////////////Leyendo archivoos de servicios ///////////////////////////////
        if(obj_proveedor.getText().equals("SERVICIOS")){
           File archivo = null; 
         FileReader contenido = null;  //acceder a todo el contenido del archivo
@@ -424,7 +424,7 @@ boolean lugar;
         if(rev_inactivo.isSelected()){
            band=false;
        }
-         archivos obj26 = new archivos();
+         archivoos obj26 = new archivoos();
         File fNuevo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Comida.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
@@ -457,7 +457,7 @@ boolean lugar;
         if(rev_inactivo.isSelected()){
            band=false;
        }
-         archivos obj26 = new archivos();
+         archivoos obj26 = new archivoos();
         File fNuevo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores Decoración y ambientación.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
@@ -487,7 +487,7 @@ boolean lugar;
         if(rev_inactivo.isSelected()){
            band=false;
        }
-         archivos obj26 = new archivos();
+         archivoos obj26 = new archivoos();
         File fNuevo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores servicios.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
@@ -516,7 +516,7 @@ boolean lugar;
         if(rev_inactivo.isSelected()){
            band=false;
        }
-         archivos obj26 = new archivos();
+         archivoos obj26 = new archivoos();
         File fNuevo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Provedores lugar.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);

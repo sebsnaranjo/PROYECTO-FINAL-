@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  *
  * @author jose noel mantilla
  */
-public class Cotizador extends javax.swing.JFrame {
+public class Cotizadoor extends javax.swing.JFrame {
 int x;
 int y;
 int tot;
@@ -42,7 +42,7 @@ String numI2=" ";
     /**
      * Creates new form Cotizador
      */
-    public Cotizador() {
+    public Cotizadoor() {
         initComponents();
         
         sele_cot.add(gastronomia);
@@ -64,7 +64,7 @@ String numI2=" ";
         DE_TEXT = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         unit_prov = new javax.swing.JTextArea();
-        arg_car_1 = new javax.swing.JButton();
+        ar_car_1 = new javax.swing.JButton();
         volver = new javax.swing.JButton();
         mutiplicado = new javax.swing.JTextField();
         tit_multi = new javax.swing.JLabel();
@@ -112,13 +112,13 @@ String numI2=" ";
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 430, 219));
 
-        arg_car_1.setText("Agregar al carrito");
-        arg_car_1.addMouseListener(new java.awt.event.MouseAdapter() {
+        ar_car_1.setText("Agregar al carrito");
+        ar_car_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                arg_car_1MouseClicked(evt);
+                ar_car_1MouseClicked(evt);
             }
         });
-        getContentPane().add(arg_car_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 520, -1, -1));
+        getContentPane().add(ar_car_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 520, -1, -1));
 
         volver.setText("VOLVER");
         volver.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -283,7 +283,7 @@ String numI2=" ";
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void arg_car_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_arg_car_1MouseClicked
+    private void ar_car_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_1MouseClicked
            
         String gastro_rev_uni = (String) combo_art_gastro.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
@@ -296,7 +296,7 @@ String numI2=" ";
         
         
         
-    }//GEN-LAST:event_arg_car_1MouseClicked
+    }//GEN-LAST:event_ar_car_1MouseClicked
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
        Evento ob21 = new Evento();
@@ -352,7 +352,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
     private void env_finalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_env_finalMouseClicked
        
-        cotizacion_final ob28 = new cotizacion_final();
+        cotizacion_finall ob28 = new cotizacion_finall();
         ob28.setVisible(true);
         ob28.llegada_final(cont, cont2, cont3, cont4, dia2, mes2, ano2);
         this.setVisible(false);
@@ -367,7 +367,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_servActionPerformed
 
     private void elec_gastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_gastroMouseClicked
-        archivos ob27 = new archivos();
+        archivoos ob27 = new archivoos();
         String gastro_rev_uni = (String) combo_gastro.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
@@ -389,7 +389,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_decoActionPerformed
 
     private void elec_decoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_decoMouseClicked
-        archivos ob27 = new archivos();
+        archivoos ob27 = new archivoos();
         String gastro_rev_uni = (String) combo_deco.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
@@ -400,7 +400,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_decoMouseClicked
 
     private void elec_servMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_servMouseClicked
-           archivos ob27 = new archivos();
+           archivoos ob27 = new archivoos();
         String gastro_rev_uni = (String) combo_serv.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
@@ -410,7 +410,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_servMouseClicked
 
     private void elec_lugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_lugarMouseClicked
-         archivos ob27 = new archivos();
+         archivoos ob27 = new archivoos();
         String gastro_rev_uni = (String) combo_lugar.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
@@ -1131,31 +1131,33 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cotizador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cotizadoor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cotizador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cotizadoor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cotizador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cotizadoor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cotizador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cotizadoor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cotizador().setVisible(true);
+                new Cotizadoor().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DE_TEXT;
+    private javax.swing.JButton ar_car_1;
     private javax.swing.JButton ar_car_2;
     private javax.swing.JButton ar_car_3;
     private javax.swing.JButton ar_car_4;
-    private javax.swing.JButton arg_car_1;
     private javax.swing.JTextArea art_unit;
     private javax.swing.JComboBox<String> combo_art_deco;
     private javax.swing.JComboBox<String> combo_art_gastro;
