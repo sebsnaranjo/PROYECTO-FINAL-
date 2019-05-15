@@ -30,7 +30,14 @@ private int dia2;
 private int mes2;
 private int ano2;
 private int numIn;
-
+int cont =0;
+int cont2=0;
+int cont4=0;
+int cont3=0;
+String gast="";
+String deocr="";
+String servi="";
+String lrgs="";
 String numI2=" ";
     /**
      * Creates new form Cotizador
@@ -55,24 +62,13 @@ String numI2=" ";
 
         sele_cot = new javax.swing.ButtonGroup();
         DE_TEXT = new javax.swing.JLabel();
-        art_prov = new javax.swing.JScrollPane();
-        art_unit = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         unit_prov = new javax.swing.JTextArea();
-        prec_ob = new javax.swing.JTextField();
-        prec_art_ob = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        selc_cont = new javax.swing.JButton();
-        resultado = new javax.swing.JTextField();
+        arg_car_1 = new javax.swing.JButton();
         volver = new javax.swing.JButton();
-        final_tit = new javax.swing.JLabel();
         mutiplicado = new javax.swing.JTextField();
         tit_multi = new javax.swing.JLabel();
         proveedor_cot = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        X1 = new javax.swing.JLabel();
         enviar_cotizar = new javax.swing.JButton();
         lugar = new javax.swing.JRadioButton();
         servicios = new javax.swing.JRadioButton();
@@ -80,16 +76,29 @@ String numI2=" ";
         gastronomia = new javax.swing.JRadioButton();
         selc_evento2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        mas = new javax.swing.JLabel();
-        cot_final = new javax.swing.JTextField();
         env_final = new javax.swing.JButton();
-        tit_fin = new javax.swing.JLabel();
-        imprimir = new javax.swing.JButton();
-        jSeparator2 = new javax.swing.JSeparator();
-        jSeparator3 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
-        nom_prov = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        combo_gastro = new javax.swing.JComboBox<>();
+        combo_deco = new javax.swing.JComboBox<>();
+        combo_serv = new javax.swing.JComboBox<>();
+        combo_lugar = new javax.swing.JComboBox<>();
+        combo_art_gastro = new javax.swing.JComboBox<>();
+        combo_art_deco = new javax.swing.JComboBox<>();
+        combo_art_serv = new javax.swing.JComboBox<>();
+        combo_art_lugar = new javax.swing.JComboBox<>();
+        ar_car_2 = new javax.swing.JButton();
+        ar_car_3 = new javax.swing.JButton();
+        ar_car_4 = new javax.swing.JButton();
+        elec_gastro = new javax.swing.JButton();
+        elec_deco = new javax.swing.JButton();
+        elec_serv = new javax.swing.JButton();
+        elec_lugar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        art_unit = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -97,48 +106,19 @@ String numI2=" ";
         DE_TEXT.setText("PROVEDOR DE:");
         getContentPane().add(DE_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 121, 36));
 
-        art_unit.setColumns(20);
-        art_unit.setRows(5);
-        art_prov.setViewportView(art_unit);
-
-        getContentPane().add(art_prov, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, 460, 220));
-
         unit_prov.setColumns(20);
         unit_prov.setRows(5);
         jScrollPane2.setViewportView(unit_prov);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 540, 219));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 430, 219));
 
-        prec_ob.addMouseListener(new java.awt.event.MouseAdapter() {
+        arg_car_1.setText("Agregar al carrito");
+        arg_car_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                prec_obMouseClicked(evt);
+                arg_car_1MouseClicked(evt);
             }
         });
-        prec_ob.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prec_obActionPerformed(evt);
-            }
-        });
-        getContentPane().add(prec_ob, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 680, 130, 51));
-
-        prec_art_ob.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prec_art_obActionPerformed(evt);
-            }
-        });
-        getContentPane().add(prec_art_ob, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 570, 160, 20));
-
-        jLabel1.setText("VALOR BASE");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 650, 95, -1));
-
-        selc_cont.setText("Agregar al carrito");
-        selc_cont.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                selc_contMouseClicked(evt);
-            }
-        });
-        getContentPane().add(selc_cont, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 560, -1, -1));
-        getContentPane().add(resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 680, 128, 50));
+        getContentPane().add(arg_car_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 520, -1, -1));
 
         volver.setText("VOLVER");
         volver.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -148,39 +128,28 @@ String numI2=" ";
         });
         getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 131, 85, -1));
 
-        final_tit.setText("    FINAL");
-        getContentPane().add(final_tit, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 650, 79, -1));
-
         mutiplicado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mutiplicadoActionPerformed(evt);
             }
         });
-        getContentPane().add(mutiplicado, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 570, 170, -1));
+        getContentPane().add(mutiplicado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 900, 170, 30));
 
         tit_multi.setText("NUMERO DE INVITADOS");
-        getContentPane().add(tit_multi, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 540, 143, -1));
+        getContentPane().add(tit_multi, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 860, 143, 30));
 
         proveedor_cot.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(proveedor_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 273, 50));
-
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("ARTICULOS DEL PROVEEDOR ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 265, 50));
-
-        jLabel9.setText("VALOR BASE");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 650, 95, -1));
-
-        jLabel10.setText("VALOR POR ARTICULO");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 540, -1, -1));
-
-        X1.setText("X");
-        getContentPane().add(X1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 570, 27, -1));
 
         enviar_cotizar.setText("COTIZAR");
         enviar_cotizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 enviar_cotizarMouseClicked(evt);
+            }
+        });
+        enviar_cotizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enviar_cotizarActionPerformed(evt);
             }
         });
         getContentPane().add(enviar_cotizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 99, -1, -1));
@@ -192,6 +161,11 @@ String numI2=" ";
         getContentPane().add(servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 131, -1, -1));
 
         decoracion.setText("DECORACION Y AMBIENTACION");
+        decoracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                decoracionActionPerformed(evt);
+            }
+        });
         getContentPane().add(decoracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 91, -1, -1));
 
         gastronomia.setText("GASTRONOMIA");
@@ -203,76 +177,126 @@ String numI2=" ";
         jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 194, 1226, 10));
 
-        mas.setText("  +");
-        getContentPane().add(mas, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 680, -1, -1));
-        getContentPane().add(cot_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 820, 130, 44));
-
         env_final.setText("Finalizar Cotizacion");
         env_final.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 env_finalMouseClicked(evt);
             }
         });
-        getContentPane().add(env_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 690, -1, -1));
+        getContentPane().add(env_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 900, -1, -1));
 
-        tit_fin.setText("COTIZACION FINAL");
-        getContentPane().add(tit_fin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 790, -1, -1));
+        jLabel5.setText("GASTRONOMIA");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, -1, -1));
 
-        imprimir.setText("IMPRIMIR");
-        imprimir.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel6.setText("DECORACIÓN");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 610, -1, -1));
+
+        jLabel7.setText("SERVICIOS");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 700, -1, -1));
+
+        jLabel8.setText("LUGAR");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 790, -1, -1));
+        getContentPane().add(combo_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 520, 220, -1));
+        getContentPane().add(combo_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 610, 220, -1));
+        getContentPane().add(combo_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 700, 220, -1));
+        getContentPane().add(combo_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 790, 220, -1));
+        getContentPane().add(combo_art_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 520, 220, -1));
+        getContentPane().add(combo_art_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 610, 220, -1));
+        getContentPane().add(combo_art_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 700, 220, -1));
+        getContentPane().add(combo_art_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 790, 220, -1));
+
+        ar_car_2.setText("Agregar al carrito");
+        ar_car_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                imprimirMouseClicked(evt);
+                ar_car_2MouseClicked(evt);
             }
         });
-        getContentPane().add(imprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 830, -1, -1));
+        getContentPane().add(ar_car_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 610, 133, -1));
 
-        jSeparator2.setForeground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 502, 1030, 10));
-        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 630, 1030, -1));
+        ar_car_3.setText("Agregar al carrito");
+        ar_car_3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ar_car_3MouseClicked(evt);
+            }
+        });
+        getContentPane().add(ar_car_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 700, 133, -1));
 
-        jLabel2.setText("NOMBRE DEL PROVEEDOR");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, -1, -1));
-        getContentPane().add(nom_prov, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 570, 150, -1));
+        ar_car_4.setText("Agregar al carrito");
+        ar_car_4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ar_car_4MouseClicked(evt);
+            }
+        });
+        getContentPane().add(ar_car_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 790, 133, -1));
 
-        jLabel3.setText("GASTRONOMIA");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, -1, -1));
+        elec_gastro.setText("Elegir");
+        elec_gastro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                elec_gastroMouseClicked(evt);
+            }
+        });
+        getContentPane().add(elec_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 520, -1, -1));
+
+        elec_deco.setText("Elegir");
+        elec_deco.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                elec_decoMouseClicked(evt);
+            }
+        });
+        elec_deco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                elec_decoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(elec_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, -1, -1));
+
+        elec_serv.setText("ELegir");
+        elec_serv.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                elec_servMouseClicked(evt);
+            }
+        });
+        elec_serv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                elec_servActionPerformed(evt);
+            }
+        });
+        getContentPane().add(elec_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 700, -1, -1));
+
+        elec_lugar.setText("Elegir");
+        elec_lugar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                elec_lugarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(elec_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 790, -1, -1));
+
+        art_unit.setColumns(20);
+        art_unit.setRows(5);
+        jScrollPane1.setViewportView(art_unit);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 510, 220));
+
+        jLabel1.setText("ARTICULOS");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void prec_obActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prec_obActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_prec_obActionPerformed
-
-    private void prec_art_obActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prec_art_obActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_prec_art_obActionPerformed
-
-    private void selc_contMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selc_contMouseClicked
-           x=x+1;
-           int multi;
-           multi = Integer.parseInt(mutiplicado.getText());
-           int[] miArreglo = new int[x];
-            for (int i=0; i<x;i++){
-             miArreglo[i]= Integer.parseInt(prec_art_ob.getText())*multi;
-              tot= tot+miArreglo[i];
-             // prec_ob.setText(" ");
-             x=x-1;
-            }
+    private void arg_car_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_arg_car_1MouseClicked
            
-            String tots=" ";
-            tots =Integer.toString(tot);
-            resultado.setText(tots);     
-            
-     
-           
-             
-             
-          // System.out.println("Valor de x: "+x);*/
-           
-                
-                
-    }//GEN-LAST:event_selc_contMouseClicked
+        String gastro_rev_uni = (String) combo_art_gastro.getSelectedItem();
+        String id[] = gastro_rev_uni.split(",");
+        String p[] = gastro_rev_uni.split(",");
+        gast=gast+id[0]+";"+p[1]+";";
+        int almax= Integer.parseInt(id[1]);
+        cont=cont+almax;
+        System.out.println(cont + gast);
+        
+        
+        
+        
+    }//GEN-LAST:event_arg_car_1MouseClicked
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
        Evento ob21 = new Evento();
@@ -281,10 +305,6 @@ String numI2=" ";
        this.setVisible(false);
        
     }//GEN-LAST:event_volverMouseClicked
-
-    private void mutiplicadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mutiplicadoActionPerformed
-        
-    }//GEN-LAST:event_mutiplicadoActionPerformed
 public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano){
          numIn= numI;
          id2=id;
@@ -292,8 +312,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
          pres2=pres;
          dia2=dia;
          mes2=mes;
-         ano2=ano2;
-         
+         ano2=ano;
          this.id2=id2;
          this.name2=name2;
          this.pres2=pres2;
@@ -325,39 +344,170 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
       if( lugar.isSelected()){
           lugar2();
           numI2 = Integer.toString(numIn);
-            mutiplicado.setText(numI2);
+          mutiplicado.setText(numI2);
+          
       }
+      
     }//GEN-LAST:event_enviar_cotizarMouseClicked
 
-    private void prec_obMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_prec_obMouseClicked
-    
-    }//GEN-LAST:event_prec_obMouseClicked
-
     private void env_finalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_env_finalMouseClicked
-        int base;
-        int total_art;
-        int finalizar;
-        String cot=" ";
-        base= Integer.parseInt(prec_ob.getText());
-        total_art= Integer.parseInt(resultado.getText());
-        finalizar=base+total_art;
-        cot =Integer.toString(finalizar);
-        
-        cot_final.setText(cot); 
-        
+       
+        cotizacion_final ob28 = new cotizacion_final();
+        ob28.setVisible(true);
+        ob28.llegada_final(cont, cont2, cont3, cont4, dia2, mes2, ano2);
+        this.setVisible(false);
     }//GEN-LAST:event_env_finalMouseClicked
     
-    private void imprimirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imprimirMouseClicked
+    private void mutiplicadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mutiplicadoActionPerformed
+
+    }//GEN-LAST:event_mutiplicadoActionPerformed
+
+    private void elec_servActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_elec_servActionPerformed
+     
+    }//GEN-LAST:event_elec_servActionPerformed
+
+    private void elec_gastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_gastroMouseClicked
         archivos ob27 = new archivos();
-       String termn= cot_final.getText();
-        ob27.archivo_cotizacion(id2,name2,pres2,numIn,dia2,mes2,ano2,termn);
-    }//GEN-LAST:event_imprimirMouseClicked
+        String gastro_rev_uni = (String) combo_gastro.getSelectedItem();
+        String id[] = gastro_rev_uni.split(",");
+        String nme[] = gastro_rev_uni.split(",");
+        String id2 = id[0];
+        ob27.archprovar(1,nme[1], id2);
+        gastronomia(id2);
+    }//GEN-LAST:event_elec_gastroMouseClicked
+
+    private void decoracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decoracionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_decoracionActionPerformed
+
+    private void enviar_cotizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviar_cotizarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enviar_cotizarActionPerformed
+
+    private void elec_decoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_elec_decoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_elec_decoActionPerformed
+
+    private void elec_decoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_decoMouseClicked
+        archivos ob27 = new archivos();
+        String gastro_rev_uni = (String) combo_deco.getSelectedItem();
+        String id[] = gastro_rev_uni.split(",");
+        String nme[] = gastro_rev_uni.split(",");
+        String id2 = id[0];
+        ob27.archprovar(2,nme[1], id2);
+        decoracion(id2);
+        
+    }//GEN-LAST:event_elec_decoMouseClicked
+
+    private void elec_servMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_servMouseClicked
+           archivos ob27 = new archivos();
+        String gastro_rev_uni = (String) combo_serv.getSelectedItem();
+        String id[] = gastro_rev_uni.split(",");
+        String nme[] = gastro_rev_uni.split(",");
+        String id2 = id[0];
+        ob27.archprovar(3,nme[1], id2);
+        servicio(id2);
+    }//GEN-LAST:event_elec_servMouseClicked
+
+    private void elec_lugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_lugarMouseClicked
+         archivos ob27 = new archivos();
+        String gastro_rev_uni = (String) combo_lugar.getSelectedItem();
+        String id[] = gastro_rev_uni.split(",");
+        String nme[] = gastro_rev_uni.split(",");
+        String id2 = id[0];
+        ob27.archprovar(4,nme[1], id2);
+        lugar(id2);
+    }//GEN-LAST:event_elec_lugarMouseClicked
+
+    private void ar_car_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_2MouseClicked
+        String gastro_rev_uni = (String) combo_art_deco.getSelectedItem();
+        String id[] = gastro_rev_uni.split(",");
+        int almax= Integer.parseInt(id[1]);
+        cont2=cont2+almax;
+        System.out.println(cont2);
+            
+    }//GEN-LAST:event_ar_car_2MouseClicked
+
+    private void ar_car_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_3MouseClicked
+        String gastro_rev_uni = (String) combo_art_serv.getSelectedItem();
+        String id[] = gastro_rev_uni.split(",");
+        int almax= Integer.parseInt(id[1]);
+        cont3=cont3+almax;
+        System.out.println(cont3);
+    }//GEN-LAST:event_ar_car_3MouseClicked
+
+    private void ar_car_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_4MouseClicked
+        String gastro_rev_uni = (String) combo_art_lugar.getSelectedItem();
+        String id[] = gastro_rev_uni.split(",");
+        int almax= Integer.parseInt(id[1]);
+        cont4=cont4+almax;
+        System.out.println(cont4);
+    }//GEN-LAST:event_ar_car_4MouseClicked
 
     /**
      * @param args the command line arguments
      */
 
+        
+      void gastronomia(String id2){
+          
+        String a;
+       
+       
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
 
+        try {
+            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Articulos Comida.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                int largo = cadena.length();
+                String info;
+                int prec;
+                boolean op;
+              String c;
+              String id[] = cadena.split(";");
+              int id3=Integer.parseInt(id[1]);
+                
+                String nombre[] = cadena.split(";");
+                info = nombre[2];
+                String value[] = cadena.split(";");
+                prec = Integer.parseInt(value[3]);
+                String band[] = cadena.split(";");
+                op=Boolean.parseBoolean(band[4]);
+               
+                if (op==true){
+                    if(id2.equals(id[1])){
+                        a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                      c=info+","+prec;
+                      combo_art_gastro.addItem(c); 
+                    }
+                     
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+    
+      }
+    
+    
+    
+    
      void gastronomia2(){
         gastro=true;
         String a;
@@ -380,16 +530,18 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 int prec;
                 boolean op;
               
-              
+              String id[] = cadena.split(";");
+              id2=Integer.parseInt(id[1]);
                 
                 String nombre[] = cadena.split(";");
-                info = nombre[1];
+                info = nombre[2];
                 String value[] = cadena.split(";");
-                prec = Integer.parseInt(value[2]);
+                prec = Integer.parseInt(value[3]);
                 String band[] = cadena.split(";");
-                op=Boolean.parseBoolean(band[3]);
+                op=Boolean.parseBoolean(band[4]);
+               
                 if (op==true){
-                      a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                      a="id:"+id2+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       art_unit.append(a);
                 }
             }
@@ -407,6 +559,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         }
        ////////////////////////////////Leyendo 2 Archivo ////////////////////////////////////////////////
         String b;
+        String c;
         File archivo2 = null;  //apuntar al archivo almancenado DD
         FileReader contenido2 = null;  //acceder a todo el contenido del archivo
         BufferedReader linea2 = null; //accede linea a linea al contenido
@@ -424,8 +577,10 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 String serv;
                 String name;
                 int prec;
+                int id2;
                 boolean op;
-                
+                String id[] = cadena2.split(";");
+                id2=Integer.parseInt(id[1]);
                 String nombre[] = cadena2.split(";");
                 name = nombre[2];
                 
@@ -442,6 +597,9 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
+                      c=id2+","+name;
+                      combo_gastro.addItem(c);
+                      
                     }
                      
                 }
@@ -463,9 +621,67 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
         
     }
+     void decoracion(String id2){
+          
+        
+        String a;
+       
+       
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+
+        try {
+            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Articulos Decoración y ambientación.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                int largo = cadena.length();
+                String info;
+                int prec;
+                boolean op;
+              String c;
+              String id[] = cadena.split(";");
+              int id3=Integer.parseInt(id[1]);
+                
+                String nombre[] = cadena.split(";");
+                info = nombre[2];
+                String value[] = cadena.split(";");
+                prec = Integer.parseInt(value[3]);
+                String band[] = cadena.split(";");
+                op=Boolean.parseBoolean(band[4]);
+               
+                if (op==true){
+                    if(id2.equals(id[1])){
+                        a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                      c=info+","+prec;
+                      combo_art_deco.addItem(c); 
+                    }
+                     
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+    
+      }
    
     void decoracion2(){
-       deco=true;
+        unit_prov.setText(" ");
+         art_unit.setText(" ");
+        deco=true;
   
           String a;
         File archivo = null;  //apuntar al archivo almancenado DD
@@ -485,12 +701,15 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 int prec;
                 boolean op;
                  
+               String id[] = cadena.split(";");
+              id2=Integer.parseInt(id[1]);
+                
                 String nombre[] = cadena.split(";");
-                info = nombre[1];
+                info = nombre[2];
                 String value[] = cadena.split(";");
-                prec = Integer.parseInt(value[2]);
+                prec = Integer.parseInt(value[3]);
                 String band[] = cadena.split(";");
-                op=Boolean.parseBoolean(band[3]);
+                op=Boolean.parseBoolean(band[4]);
                 if (op==true){
                       a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       art_unit.append(a);
@@ -528,6 +747,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 int largo = cadena2.length();
                 String serv;
                 String name;
+                String c;
                 int prec;
                 boolean op;
                 
@@ -547,6 +767,9 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
+                      c=id2+","+name;
+                      combo_deco.addItem(c);
+                      
                     }
                      
                 }
@@ -567,6 +790,64 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         }
        
     }
+    void servicio(String id2){
+                
+        
+        String a;
+       
+       
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+
+        try {
+            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\Articulos servicios.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                int largo = cadena.length();
+                String info;
+                int prec;
+                boolean op;
+              String c;
+              String id[] = cadena.split(";");
+              int id3=Integer.parseInt(id[1]);
+                
+                String nombre[] = cadena.split(";");
+                info = nombre[2];
+                String value[] = cadena.split(";");
+                prec = Integer.parseInt(value[3]);
+                String band[] = cadena.split(";");
+                op=Boolean.parseBoolean(band[4]);
+               
+                if (op==true){
+                    if(id2.equals(id[1])){
+                        a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                      c=info+","+prec;
+                      combo_art_serv.addItem(c); 
+                    }
+                     
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+    
+    
+      }
+    
    
     void servicios2(){
         serv=true;
@@ -587,13 +868,15 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 String info;
                 int prec;
                 boolean op;
+              String id[] = cadena.split(";");
+              id2=Integer.parseInt(id[1]);
                 
                 String nombre[] = cadena.split(";");
-                info = nombre[1];
+                info = nombre[2];
                 String value[] = cadena.split(";");
-                prec = Integer.parseInt(value[2]);
+                prec = Integer.parseInt(value[3]);
                 String band[] = cadena.split(";");
-                op=Boolean.parseBoolean(band[3]);
+                op=Boolean.parseBoolean(band[4]);
                 if (op==true){
                       a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       art_unit.append(a);
@@ -615,6 +898,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         }
        ////////////////////////////////Leyendo 2 Archivo ////////////////////////////////////////////////
         String b;
+        String c;
         File archivo2 = null;  //apuntar al archivo almancenado DD
         FileReader contenido2 = null;  //acceder a todo el contenido del archivo
         BufferedReader linea2 = null; //accede linea a linea al contenido
@@ -650,6 +934,9 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
+                       c=id2+","+name;
+                      combo_serv.addItem(c);
+                      
                     }
                      
                 }
@@ -670,6 +957,59 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         }
     }
     
+    void lugar(String id2){
+         String a;
+       
+       
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+
+        try {
+            archivo = new File("C:\\Users\\jose noel mantilla\\Desktop\\lugar.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                int largo = cadena.length();
+                String info;
+                int prec;
+                boolean op;
+              String c;
+              String id[] = cadena.split(";");
+              int id3=Integer.parseInt(id[1]);
+                
+                String nombre[] = cadena.split(";");
+                info = nombre[2];
+                String value[] = cadena.split(";");
+                prec = Integer.parseInt(value[3]);
+                String band[] = cadena.split(";");
+                op=Boolean.parseBoolean(band[4]);
+               
+                if (op==true){
+                    if(id2.equals(id[1])){
+                        a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                      c=info+","+prec;
+                      combo_art_lugar.addItem(c); 
+                    }
+                     
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+    }
     
     void lugar2(){
         
@@ -691,13 +1031,15 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 String info;
                 int prec;
                 boolean op;
-                 
+               String id[] = cadena.split(";");
+              id2=Integer.parseInt(id[1]);
+                
                 String nombre[] = cadena.split(";");
-                info = nombre[1];
+                info = nombre[2];
                 String value[] = cadena.split(";");
-                prec = Integer.parseInt(value[2]);
+                prec = Integer.parseInt(value[3]);
                 String band[] = cadena.split(";");
-                op=Boolean.parseBoolean(band[3]);
+                op=Boolean.parseBoolean(band[4]);
                 if (op==true){
                       a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       art_unit.append(a);
@@ -737,7 +1079,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 String name;
                 int prec;
                 boolean op;
-                
+                String c;
                 String nombre[] = cadena2.split(";");
                 name = nombre[2];
                 
@@ -754,6 +1096,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
+                      c=id2+","+name;
+                      combo_lugar.addItem(c);
                     }
                      
                 }
@@ -796,6 +1140,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
             java.util.logging.Logger.getLogger(Cotizador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -807,39 +1152,41 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DE_TEXT;
-    private javax.swing.JLabel X1;
-    private javax.swing.JScrollPane art_prov;
+    private javax.swing.JButton ar_car_2;
+    private javax.swing.JButton ar_car_3;
+    private javax.swing.JButton ar_car_4;
+    private javax.swing.JButton arg_car_1;
     private javax.swing.JTextArea art_unit;
-    private javax.swing.JTextField cot_final;
+    private javax.swing.JComboBox<String> combo_art_deco;
+    private javax.swing.JComboBox<String> combo_art_gastro;
+    private javax.swing.JComboBox<String> combo_art_lugar;
+    private javax.swing.JComboBox<String> combo_art_serv;
+    private javax.swing.JComboBox<String> combo_deco;
+    private javax.swing.JComboBox<String> combo_gastro;
+    private javax.swing.JComboBox<String> combo_lugar;
+    private javax.swing.JComboBox<String> combo_serv;
     private javax.swing.JRadioButton decoracion;
+    private javax.swing.JButton elec_deco;
+    private javax.swing.JButton elec_gastro;
+    private javax.swing.JButton elec_lugar;
+    private javax.swing.JButton elec_serv;
     private javax.swing.JButton env_final;
     private javax.swing.JButton enviar_cotizar;
-    private javax.swing.JLabel final_tit;
     private javax.swing.JRadioButton gastronomia;
-    private javax.swing.JButton imprimir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JRadioButton lugar;
-    private javax.swing.JLabel mas;
     private javax.swing.JTextField mutiplicado;
-    private javax.swing.JTextField nom_prov;
-    private javax.swing.JTextField prec_art_ob;
-    private javax.swing.JTextField prec_ob;
     private javax.swing.JLabel proveedor_cot;
-    private javax.swing.JTextField resultado;
-    private javax.swing.JButton selc_cont;
     private javax.swing.JLabel selc_evento2;
     private javax.swing.ButtonGroup sele_cot;
     private javax.swing.JRadioButton servicios;
-    private javax.swing.JLabel tit_fin;
     private javax.swing.JLabel tit_multi;
     private javax.swing.JTextArea unit_prov;
     private javax.swing.JButton volver;

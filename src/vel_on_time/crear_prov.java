@@ -324,7 +324,7 @@ public class crear_prov extends javax.swing.JFrame {
         art=rev_nomb_art.getText();
         precart=Integer.parseInt(rev_prec_uni.getText());
         ob14.arcprovcom(id,nombre,prec,serv,provedor_gastro);
-        ob14.artch(art,precart,provedor_gastro);
+        ob14.artch(id,art,precart,provedor_gastro);
         gastropol = true;
     }
     
@@ -347,14 +347,14 @@ public class crear_prov extends javax.swing.JFrame {
         }
         
          
-        id=0;
+         id= Integer.parseInt(rev_id.getText());
         nombre= rev_nom_prov.getText();
         prec=0;
         serv=" ";
         art=rev_nomb_art2.getText();
         precart=Integer.parseInt(rev_prec_uni2.getText());
         ob14.arcprovcompol(id,nombre,prec,serv,provedor_gastro);
-        ob14.artch(art,precart,provedor_gastro);
+        ob14.artch(id,art,precart,provedor_gastro);
     }
     
     void decoracion(){
@@ -391,7 +391,7 @@ public class crear_prov extends javax.swing.JFrame {
         precart=Integer.parseInt(rev_prec_uni.getText());
         
         ob14.arcprovdeco(id, nombre, prec, serv, provedor_deco);
-        ob14.artdeco(art, precart, provedor_deco);
+        ob14.artdeco(id,art, precart, provedor_deco);
         decopol=true;
     }
     void decopol(){   
@@ -413,14 +413,14 @@ public class crear_prov extends javax.swing.JFrame {
         }
         
          
-        id=0;
+       id= Integer.parseInt(rev_id.getText());
         nombre= rev_nom_prov.getText();
         prec=0;
         serv=" ";
         art=rev_nomb_art2.getText();
         precart=Integer.parseInt(rev_prec_uni2.getText());
         ob14.arcprovdecopol(id,nombre,prec,serv,provedor_gastro);
-        ob14.artdeco(art,precart,provedor_gastro);
+        ob14.artdeco(id,art,precart,provedor_gastro);
     }
     
     void servicios(){
@@ -454,7 +454,7 @@ public class crear_prov extends javax.swing.JFrame {
         precart=Integer.parseInt(rev_prec_uni.getText());
         
         ob14.arcprovserv(id, nombre, prec, serv, provedor_deco);
-        ob14.artserv(art, precart, provedor_deco);
+        ob14.artserv(id,art, precart, provedor_deco);
         servpol=true;
     }
     void servpol(){   
@@ -476,14 +476,14 @@ public class crear_prov extends javax.swing.JFrame {
         }
         
          
-        id=0;
+        id= Integer.parseInt(rev_id.getText());
         nombre= rev_nom_prov.getText();
         prec=0;
         serv=" ";
         art=rev_nomb_art2.getText();
         precart=Integer.parseInt(rev_prec_uni2.getText());
         ob14.arcprovservpol(id,nombre,prec,serv,provedor_gastro);
-        ob14.artserv(art,precart,provedor_gastro);
+        ob14.artserv(id,art,precart,provedor_gastro);
     }
     
     void lugar(){
@@ -517,7 +517,7 @@ public class crear_prov extends javax.swing.JFrame {
         precart=Integer.parseInt(rev_prec_uni.getText());
         
         ob14.arcprovlug(id, nombre, prec, serv, provedor_deco);
-        ob14.artlug(art, precart, provedor_deco);
+        ob14.artlug(id,art, precart, provedor_deco);
         lugarpol=true;
     }
     void lugarpol(){   
@@ -539,14 +539,14 @@ public class crear_prov extends javax.swing.JFrame {
         }
         
          
-        id=0;
+        id= Integer.parseInt(rev_id.getText());
         nombre= rev_nom_prov.getText();
         prec=0;
         serv=" ";
         art=rev_nomb_art2.getText();
         precart=Integer.parseInt(rev_prec_uni2.getText());
         ob14.arcprovlugarpol(id,nombre,prec,serv,provedor_gastro);
-        ob14.artlug(art,precart,provedor_gastro);
+        ob14.artlug(id,art,precart,provedor_gastro);
     }
     
     public static void main(String args[]) {

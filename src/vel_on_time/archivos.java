@@ -124,7 +124,7 @@ public class archivos {
         
     }
 ////////////////////////ARTICULO DE COMIDA ////////////////////////////////////////////////////////////////////////////////
-    void artch(String art, int precart, boolean provedor_gastro) {
+    void artch(int id,String art, int precart, boolean provedor_gastro) {
            String dato; 
         String cadena; 
          String cadena1="";
@@ -138,7 +138,7 @@ public class archivos {
             
          
             
-            cadena = cadena1 + ";"+art+ ";"+precart+ ";"+ provedor_gastro +";";
+            cadena = cadena1 +";"+id+ ";"+art+ ";"+precart+ ";"+ provedor_gastro +";";
             
             linea.println(cadena); //escribiendo en el archivo
             
@@ -226,7 +226,7 @@ public class archivos {
     }
 ///////////////////////////ARTICULO DE DECORACION /////////////////////////////////////////////////////////////////////////////
  
- void artdeco(String art, int precart, boolean provedor_deco) {
+ void artdeco(int id,String art, int precart, boolean provedor_deco) {
      System.out.println("hola");
         String dato; 
         String cadena; 
@@ -241,7 +241,7 @@ public class archivos {
             
          
             
-            cadena = cadena1 + ";"+art+ ";"+precart+ ";"+ provedor_deco +";";
+            cadena = cadena1 +";"+id+ ";"+art+ ";"+precart+ ";"+ provedor_deco +";";
             
             linea.println(cadena); //escribiendo en el archivo
             
@@ -331,7 +331,7 @@ public class archivos {
 
 ///////////////////////////// ARTICULO SERVICIOS ////////////////////////////////////////////////////////////////////////
 
-void artserv(String art, int precart, boolean provedor_deco) {
+void artserv(int id,String art, int precart, boolean provedor_deco) {
      System.out.println("hola");
         String dato; 
         String cadena; 
@@ -346,7 +346,7 @@ void artserv(String art, int precart, boolean provedor_deco) {
             
          
             
-            cadena = cadena1 + ";"+art+ ";"+precart+ ";"+ provedor_deco +";";
+            cadena = cadena1 +";"+id+ ";"+art+ ";"+precart+ ";"+ provedor_deco +";";
             
             linea.println(cadena); //escribiendo en el archivo
             
@@ -437,7 +437,7 @@ void arcprovlug(int id, String nombre, int prec, String serv,boolean provedor_de
 
 ////////////////////////////// ARTICULO LUGAR ////////////////////////////////////////////////////////////////////////////////////////
 
-void artlug(String art, int precart, boolean provedor_deco) {
+void artlug(int id,String art, int precart, boolean provedor_deco) {
      System.out.println("hola");
         String dato; 
         String cadena; 
@@ -452,7 +452,7 @@ void artlug(String art, int precart, boolean provedor_deco) {
             
          
             
-            cadena = cadena1 + ";"+art+ ";"+precart+ ";"+ provedor_deco +";";
+            cadena = cadena1 +";"+id+ ";"+art+ ";"+precart+ ";"+ provedor_deco +";";
             
             linea.println(cadena); //escribiendo en el archivo
             
@@ -590,7 +590,7 @@ void artlug(String art, int precart, boolean provedor_deco) {
        String fceha= dia2+"/"+mes2+"/"+ano2;
       // Random numaleatorio = new Random(250l);
         int random=(int) (Math.random() *1043) +1;  
-        comprobar(random);
+        //comprobar(random);
         String cadena; 
          String cadena1="";
         FileWriter fichero = null; 
@@ -624,9 +624,44 @@ void artlug(String art, int precart, boolean provedor_deco) {
        
        
     }
-   boolean comprobar(int x){
+   
+  /* boolean comprobar(int x){
        boolean y=false;
      return y;  
+   }*/
+   void archprovar(int z,String x,String y){
+      int alet;
+      // Random numaleatorio = new Random(250l);
+        int random=(int) (Math.random() *1043) +1;  
+        //comprobar(random);
+        String cadena; 
+         String cadena1="";
+        FileWriter fichero = null; 
+        PrintWriter linea = null;  
+        
+        try{
+            fichero = new FileWriter("C:\\Users\\jose noel mantilla\\Desktop\\Phantom.txt",true); //crea el archivo 
+            linea = new PrintWriter(fichero); //
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+         
+            
+            cadena = cadena1 +";"+z+";"+x+";"+y+";";
+            
+            linea.println(cadena); //escribiendo en el archivo
+            
+      }catch(IOException e){
+           System.out.print("Error creando archivo");
+        }
+        finally{
+            try{
+                if(fichero != null){
+                    fichero.close();
+                }
+            }catch(IOException e1){
+                System.out.print("Error cerrando archivo");
+            }
+        }
    }
     
     
