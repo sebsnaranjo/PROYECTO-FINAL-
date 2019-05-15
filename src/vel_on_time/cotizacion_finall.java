@@ -166,8 +166,11 @@ private int base_lug;
     }//GEN-LAST:event_rev_tot_decoActionPerformed
     
     public void llegada_final(int prec_gastro, int prec_deco,int prec_serv,int prec_lug,int gastro,int deco,int serv,int lug,int dia,int mes,int ano){
-        
-         gastro2= gastro;
+         base_gastro= prec_gastro;
+         base_deco=prec_deco;
+         base_serv=prec_serv;
+         base_lug=prec_lug;
+        gastro2= gastro;
          deco2=deco;
          serv2=serv;
          lug2=lug;
@@ -175,6 +178,10 @@ private int base_lug;
          mes2=mes;
          ano2=ano;
          
+         this.base_gastro=base_gastro;
+         this.base_deco=base_deco;
+         this.base_serv=base_serv;
+         this.base_lug=base_lug;
          this.gastro2=gastro2;
          this.deco2=deco2;
          this.serv2=serv2;
@@ -186,7 +193,18 @@ private int base_lug;
          
     }
     void cotizacion(){
-        
+       /* base_gastro_fin = Integer.toString(base_gastro);
+        base_deco_fin = Integer.toString(base_deco);
+        base_serv_fin = Integer.toString(base_serv);
+        base_lug_fin = Integer.toString(base_lug);*/
+        System.out.println(base_gastro);
+        System.out.println(gastro2);
+       gastro2=gastro2+base_gastro;
+       deco2=deco2+base_deco;
+       serv2=serv2+base_serv;
+       lug2=lug2+base_lug;
+       
+       
         gastro_fin = Integer.toString(gastro2);
         deco_fin = Integer.toString(deco2);
         serv_fin = Integer.toString(serv2);
@@ -194,6 +212,7 @@ private int base_lug;
         dia_fin = Integer.toString(dia2);
         mes_fin = Integer.toString(mes2);
         ano_fin = Integer.toString(ano2);
+        
         rev_tot_gastro.setText(gastro_fin);
         rev_tot_deco.setText(deco_fin);
         rev_tot_serv.setText(serv_fin); 

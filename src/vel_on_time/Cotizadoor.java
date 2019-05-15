@@ -363,7 +363,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         cont2=cont2*numIn;
         cont3=cont3*numIn;
         cont4=cont4*numIn;
-        ob28.llegada_final(cont, cont2, cont3, cont4, dia2, mes2, ano2);
+        
+        ob28.llegada_final(prec_gastro,prec_deco,prec_serv,prec_lug,cont, cont2, cont3, cont4, dia2, mes2, ano2);
         
         this.setVisible(false);
     }//GEN-LAST:event_env_finalMouseClicked
