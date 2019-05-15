@@ -70,7 +70,7 @@ public class Empleado extends javax.swing.JFrame {
                 cotizarActionPerformed(evt);
             }
         });
-        getContentPane().add(cotizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 220, 50));
+        getContentPane().add(cotizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 220, 50));
 
         admon.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         admon.setText("Administrar");
