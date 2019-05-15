@@ -228,25 +228,25 @@ int prec_lug;
         getContentPane().add(combo_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 470, 220, -1));
 
         combo_deco.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
-        getContentPane().add(combo_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 510, 220, -1));
+        getContentPane().add(combo_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 590, 220, -1));
 
         combo_serv.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         getContentPane().add(combo_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 220, -1));
 
         combo_lugar.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
-        getContentPane().add(combo_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 590, 220, -1));
+        getContentPane().add(combo_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 510, 220, -1));
 
         combo_art_gastro.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         getContentPane().add(combo_art_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 470, 220, -1));
 
         combo_art_deco.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
-        getContentPane().add(combo_art_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, 220, -1));
+        getContentPane().add(combo_art_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 590, 220, -1));
 
         combo_art_serv.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         getContentPane().add(combo_art_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 550, 220, -1));
 
         combo_art_lugar.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
-        getContentPane().add(combo_art_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 590, 220, -1));
+        getContentPane().add(combo_art_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, 220, -1));
 
         ar_car_2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ar_car_2.setText("Agregar al carrito");
@@ -255,7 +255,7 @@ int prec_lug;
                 ar_car_2MouseClicked(evt);
             }
         });
-        getContentPane().add(ar_car_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 510, 200, -1));
+        getContentPane().add(ar_car_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 590, 200, -1));
 
         ar_car_3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ar_car_3.setText("Agregar al carrito");
@@ -273,7 +273,7 @@ int prec_lug;
                 ar_car_4MouseClicked(evt);
             }
         });
-        getContentPane().add(ar_car_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 590, 200, -1));
+        getContentPane().add(ar_car_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 510, 200, -1));
 
         elec_gastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         elec_gastro.setText("Elegir");
@@ -296,7 +296,7 @@ int prec_lug;
                 elec_decoActionPerformed(evt);
             }
         });
-        getContentPane().add(elec_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 90, -1));
+        getContentPane().add(elec_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 590, 90, -1));
 
         elec_serv.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         elec_serv.setText("Elegir");
@@ -319,7 +319,7 @@ int prec_lug;
                 elec_lugarMouseClicked(evt);
             }
         });
-        getContentPane().add(elec_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 590, 90, -1));
+        getContentPane().add(elec_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 90, -1));
 
         art_unit.setColumns(20);
         art_unit.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
