@@ -183,7 +183,7 @@ public class Evento extends javax.swing.JFrame {
        ob4.archCli(id,name,pres,numI,fecha);
        
        
-       Cotizadoor ob29= new Cotizadoor();
+       Cotizadooor ob29= new Cotizadooor();
        ob29.llegada(id,name,pres,numI,dia,mes,ano);
    
        ob29.setVisible(true);

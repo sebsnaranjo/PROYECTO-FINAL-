@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  *
  * @author jose noel mantilla
  */
-public class Cotizadoor extends javax.swing.JFrame {
+public class Cotizadooor extends javax.swing.JFrame {
 int x;
 int y;
 int tot;
@@ -46,9 +46,10 @@ int prec_lug;
     /**
      * Creates new form Cotizador
      */
-    public Cotizadoor() {
+    public Cotizadooor() {
         initComponents();
-        
+        transparenciaBotones();
+        this.setLocationRelativeTo(null);
         sele_cot.add(gastronomia);
         sele_cot.add(decoracion);
         sele_cot.add(servicios);
@@ -85,14 +86,14 @@ int prec_lug;
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        combo_gastro = new javax.swing.JComboBox<>();
-        combo_deco = new javax.swing.JComboBox<>();
-        combo_serv = new javax.swing.JComboBox<>();
-        combo_lugar = new javax.swing.JComboBox<>();
-        combo_art_gastro = new javax.swing.JComboBox<>();
-        combo_art_deco = new javax.swing.JComboBox<>();
-        combo_art_serv = new javax.swing.JComboBox<>();
-        combo_art_lugar = new javax.swing.JComboBox<>();
+        combo_gastro = new javax.swing.JComboBox<String>();
+        combo_deco = new javax.swing.JComboBox<String>();
+        combo_serv = new javax.swing.JComboBox<String>();
+        combo_lugar = new javax.swing.JComboBox<String>();
+        combo_art_gastro = new javax.swing.JComboBox<String>();
+        combo_art_deco = new javax.swing.JComboBox<String>();
+        combo_art_serv = new javax.swing.JComboBox<String>();
+        combo_art_lugar = new javax.swing.JComboBox<String>();
         ar_car_2 = new javax.swing.JButton();
         ar_car_3 = new javax.swing.JButton();
         ar_car_4 = new javax.swing.JButton();
@@ -103,49 +104,57 @@ int prec_lug;
         jScrollPane1 = new javax.swing.JScrollPane();
         art_unit = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        DE_TEXT.setText("PROVEDOR DE:");
-        getContentPane().add(DE_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 121, 36));
+        DE_TEXT.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        DE_TEXT.setText("Proveedor de:");
+        getContentPane().add(DE_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 430, 36));
 
         unit_prov.setColumns(20);
+        unit_prov.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         unit_prov.setRows(5);
         jScrollPane2.setViewportView(unit_prov);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 430, 219));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 430, 219));
 
+        ar_car_1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ar_car_1.setText("Agregar al carrito");
         ar_car_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ar_car_1MouseClicked(evt);
             }
         });
-        getContentPane().add(ar_car_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 520, -1, -1));
+        getContentPane().add(ar_car_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 470, 200, -1));
 
-        volver.setText("VOLVER");
+        volver.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        volver.setText("Volver");
         volver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverMouseClicked(evt);
             }
         });
-        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 131, 85, -1));
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 40, 120, 30));
 
+        mutiplicado.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         mutiplicado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mutiplicadoActionPerformed(evt);
             }
         });
-        getContentPane().add(mutiplicado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 900, 170, 30));
+        getContentPane().add(mutiplicado, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 630, 170, 30));
 
-        tit_multi.setText("NUMERO DE INVITADOS");
-        getContentPane().add(tit_multi, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 860, 143, 30));
+        tit_multi.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        tit_multi.setText("Número de invitados:");
+        getContentPane().add(tit_multi, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 630, 190, 30));
 
         proveedor_cot.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         getContentPane().add(proveedor_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 273, 50));
 
-        enviar_cotizar.setText("COTIZAR");
+        enviar_cotizar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        enviar_cotizar.setText("Cotizar");
         enviar_cotizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 enviar_cotizarMouseClicked(evt);
@@ -156,91 +165,126 @@ int prec_lug;
                 enviar_cotizarActionPerformed(evt);
             }
         });
-        getContentPane().add(enviar_cotizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(693, 99, -1, -1));
+        getContentPane().add(enviar_cotizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 90, 120, 30));
 
-        lugar.setText("LUGAR");
-        getContentPane().add(lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 131, -1, -1));
+        lugar.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        lugar.setText("Lugar");
+        lugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/location_map_directions_geography_gps_icon-icons.com_55988.png"))); // NOI18N
+        getContentPane().add(lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, 120, -1));
 
-        servicios.setText("SERVICIOS");
-        getContentPane().add(servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 131, -1, -1));
+        servicios.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        servicios.setText("Servicios");
+        servicios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
+        getContentPane().add(servicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 130, 60));
 
-        decoracion.setText("DECORACION Y AMBIENTACION");
+        decoracion.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        decoracion.setText("Decoración");
+        decoracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/4_balloon_decoration_christmas_xmas_celebration_party_icon-icons.com_77039.png"))); // NOI18N
         decoracion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 decoracionActionPerformed(evt);
             }
         });
-        getContentPane().add(decoracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 91, -1, -1));
+        getContentPane().add(decoracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 170, -1));
 
-        gastronomia.setText("GASTRONOMIA");
-        getContentPane().add(gastronomia, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 91, -1, -1));
+        gastronomia.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        gastronomia.setText("Gastronomia");
+        gastronomia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/32395greensalad_98843.png"))); // NOI18N
+        getContentPane().add(gastronomia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 190, 60));
 
-        selc_evento2.setText("COTIZAR:");
-        getContentPane().add(selc_evento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 39, -1, -1));
+        selc_evento2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        selc_evento2.setText("Cotizar:");
+        getContentPane().add(selc_evento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 870, -1));
 
         jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 194, 1226, 10));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 880, 20));
 
-        env_final.setText("Finalizar Cotizacion");
+        env_final.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        env_final.setText("Finalizar cotización");
         env_final.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 env_finalMouseClicked(evt);
             }
         });
-        getContentPane().add(env_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 900, -1, -1));
+        getContentPane().add(env_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 670, -1, 30));
 
-        jLabel5.setText("GASTRONOMIA");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, -1, -1));
+        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel5.setText("Gastronomia:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 100, 20));
 
-        jLabel6.setText("DECORACIÓN");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 610, -1, -1));
+        jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel6.setText("Decoración:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 590, 100, 20));
 
-        jLabel7.setText("SERVICIOS");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 700, -1, -1));
+        jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel7.setText("Servicios:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 550, 90, 20));
 
-        jLabel8.setText("LUGAR");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 790, -1, -1));
-        getContentPane().add(combo_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 520, 220, -1));
-        getContentPane().add(combo_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 610, 220, -1));
-        getContentPane().add(combo_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 700, 220, -1));
-        getContentPane().add(combo_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 790, 220, -1));
-        getContentPane().add(combo_art_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 520, 220, -1));
-        getContentPane().add(combo_art_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 610, 220, -1));
-        getContentPane().add(combo_art_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 700, 220, -1));
-        getContentPane().add(combo_art_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 790, 220, -1));
+        jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel8.setText("Lugar:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 90, 20));
 
+        combo_gastro.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        getContentPane().add(combo_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 470, 220, -1));
+
+        combo_deco.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        getContentPane().add(combo_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 510, 220, -1));
+
+        combo_serv.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        getContentPane().add(combo_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 220, -1));
+
+        combo_lugar.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        getContentPane().add(combo_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 590, 220, -1));
+
+        combo_art_gastro.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        getContentPane().add(combo_art_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 470, 220, -1));
+
+        combo_art_deco.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        getContentPane().add(combo_art_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, 220, -1));
+
+        combo_art_serv.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        getContentPane().add(combo_art_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 550, 220, -1));
+
+        combo_art_lugar.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        getContentPane().add(combo_art_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 590, 220, -1));
+
+        ar_car_2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ar_car_2.setText("Agregar al carrito");
         ar_car_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ar_car_2MouseClicked(evt);
             }
         });
-        getContentPane().add(ar_car_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 610, 133, -1));
+        getContentPane().add(ar_car_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 510, 200, -1));
 
+        ar_car_3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ar_car_3.setText("Agregar al carrito");
         ar_car_3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ar_car_3MouseClicked(evt);
             }
         });
-        getContentPane().add(ar_car_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 700, 133, -1));
+        getContentPane().add(ar_car_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 550, 200, -1));
 
+        ar_car_4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ar_car_4.setText("Agregar al carrito");
         ar_car_4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ar_car_4MouseClicked(evt);
             }
         });
-        getContentPane().add(ar_car_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 790, 133, -1));
+        getContentPane().add(ar_car_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 590, 200, -1));
 
+        elec_gastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         elec_gastro.setText("Elegir");
         elec_gastro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 elec_gastroMouseClicked(evt);
             }
         });
-        getContentPane().add(elec_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 520, -1, -1));
+        getContentPane().add(elec_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 470, 90, -1));
 
+        elec_deco.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         elec_deco.setText("Elegir");
         elec_deco.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -252,9 +296,10 @@ int prec_lug;
                 elec_decoActionPerformed(evt);
             }
         });
-        getContentPane().add(elec_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, -1, -1));
+        getContentPane().add(elec_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 90, -1));
 
-        elec_serv.setText("ELegir");
+        elec_serv.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        elec_serv.setText("Elegir");
         elec_serv.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 elec_servMouseClicked(evt);
@@ -265,38 +310,64 @@ int prec_lug;
                 elec_servActionPerformed(evt);
             }
         });
-        getContentPane().add(elec_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 700, -1, -1));
+        getContentPane().add(elec_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 550, 90, -1));
 
+        elec_lugar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         elec_lugar.setText("Elegir");
         elec_lugar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 elec_lugarMouseClicked(evt);
             }
         });
-        getContentPane().add(elec_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 790, -1, -1));
+        getContentPane().add(elec_lugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 590, 90, -1));
 
         art_unit.setColumns(20);
+        art_unit.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         art_unit.setRows(5);
         jScrollPane1.setViewportView(art_unit);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 510, 220));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 430, 220));
 
-        jLabel1.setText("ARTICULOS");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, -1, -1));
+        jLabel1.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        jLabel1.setText("Articulos:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 430, 36));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void transparenciaBotones(){
+    
+        gastronomia.setOpaque(false);
+        gastronomia.setContentAreaFilled(false);
+        gastronomia.setBorderPainted(true);
+        
+        servicios.setOpaque(false);
+        servicios.setContentAreaFilled(false);
+        servicios.setBorderPainted(true);
+        
+        lugar.setOpaque(false);
+        lugar.setContentAreaFilled(false);
+        lugar.setBorderPainted(true);
+        
+        decoracion.setOpaque(false);
+        decoracion.setContentAreaFilled(false);
+        decoracion.setBorderPainted(true);
+        
+        
+    }
+    
+    
     private void ar_car_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_1MouseClicked
-           
-        String gastro_rev_uni = (String) combo_art_gastro.getSelectedItem();
+         String gastro_rev_uni = (String) combo_art_gastro.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String p[] = gastro_rev_uni.split(",");
         gast=gast+id[0]+";"+p[1]+";";
         int almax= Integer.parseInt(id[1]);
         cont=cont+almax;
         System.out.println(cont + gast);
-        
         
         
         
@@ -310,7 +381,7 @@ int prec_lug;
        
     }//GEN-LAST:event_volverMouseClicked
 public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano){
-         numIn= numI;
+       numIn= numI;
          id2=id;
          name2=name;
          pres2=pres;
@@ -350,14 +421,13 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
           numI2 = Integer.toString(numIn);
           mutiplicado.setText(numI2);
           
-          
       }
       
     }//GEN-LAST:event_enviar_cotizarMouseClicked
 
     private void env_finalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_env_finalMouseClicked
        
-        cotizacion_finall ob28 = new cotizacion_finall();
+         cotizacion_finalll ob28 = new cotizacion_finalll();
         ob28.setVisible(true);
         cont=cont*numIn;
         cont2=cont2*numIn;
@@ -403,7 +473,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_decoActionPerformed
 
     private void elec_decoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_decoMouseClicked
-        archivoos ob27 = new archivoos();
+           archivoos ob27 = new archivoos();
         String gastro_rev_uni = (String) combo_deco.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
@@ -417,7 +487,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_decoMouseClicked
 
     private void elec_servMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_servMouseClicked
-           archivoos ob27 = new archivoos();
+             archivoos ob27 = new archivoos();
         String gastro_rev_uni = (String) combo_serv.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
@@ -430,7 +500,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_servMouseClicked
 
     private void elec_lugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_lugarMouseClicked
-         archivoos ob27 = new archivoos();
+             archivoos ob27 = new archivoos();
         String gastro_rev_uni = (String) combo_lugar.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
@@ -443,7 +513,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_lugarMouseClicked
 
     private void ar_car_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_2MouseClicked
-        String gastro_rev_uni = (String) combo_art_deco.getSelectedItem();
+      String gastro_rev_uni = (String) combo_art_deco.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         int almax= Integer.parseInt(id[1]);
         cont2=cont2+almax;
@@ -452,7 +522,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_ar_car_2MouseClicked
 
     private void ar_car_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_3MouseClicked
-        String gastro_rev_uni = (String) combo_art_serv.getSelectedItem();
+    String gastro_rev_uni = (String) combo_art_serv.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         int almax= Integer.parseInt(id[1]);
         cont3=cont3+almax;
@@ -460,7 +530,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_ar_car_3MouseClicked
 
     private void ar_car_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_4MouseClicked
-        String gastro_rev_uni = (String) combo_art_lugar.getSelectedItem();
+         String gastro_rev_uni = (String) combo_art_lugar.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         int almax= Integer.parseInt(id[1]);
         cont4=cont4+almax;
@@ -1154,14 +1224,42 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cotizadoor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cotizadooor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cotizadoor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cotizadooor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cotizadoor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cotizadooor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cotizadoor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cotizadooor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -1170,7 +1268,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cotizadoor().setVisible(true);
+                new Cotizadooor().setVisible(true);
             }
         });
     }
@@ -1199,6 +1297,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     private javax.swing.JButton enviar_cotizar;
     private javax.swing.JRadioButton gastronomia;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

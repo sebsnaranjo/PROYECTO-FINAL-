@@ -22,7 +22,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,-62,0,0,3,-2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-54,0,0,3,-93"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -31,11 +31,14 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="DE_TEXT">
       <Properties>
-        <Property name="text" type="java.lang.String" value="PROVEDOR DE:"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SFNS Display" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Proveedor de:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="20" y="220" width="121" height="36"/>
+          <AbsoluteConstraints x="20" y="170" width="430" height="36"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -45,7 +48,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="20" y="270" width="430" height="219"/>
+          <AbsoluteConstraints x="20" y="220" width="430" height="219"/>
         </Constraint>
       </Constraints>
 
@@ -54,6 +57,9 @@
         <Component class="javax.swing.JTextArea" name="unit_prov">
           <Properties>
             <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="OCR A Extended" size="12" style="0"/>
+            </Property>
             <Property name="rows" type="int" value="5"/>
           </Properties>
         </Component>
@@ -61,6 +67,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="ar_car_1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Agregar al carrito"/>
       </Properties>
       <Events>
@@ -68,40 +77,51 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="840" y="520" width="-1" height="-1"/>
+          <AbsoluteConstraints x="710" y="470" width="200" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="volver">
       <Properties>
-        <Property name="text" type="java.lang.String" value="VOLVER"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Volver"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="volverMouseClicked"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="693" y="131" width="85" height="-1"/>
+          <AbsoluteConstraints x="770" y="40" width="120" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="mutiplicado">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="OCR A Extended" size="12" style="0"/>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mutiplicadoActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="330" y="900" width="170" height="30"/>
+          <AbsoluteConstraints x="470" y="630" width="170" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="tit_multi">
       <Properties>
-        <Property name="text" type="java.lang.String" value="NUMERO DE INVITADOS"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SFNS Display" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="N&#xfa;mero de invitados:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="340" y="860" width="143" height="30"/>
+          <AbsoluteConstraints x="280" y="630" width="190" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -117,7 +137,10 @@
     </Component>
     <Component class="javax.swing.JButton" name="enviar_cotizar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="COTIZAR"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cotizar"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="enviar_cotizarMouseClicked"/>
@@ -125,60 +148,87 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="693" y="99" width="-1" height="-1"/>
+          <AbsoluteConstraints x="770" y="90" width="120" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JRadioButton" name="lugar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="LUGAR"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SFNS Display" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Lugar"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagenes/location_map_directions_geography_gps_icon-icons.com_55988.png"/>
+        </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="341" y="131" width="-1" height="-1"/>
+          <AbsoluteConstraints x="400" y="50" width="120" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JRadioButton" name="servicios">
       <Properties>
-        <Property name="text" type="java.lang.String" value="SERVICIOS"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SFNS Display" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Servicios"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"/>
+        </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="138" y="131" width="-1" height="-1"/>
+          <AbsoluteConstraints x="250" y="50" width="130" height="60"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JRadioButton" name="decoracion">
       <Properties>
-        <Property name="text" type="java.lang.String" value="DECORACION Y AMBIENTACION"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SFNS Display" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Decoraci&#xf3;n"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagenes/4_balloon_decoration_christmas_xmas_celebration_party_icon-icons.com_77039.png"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decoracionActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="341" y="91" width="-1" height="-1"/>
+          <AbsoluteConstraints x="540" y="50" width="170" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JRadioButton" name="gastronomia">
       <Properties>
-        <Property name="text" type="java.lang.String" value="GASTRONOMIA"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SFNS Display" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Gastronomia"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagenes/32395greensalad_98843.png"/>
+        </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="138" y="91" width="-1" height="-1"/>
+          <AbsoluteConstraints x="30" y="50" width="190" height="60"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="selc_evento2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="COTIZAR:"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="24" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cotizar:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="92" y="39" width="-1" height="-1"/>
+          <AbsoluteConstraints x="20" y="10" width="870" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -190,145 +240,203 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="194" width="1226" height="10"/>
+          <AbsoluteConstraints x="10" y="150" width="880" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="env_final">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Finalizar Cotizacion"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="11" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Finalizar cotizaci&#xf3;n"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="env_finalMouseClicked"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="510" y="900" width="-1" height="-1"/>
+          <AbsoluteConstraints x="390" y="670" width="-1" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="GASTRONOMIA"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Gastronomia:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="520" width="-1" height="-1"/>
+          <AbsoluteConstraints x="30" y="470" width="100" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="DECORACI&#xd3;N"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Decoraci&#xf3;n:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="610" width="-1" height="-1"/>
+          <AbsoluteConstraints x="30" y="590" width="100" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="SERVICIOS"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Servicios:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="700" width="-1" height="-1"/>
+          <AbsoluteConstraints x="30" y="550" width="90" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="LUGAR"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Lugar:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="80" y="790" width="-1" height="-1"/>
+          <AbsoluteConstraints x="30" y="510" width="90" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="combo_gastro">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="OCR A Extended" size="12" style="0"/>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="190" y="520" width="220" height="-1"/>
+          <AbsoluteConstraints x="130" y="470" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="combo_deco">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="OCR A Extended" size="12" style="0"/>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="190" y="610" width="220" height="-1"/>
+          <AbsoluteConstraints x="130" y="510" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="combo_serv">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="OCR A Extended" size="12" style="0"/>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="190" y="700" width="220" height="-1"/>
+          <AbsoluteConstraints x="130" y="550" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="combo_lugar">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="OCR A Extended" size="12" style="0"/>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="190" y="790" width="220" height="-1"/>
+          <AbsoluteConstraints x="130" y="590" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="combo_art_gastro">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="OCR A Extended" size="12" style="0"/>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="560" y="520" width="220" height="-1"/>
+          <AbsoluteConstraints x="480" y="470" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="combo_art_deco">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="OCR A Extended" size="12" style="0"/>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="560" y="610" width="220" height="-1"/>
+          <AbsoluteConstraints x="480" y="510" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="combo_art_serv">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="OCR A Extended" size="12" style="0"/>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="560" y="700" width="220" height="-1"/>
+          <AbsoluteConstraints x="480" y="550" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="combo_art_lugar">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="OCR A Extended" size="12" style="0"/>
+        </Property>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="560" y="790" width="220" height="-1"/>
+          <AbsoluteConstraints x="480" y="590" width="220" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="ar_car_2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Agregar al carrito"/>
       </Properties>
       <Events>
@@ -336,12 +444,15 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="840" y="610" width="133" height="-1"/>
+          <AbsoluteConstraints x="710" y="510" width="200" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="ar_car_3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Agregar al carrito"/>
       </Properties>
       <Events>
@@ -349,12 +460,15 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="840" y="700" width="133" height="-1"/>
+          <AbsoluteConstraints x="710" y="550" width="200" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="ar_car_4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Agregar al carrito"/>
       </Properties>
       <Events>
@@ -362,12 +476,15 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="840" y="790" width="133" height="-1"/>
+          <AbsoluteConstraints x="710" y="590" width="200" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="elec_gastro">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Elegir"/>
       </Properties>
       <Events>
@@ -375,12 +492,15 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="440" y="520" width="-1" height="-1"/>
+          <AbsoluteConstraints x="360" y="470" width="90" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="elec_deco">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Elegir"/>
       </Properties>
       <Events>
@@ -389,13 +509,16 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="440" y="610" width="-1" height="-1"/>
+          <AbsoluteConstraints x="360" y="510" width="90" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="elec_serv">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ELegir"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="11" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Elegir"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="elec_servMouseClicked"/>
@@ -403,12 +526,15 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="440" y="700" width="-1" height="-1"/>
+          <AbsoluteConstraints x="360" y="550" width="90" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="elec_lugar">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Rounded MT Bold" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Elegir"/>
       </Properties>
       <Events>
@@ -416,7 +542,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="440" y="790" width="-1" height="-1"/>
+          <AbsoluteConstraints x="360" y="590" width="90" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -426,7 +552,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="480" y="270" width="510" height="220"/>
+          <AbsoluteConstraints x="480" y="220" width="430" height="220"/>
         </Constraint>
       </Constraints>
 
@@ -435,6 +561,9 @@
         <Component class="javax.swing.JTextArea" name="art_unit">
           <Properties>
             <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="OCR A Extended" size="12" style="0"/>
+            </Property>
             <Property name="rows" type="int" value="5"/>
           </Properties>
         </Component>
@@ -442,11 +571,26 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ARTICULOS"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SFNS Display" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Articulos:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="500" y="230" width="-1" height="-1"/>
+          <AbsoluteConstraints x="480" y="170" width="430" height="36"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/imagenes/marble.jpg"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="930" height="710"/>
         </Constraint>
       </Constraints>
     </Component>
