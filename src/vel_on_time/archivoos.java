@@ -5,9 +5,15 @@
  */
 package vel_on_time;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -663,6 +669,27 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             }
         }
    }
+       void generarPdf() throws FileNotFoundException, DocumentException{
+           try{
+        String nombre="otra1";
+               FileOutputStream archivo = new FileOutputStream(nombre+".pdf");
+               Document documento= new Document();
+               PdfWriter.getInstance(documento,archivo);
+                documento.open();
+                Paragraph parrafo= new Paragraph("Datsos personales");
+                parrafo.setAlignment(1);
+                documento.add(parrafo);
+                documento.add(new Paragraph("Nombre: "+ " Andres"  ));
+                documento.add(new Paragraph("Id "+ " 10074740234" ));
+              
+               
+                documento.add(new Paragraph("Correo : "+ " andreslab7@gmial.com" ));
+
+                documento.close();}catch(IOException e){
+           System.out.print("Error creando archivo");
+        }
+           
+    }
     
     
 
