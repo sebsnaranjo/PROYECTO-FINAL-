@@ -117,7 +117,7 @@ private int base_lug;
         tit_fecha.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         tit_fecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tit_fecha.setText("Fecha del evento");
-        getContentPane().add(tit_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 180, 20));
+        getContentPane().add(tit_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 170, 20));
 
         rev_fecha.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         getContentPane().add(rev_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 178, -1));
@@ -129,10 +129,14 @@ private int base_lug;
         otra_cot.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         otra_cot.setText("Hacer otra cotización");
         getContentPane().add(otra_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, 30));
-        getContentPane().add(final_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 180, -1));
 
-        tit_final.setText("FINAL");
-        getContentPane().add(tit_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, -1, -1));
+        final_cot.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        getContentPane().add(final_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 180, -1));
+
+        tit_final.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        tit_final.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tit_final.setText("Final");
+        getContentPane().add(tit_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 180, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 380));

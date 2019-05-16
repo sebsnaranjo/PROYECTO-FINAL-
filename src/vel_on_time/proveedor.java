@@ -62,6 +62,11 @@ public class proveedor extends javax.swing.JFrame {
                 MAKEMouseClicked(evt);
             }
         });
+        MAKE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MAKEActionPerformed(evt);
+            }
+        });
         getContentPane().add(MAKE, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 90, 30));
 
         DESEO.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
@@ -115,6 +120,10 @@ public class proveedor extends javax.swing.JFrame {
         ob19.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_VOLVERMouseClicked
+
+    private void MAKEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MAKEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MAKEActionPerformed
 
     /**
      * @param args the command line arguments

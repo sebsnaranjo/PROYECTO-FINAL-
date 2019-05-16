@@ -78,6 +78,7 @@ public class Evento extends javax.swing.JFrame {
         id_cliente.setText("Id del cliente:");
         getContentPane().add(id_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 85, 34));
 
+        rev_id.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_id.setText("454");
         rev_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,12 +87,15 @@ public class Evento extends javax.swing.JFrame {
         });
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 103, -1));
 
+        rev_nombre.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_nombre.setText("saraaaa");
         getContentPane().add(rev_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 160, -1));
 
+        rev_presupuesto.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_presupuesto.setText("4548");
         getContentPane().add(rev_presupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 103, -1));
 
+        rev_invitados.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_invitados.setText("4848");
         getContentPane().add(rev_invitados, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 130, -1));
 
@@ -128,12 +132,15 @@ public class Evento extends javax.swing.JFrame {
         DIA.setText("DIA:");
         getContentPane().add(DIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 36, 34));
 
+        rev_dia.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_dia.setText("12");
         getContentPane().add(rev_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 60, -1));
 
+        rev_mes.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_mes.setText("2");
         getContentPane().add(rev_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 61, -1));
 
+        rev_ano.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_ano.setText("2019");
         getContentPane().add(rev_ano, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 68, -1));
 

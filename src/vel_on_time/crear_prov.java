@@ -76,6 +76,7 @@ public class crear_prov extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        rev_nomb_art.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_nomb_art.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rev_nomb_artActionPerformed(evt);
@@ -149,9 +150,17 @@ public class crear_prov extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enviar_repeat, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 520, -1, -1));
+
+        rev_id.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 110, -1));
+
+        rev_nom_prov.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_nom_prov, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 110, -1));
+
+        rev_prec_base.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_prec_base, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 110, -1));
+
+        rev_prec_uni.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_prec_uni, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 106, -1));
 
         rev_activo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
@@ -166,12 +175,15 @@ public class crear_prov extends javax.swing.JFrame {
         SERICIOS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         SERICIOS.setText("Servicios");
         getContentPane().add(SERICIOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 240, -1));
+
+        rev_servicio.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_servicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 240, 100));
 
         obj_proveedor.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         getContentPane().add(obj_proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 280, 20));
         getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 640, 10));
 
+        rev_nomb_art2.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_nomb_art2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rev_nomb_art2ActionPerformed(evt);
@@ -192,6 +204,8 @@ public class crear_prov extends javax.swing.JFrame {
         ARTICULO_EXTRA2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ARTICULO_EXTRA2.setText("¿Desea agregar más articulos del mismo proveedor?");
         getContentPane().add(ARTICULO_EXTRA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 640, 28));
+
+        rev_prec_uni2.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_prec_uni2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, 150, -1));
 
         enviar_all1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N

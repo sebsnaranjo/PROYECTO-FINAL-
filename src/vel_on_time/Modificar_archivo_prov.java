@@ -82,14 +82,22 @@ boolean lugar;
         NOMBRE_PROVEEDOR.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         NOMBRE_PROVEEDOR.setText("Nombre del proveedor: ");
         getContentPane().add(NOMBRE_PROVEEDOR, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, -1));
+
+        rev_id.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 110, -1));
+
+        rev_nom_prov.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_nom_prov, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 110, -1));
+
+        rev_prec_base.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_prec_base, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 110, -1));
 
         SERICIOS.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         SERICIOS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         SERICIOS.setText("Servicios");
         getContentPane().add(SERICIOS, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 205, 240, 30));
+
+        rev_servicio.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_servicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 249, 240, 100));
 
         obj_proveedor.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
@@ -143,6 +151,8 @@ boolean lugar;
         digite.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         digite.setText("Digite el nombre del proveedor que desea cambiar: ");
         getContentPane().add(digite, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 360, -1));
+
+        rev_prov.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_prov, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 180, -1));
 
         met.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
