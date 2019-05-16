@@ -197,7 +197,7 @@ public class crear_prov extends javax.swing.JFrame {
         NOMBRE_ARTICULO2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         NOMBRE_ARTICULO2.setText("Nombre del articulo:");
         getContentPane().add(NOMBRE_ARTICULO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 600, 120, -1));
-        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 640, 10));
+        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 640, 10));
 
         PRECIO_UNITARIO2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         PRECIO_UNITARIO2.setText("Precio unitario:");
@@ -225,15 +225,18 @@ public class crear_prov extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enviar_all1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
-        getContentPane().add(AY, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, 150, -1));
 
-        tit_val_to_clien.setText("VALOR AL CLIENTE CALCULADO");
-        getContentPane().add(tit_val_to_clien, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 480, -1, -1));
-        getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 542, 670, 10));
+        AY.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        getContentPane().add(AY, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 480, 150, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
+        tit_val_to_clien.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        tit_val_to_clien.setText("Valor al cliente calculado: ");
+        getContentPane().add(tit_val_to_clien, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, -1, -1));
+        getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 640, 10));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 560));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 680));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
