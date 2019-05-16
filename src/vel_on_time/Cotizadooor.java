@@ -24,21 +24,23 @@ boolean deco;
 boolean serv;
 boolean lug;
 private int id2;
+private int id_en;
 private String name2;
 private int pres2;
 private int dia2;
 private int mes2;
 private int ano2;
 private int numIn;
+private String fecha;
 int cont =0;
 int cont2=0;
 int cont4=0;
 int cont3=0;
-String gast="";
-String deocr="";
-String servi="";
-String lrgs="";
-String numI2=" ";
+private String gast="";
+private String deocr="";
+private String servi="";
+private String lrgs="";
+private String numI2=" ";
 int prec_gastro;
 int prec_deco;
 int prec_serv;
@@ -364,11 +366,12 @@ int prec_lug;
          String gastro_rev_uni = (String) combo_art_gastro.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String p[] = gastro_rev_uni.split(",");
-        gast=gast+id[0]+";"+p[1]+";";
+        gast=gast+id[0]+","+p[1]+",";
+        System.out.println(gast+"gast");
         int almax= Integer.parseInt(id[1]);
         cont=cont+almax;
-        System.out.println(cont + gast);
-        
+        this.gast=gast;
+       
         
         
     }//GEN-LAST:event_ar_car_1MouseClicked
@@ -381,20 +384,23 @@ int prec_lug;
        
     }//GEN-LAST:event_volverMouseClicked
 public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano){
-       numIn= numI;
+         numIn= numI;
+         System.out.println(id+"g");
          id2=id;
          name2=name;
          pres2=pres;
          dia2=dia;
          mes2=mes;
          ano2=ano;
+         fecha = dia+"/"+mes+"/"+ano;
+         System.out.println(id2+"l");
+         
          this.id2=id2;
          this.name2=name2;
          this.pres2=pres2;
          this.numIn=numIn;
-         this.dia2=dia2;
-         this.mes2=mes2;
-         this.ano2=ano2;
+         this.fecha=fecha;
+      
          
          
     }
@@ -434,7 +440,10 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         cont3=cont3*numIn;
         cont4=cont4*numIn;
         
-        ob28.llegada_final(prec_gastro,prec_deco,prec_serv,prec_lug,cont, cont2, cont3, cont4, dia2, mes2, ano2);
+        System.out.println(id_en+"f");
+        ob28.llegada_oculta(id2,name2,pres2,numIn,fecha);
+        ob28.llegada_fantasma(gast,servi,deocr,lrgs);
+        ob28.llegada_final(prec_gastro,prec_deco,prec_serv,prec_lug,cont, cont2, cont3, cont4);
         
         this.setVisible(false);
     }//GEN-LAST:event_env_finalMouseClicked
@@ -449,15 +458,20 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
     private void elec_gastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_gastroMouseClicked
         archivoos ob27 = new archivoos();
+        id_en=id2;
+        this.id_en=id_en;
         String gastro_rev_uni = (String) combo_gastro.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
         String prec[] = gastro_rev_uni.split(",");
-        String id2 = id[0];
+        String id5 = id[0];
         prec_gastro= Integer.parseInt(prec[2]);
        this.prec_gastro=prec_gastro;
-        ob27.archprovar(1,nme[1], id2);
-        gastronomia(id2);
+        ob27.archprovar(1,nme[1], id5);
+        gastronomia(id5);
+        
+      
+        
     }//GEN-LAST:event_elec_gastroMouseClicked
 
     private void decoracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decoracionActionPerformed
@@ -473,68 +487,89 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_decoActionPerformed
 
     private void elec_decoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_decoMouseClicked
-           archivoos ob27 = new archivoos();
+        archivoos ob27 = new archivoos();
+        id_en=id2;
+        this.id_en=id_en;
         String gastro_rev_uni = (String) combo_deco.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
-        String id2 = id[0];
+        String id5 = id[0];
          String prec[] = gastro_rev_uni.split(",");
         prec_deco= Integer.parseInt(prec[2]);
        this.prec_deco=prec_deco;
-        ob27.archprovar(2,nme[1], id2);
-        decoracion(id2);
+        ob27.archprovar(2,nme[1], id5);
+        decoracion(id5);
         
     }//GEN-LAST:event_elec_decoMouseClicked
 
     private void elec_servMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_servMouseClicked
-             archivoos ob27 = new archivoos();
+        archivoos ob27 = new archivoos();
+        id_en=id2;
+        this.id_en=id_en;
         String gastro_rev_uni = (String) combo_serv.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
-        String id2 = id[0];
+        String id5 = id[0];
          String prec[] = gastro_rev_uni.split(",");
         prec_serv= Integer.parseInt(prec[2]);
        this.prec_serv=prec_serv;
-        ob27.archprovar(3,nme[1], id2);
-        servicio(id2);
+        ob27.archprovar(3,nme[1], id5);
+        servicio(id5);
     }//GEN-LAST:event_elec_servMouseClicked
 
     private void elec_lugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elec_lugarMouseClicked
-             archivoos ob27 = new archivoos();
+        archivoos ob27 = new archivoos();
+        id_en=id2;
+        this.id_en=id_en;
         String gastro_rev_uni = (String) combo_lugar.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
-        String id2 = id[0];
+        String id5 = id[0];
          String prec[] = gastro_rev_uni.split(",");
         prec_lug= Integer.parseInt(prec[2]);
        this.prec_lug=prec_lug;
-        ob27.archprovar(4,nme[1], id2);
-        lugar(id2);
+        ob27.archprovar(4,nme[1], id5);
+        lugar(id5);
     }//GEN-LAST:event_elec_lugarMouseClicked
 
     private void ar_car_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_2MouseClicked
       String gastro_rev_uni = (String) combo_art_deco.getSelectedItem();
+    
         String id[] = gastro_rev_uni.split(",");
         int almax= Integer.parseInt(id[1]);
+        String p[] = gastro_rev_uni.split(",");
+        deocr=deocr+id[0]+","+p[1]+",";
         cont2=cont2+almax;
         System.out.println(cont2);
+        System.out.println("deocr"+deocr);
+        this.deocr=deocr;
             
     }//GEN-LAST:event_ar_car_2MouseClicked
 
     private void ar_car_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_3MouseClicked
     String gastro_rev_uni = (String) combo_art_serv.getSelectedItem();
+   
         String id[] = gastro_rev_uni.split(",");
         int almax= Integer.parseInt(id[1]);
+        String p[] = gastro_rev_uni.split(",");
+        servi=servi+id[0]+","+p[1]+",";
         cont3=cont3+almax;
         System.out.println(cont3);
+        System.out.println("serv"+servi);
+        this.servi=servi;
     }//GEN-LAST:event_ar_car_3MouseClicked
 
     private void ar_car_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_4MouseClicked
          String gastro_rev_uni = (String) combo_art_lugar.getSelectedItem();
+       
         String id[] = gastro_rev_uni.split(",");
         int almax= Integer.parseInt(id[1]);
+        String p[] = gastro_rev_uni.split(",");
+        lrgs=lrgs+id[0]+","+p[1]+",";
         cont4=cont4+almax;
         System.out.println(cont4);
+        System.out.println("lrgs"+lrgs);
+        this.lrgs=lrgs;
     }//GEN-LAST:event_ar_car_4MouseClicked
 
     /**
@@ -542,7 +577,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
      */
 
         
-      void gastronomia(String id2){
+      void gastronomia(String id5){
           
         String a;
        
@@ -575,8 +610,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 op=Boolean.parseBoolean(band[4]);
                
                 if (op==true){
-                    if(id2.equals(id[1])){
-                        a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                    if(id5.equals(id[1])){
+                        a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       c=info+","+prec;
                       combo_art_gastro.addItem(c); 
                     }
@@ -625,7 +660,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 boolean op;
               
               String id[] = cadena.split(";");
-              id2=Integer.parseInt(id[1]);
+             int id3=Integer.parseInt(id[1]);
                 
                 String nombre[] = cadena.split(";");
                 info = nombre[2];
@@ -635,7 +670,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 op=Boolean.parseBoolean(band[4]);
                
                 if (op==true){
-                      a="id:"+id2+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                      a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       art_unit.append(a);
                 }
             }
@@ -671,10 +706,10 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 String serv;
                 String name;
                 int prec;
-                int id2;
+               
                 boolean op;
                 String id[] = cadena2.split(";");
-                id2=Integer.parseInt(id[1]);
+               int id3=Integer.parseInt(id[1]);
                 String nombre[] = cadena2.split(";");
                 name = nombre[2];
                 
@@ -691,7 +726,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
-                      c=id2+","+name+","+prec;
+                      c=id3+","+name+","+prec;
                       combo_gastro.addItem(c);
                       
                     }
@@ -715,7 +750,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
         
     }
-     void decoracion(String id2){
+     void decoracion(String id5){
           
         
         String a;
@@ -749,8 +784,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 op=Boolean.parseBoolean(band[4]);
                
                 if (op==true){
-                    if(id2.equals(id[1])){
-                        a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                    if(id5.equals(id[1])){
+                        a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       c=info+","+prec;
                       combo_art_deco.addItem(c); 
                     }
@@ -796,7 +831,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 boolean op;
                  
                String id[] = cadena.split(";");
-              id2=Integer.parseInt(id[1]);
+             int id3=Integer.parseInt(id[1]);
                 
                 String nombre[] = cadena.split(";");
                 info = nombre[2];
@@ -805,7 +840,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 String band[] = cadena.split(";");
                 op=Boolean.parseBoolean(band[4]);
                 if (op==true){
-                      a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                       a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       art_unit.append(a);
                 }
              
@@ -847,7 +882,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 
                 String nombre[] = cadena2.split(";");
                 name = nombre[2];
-                
+                 String id[] = cadena2.split(";");
+               int id3=Integer.parseInt(id[1]);
                 String precb[] = cadena2.split(";");
                 prec=Integer.parseInt(precb[3]);
                 String value[] = cadena2.split(";");
@@ -861,7 +897,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
-                      c=id2+","+name+","+prec;
+                      c=id3+","+name+","+prec;
                       combo_deco.addItem(c);
                       
                     }
@@ -884,7 +920,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         }
        
     }
-    void servicio(String id2){
+    void servicio(String id5){
                 
         
         String a;
@@ -918,8 +954,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 op=Boolean.parseBoolean(band[4]);
                
                 if (op==true){
-                    if(id2.equals(id[1])){
-                        a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                    if(id5.equals(id[1])){
+                         a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       c=info+","+prec;
                       combo_art_serv.addItem(c); 
                     }
@@ -965,7 +1001,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 int prec;
                 boolean op;
               String id[] = cadena.split(";");
-              id2=Integer.parseInt(id[1]);
+             int id3=Integer.parseInt(id[1]);
                 
                 String nombre[] = cadena.split(";");
                 info = nombre[2];
@@ -974,7 +1010,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 String band[] = cadena.split(";");
                 op=Boolean.parseBoolean(band[4]);
                 if (op==true){
-                      a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                      a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       art_unit.append(a);
                 }
              
@@ -1016,7 +1052,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 
                 String nombre[] = cadena2.split(";");
                 name = nombre[2];
-                
+                 String id[] = cadena2.split(";");
+               int id3=Integer.parseInt(id[1]);
                 String precb[] = cadena2.split(";");
                 prec=Integer.parseInt(precb[3]);
                 String value[] = cadena2.split(";");
@@ -1030,7 +1067,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
-                       c=id2+","+name+","+prec;
+                       c=id3+","+name+","+prec;
                       combo_serv.addItem(c);
                       
                     }
@@ -1053,7 +1090,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         }
     }
     
-    void lugar(String id2){
+    void lugar(String id5){
          String a;
        
        
@@ -1085,8 +1122,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 op=Boolean.parseBoolean(band[4]);
                
                 if (op==true){
-                    if(id2.equals(id[1])){
-                        a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                    if(id5.equals(id[1])){
+                        a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       c=info+","+prec;
                       combo_art_lugar.addItem(c); 
                     }
@@ -1129,7 +1166,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 int prec;
                 boolean op;
                String id[] = cadena.split(";");
-              id2=Integer.parseInt(id[1]);
+              int id3=Integer.parseInt(id[1]);
                 
                 String nombre[] = cadena.split(";");
                 info = nombre[2];
@@ -1138,7 +1175,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 String band[] = cadena.split(";");
                 op=Boolean.parseBoolean(band[4]);
                 if (op==true){
-                      a= "Nombre del articulo: "+info+" Precio: "+prec +"\n";
+                      a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
                       art_unit.append(a);
                 }
              
@@ -1179,7 +1216,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 String c;
                 String nombre[] = cadena2.split(";");
                 name = nombre[2];
-                
+                 String id[] = cadena2.split(";");
+               int id3=Integer.parseInt(id[1]);
                 String precb[] = cadena2.split(";");
                 prec=Integer.parseInt(precb[3]);
                 String value[] = cadena2.split(";");
@@ -1193,7 +1231,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                     }else {
                          b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
                       unit_prov.append(b);
-                      c=id2+","+name+","+prec;
+                      c=id3+","+name+","+prec;
                       combo_lugar.addItem(c);
                     }
                      

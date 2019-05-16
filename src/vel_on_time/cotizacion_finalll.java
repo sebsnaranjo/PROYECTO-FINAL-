@@ -15,14 +15,20 @@ private int gastro2;
 private int deco2;
 private int serv2;
 private int lug2;
-private int dia2;
-private int mes2;
-private int ano2;
+private String fecha2;
 private int base_gastro;
 private int base_deco;
 private int base_serv;
 private int base_lug;
-
+private int id2;
+private  int tot_fin;
+private String nombre2;
+private int presupuesto2;
+private int numIn2;
+private String art_gastro;
+private String art_deco;
+private String art_serv;
+private String art_lug;
  String gastro_fin;
  String deco_fin;
  String serv_fin;
@@ -70,6 +76,7 @@ private int base_lug;
         otra_cot = new javax.swing.JButton();
         final_cot = new javax.swing.JTextField();
         tit_final = new javax.swing.JLabel();
+        ver_cot = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -123,12 +130,17 @@ private int base_lug;
         getContentPane().add(rev_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 178, -1));
 
         finalizar_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        finalizar_cliente.setText("Finalizar");
-        getContentPane().add(finalizar_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, -1, 30));
+        finalizar_cliente.setText("Imprimir contrato de esta");
+        getContentPane().add(finalizar_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, 30));
 
         otra_cot.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         otra_cot.setText("Hacer otra cotización");
-        getContentPane().add(otra_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, 30));
+        otra_cot.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                otra_cotMouseClicked(evt);
+            }
+        });
+        getContentPane().add(otra_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, 30));
 
         final_cot.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(final_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 180, -1));
@@ -137,6 +149,14 @@ private int base_lug;
         tit_final.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tit_final.setText("Final");
         getContentPane().add(tit_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 180, -1));
+
+        ver_cot.setText("Ver cotizaciones");
+        ver_cot.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ver_cotMouseClicked(evt);
+            }
+        });
+        getContentPane().add(ver_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 140, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 380));
@@ -147,20 +167,56 @@ private int base_lug;
     private void rev_tot_decoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rev_tot_decoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rev_tot_decoActionPerformed
-    
-    public void llegada_final(int prec_gastro, int prec_deco,int prec_serv,int prec_lug,int gastro,int deco,int serv,int lug,int dia,int mes,int ano){
+
+    private void ver_cotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ver_cotMouseClicked
+       todas_cot ob30 = new todas_cot();
+        System.out.println(id2 +"a");
+       ob30.buscar(id2,nombre2,presupuesto2,numIn2,fecha2);
+       ob30.setVisible(true);
+       this.setVisible(false);
+       
+    }//GEN-LAST:event_ver_cotMouseClicked
+
+    private void otra_cotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_otra_cotMouseClicked
+            archivoos ob32 = new archivoos();
+            ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug);
+    }//GEN-LAST:event_otra_cotMouseClicked
+    public void llegada_oculta(int id,String nombre,int presupuesto,int numIn,String fecha){
+        System.out.println(id+"c");
+        id2=id;
+        nombre2=nombre;
+        presupuesto2=presupuesto;
+        numIn2=numIn;
+        fecha2=fecha;
+        System.out.println(id+"b");
+        this.id2=id2;
+        this.nombre2=nombre2;
+        this.presupuesto2=presupuesto2;
+        this.numIn2=numIn2;
+        this.fecha2=fecha2;
+      
+    }
+    public void llegada_fantasma(String gastro, String deco, String serv, String lugar){
+        art_gastro=gastro;
+        art_deco=deco;
+        art_serv=serv;
+        art_lug=lugar;
+        
+        this.art_deco=art_deco;
+        this.art_gastro=art_gastro;
+        this.art_lug=art_lug;
+        this.art_serv=art_serv;
+    }
+    public void llegada_final(int prec_gastro, int prec_deco,int prec_serv,int prec_lug,int gastro,int deco,int serv,int lug){
         
          base_gastro= prec_gastro;
          base_deco=prec_deco;
          base_serv=prec_serv;
          base_lug=prec_lug;
-        gastro2= gastro;
+         gastro2= gastro;
          deco2=deco;
          serv2=serv;
-         lug2=lug;
-         dia2=dia;
-         mes2=mes;
-         ano2=ano;
+   
          
          this.base_gastro=base_gastro;
          this.base_deco=base_deco;
@@ -170,9 +226,7 @@ private int base_lug;
          this.deco2=deco2;
          this.serv2=serv2;
          this.lug2=lug2;
-         this.dia2=dia2;
-         this.mes2=mes2;
-         this.ano2=ano2;
+      
          cotizacion();
          
     }
@@ -194,23 +248,21 @@ private int base_lug;
         deco_fin = Integer.toString(deco2);
         serv_fin = Integer.toString(serv2);
         lug_fin = Integer.toString(lug2);
-        dia_fin = Integer.toString(dia2);
-        mes_fin = Integer.toString(mes2);
-        ano_fin = Integer.toString(ano2);
+ 
         
         rev_tot_gastro.setText(gastro_fin);
         rev_tot_deco.setText(deco_fin);
         rev_tot_serv.setText(serv_fin); 
         rev_tot_lug.setText(lug_fin);
-        String fecha=dia_fin+"/"+mes_fin+"/"+ano_fin+"/";
-        rev_fecha.setText(fecha);
+        rev_fecha.setText(fecha2);
           
         
-        int tot_fin;
+      
         String tot_fin2;
         tot_fin=gastro2+deco2+serv2+lug2;
         tot_fin2 = Integer.toString(tot_fin);
         final_cot.setText(tot_fin2);
+        this.tot_fin=tot_fin;
     }
     
     /**
@@ -280,5 +332,6 @@ private int base_lug;
     private javax.swing.JLabel tit_gastro;
     private javax.swing.JLabel tit_lug;
     private javax.swing.JLabel tit_serv;
+    private javax.swing.JButton ver_cot;
     // End of variables declaration//GEN-END:variables
 }

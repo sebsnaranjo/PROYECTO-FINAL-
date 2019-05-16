@@ -669,6 +669,37 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             }
         }
    }
+   void atccod(int id, String nombre, int nI,String fecha, int valortgast,int valortdeco,int valortserv,int valortlug, int valorTglo,String artGast,String artDeco,String artServ,String artLug ){
+        String dato; 
+        String cadena; 
+         String cadena1="";
+        FileWriter fichero = null; 
+        PrintWriter linea = null;  
+        int random=(int) (Math.random() *1043) +1;
+        try{
+            fichero = new FileWriter("src\\archivos\\Cotizaciones Realizadas.txt",true); //crea el archivo 
+            linea = new PrintWriter(fichero); //
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+         
+            
+            cadena = cadena1 + ";"+ random+ ";"+id+";"+nombre+";"+nI+";"+fecha+";"+valortgast+";"+valortdeco+";"+valortserv+";"+valortlug+";"+valorTglo+";"+artGast+";"+artDeco+";"+artServ+";"+artLug+";";
+            
+            linea.println(cadena); //escribiendo en el archivo
+            
+      }catch(IOException e){
+           System.out.print("Error creando archivo");
+        }
+        finally{
+            try{
+                if(fichero != null){
+                    fichero.close();
+                }
+            }catch(IOException e1){
+                System.out.print("Error cerrando archivo");
+            }
+        }
+   }
        void generarPdf() throws FileNotFoundException, DocumentException{
            try{
         String nombre="otra1";

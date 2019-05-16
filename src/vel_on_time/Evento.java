@@ -189,7 +189,7 @@ public class Evento extends javax.swing.JFrame {
        
        ob4.archCli(id,name,pres,numI,fecha);
        
-       
+        System.out.println(id+"z");
        Cotizadooor ob29= new Cotizadooor();
        ob29.llegada(id,name,pres,numI,dia,mes,ano);
    
