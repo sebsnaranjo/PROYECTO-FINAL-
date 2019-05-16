@@ -132,10 +132,12 @@ private String fecha2;
         mostrar_cot ob32 = new mostrar_cot();
         String cotizacion = (String) combo_cotizacion.getSelectedItem();
         String id_cot[] = cotizacion.split(",");
-        int randomico= Integer.parseInt(id_cot[1]);
+        int randomico= Integer.parseInt(id_cot[0]);
         String precio_final[] = cotizacion.split(",");
-        int precio= Integer.parseInt(precio_final[2]);
-        ob32.mostrar(randomico,precio);
+        int precio= Integer.parseInt(precio_final[1]);
+        ob32.mostrar2(randomico,precio);
+        ob32.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_verMouseClicked
 
     private void VOLVERMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VOLVERMouseClicked
@@ -150,7 +152,7 @@ private String fecha2;
         BufferedReader linea = null; //accede linea a linea al contenido
         String a;
         try {
-            archivo = new File("src\\archivos\\Cotizaciones Realizadas.txt.txt");
+            archivo = new File("src\\archivos\\Cotizaciones Realizadas.txt");
             contenido = new FileReader(archivo);
             linea = new BufferedReader(contenido);
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -163,12 +165,12 @@ private String fecha2;
                 boolean op;
                 String c;
                 String nombre[] = cadena.split(";");
-                info = nombre[2];
+                info = nombre[3];
                 String value[] = cadena.split(";");
              
                 String vlrt[]= cadena.split(";");
-                if (value[3].equals(rev_id.getText())){
-                  a=nombre[3]+","+vlrt[9];
+                if (value[2].equals(rev_id.getText())){
+                  a=nombre[2]+","+vlrt[10];
                    combo_cotizacion.addItem(a);
                 }
                
@@ -213,8 +215,8 @@ private String fecha2;
         presupuesto3=Integer.toString(presupuesto2);
         numIn3=Integer.toString(numIn2);
         
-        /*rev_id.setText(id3);
-        rev_nom.setText(nombre2);
+        rev_id.setText(id3);
+        /*rev_nom.setText(nombre2);
         rev_pres.setText(presupuesto3);
         rev_numIN.setText(numIn3);
         rev_fecha.setText(fecha2);*/
