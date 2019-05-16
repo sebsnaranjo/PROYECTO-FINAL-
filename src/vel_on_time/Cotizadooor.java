@@ -494,7 +494,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
         String id5 = id[0];
-         String prec[] = gastro_rev_uni.split(",");
+        String prec[] = gastro_rev_uni.split(",");
         prec_deco= Integer.parseInt(prec[2]);
        this.prec_deco=prec_deco;
         ob27.archprovar(2,nme[1], id5);
