@@ -71,6 +71,9 @@ public class crear_prov extends javax.swing.JFrame {
         ARTICULO_EXTRA2 = new javax.swing.JLabel();
         rev_prec_uni2 = new javax.swing.JTextField();
         enviar_all1 = new javax.swing.JButton();
+        AY = new javax.swing.JTextField();
+        tit_val_to_clien = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -149,7 +152,7 @@ public class crear_prov extends javax.swing.JFrame {
                 enviar_repeatActionPerformed(evt);
             }
         });
-        getContentPane().add(enviar_repeat, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 520, -1, -1));
+        getContentPane().add(enviar_repeat, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 640, -1, -1));
 
         rev_id.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 110, -1));
@@ -180,7 +183,7 @@ public class crear_prov extends javax.swing.JFrame {
         getContentPane().add(rev_servicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 240, 100));
 
         obj_proveedor.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
-        getContentPane().add(obj_proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 280, 20));
+        getContentPane().add(obj_proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 520, 20));
         getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 640, 10));
 
         rev_nomb_art2.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
@@ -189,24 +192,24 @@ public class crear_prov extends javax.swing.JFrame {
                 rev_nomb_art2ActionPerformed(evt);
             }
         });
-        getContentPane().add(rev_nomb_art2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 480, 130, -1));
+        getContentPane().add(rev_nomb_art2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 600, 130, -1));
 
         NOMBRE_ARTICULO2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         NOMBRE_ARTICULO2.setText("Nombre del articulo:");
-        getContentPane().add(NOMBRE_ARTICULO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, 120, -1));
-        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 640, 10));
+        getContentPane().add(NOMBRE_ARTICULO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 600, 120, -1));
+        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 640, 10));
 
         PRECIO_UNITARIO2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         PRECIO_UNITARIO2.setText("Precio unitario:");
-        getContentPane().add(PRECIO_UNITARIO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 480, 120, -1));
+        getContentPane().add(PRECIO_UNITARIO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 600, 120, -1));
 
         ARTICULO_EXTRA2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         ARTICULO_EXTRA2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ARTICULO_EXTRA2.setText("¿Desea agregar más articulos del mismo proveedor?");
-        getContentPane().add(ARTICULO_EXTRA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 640, 28));
+        getContentPane().add(ARTICULO_EXTRA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 640, 28));
 
         rev_prec_uni2.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        getContentPane().add(rev_prec_uni2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, 150, -1));
+        getContentPane().add(rev_prec_uni2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 600, 150, -1));
 
         enviar_all1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         enviar_all1.setText("Aceptar");
@@ -222,6 +225,11 @@ public class crear_prov extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enviar_all1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
+        getContentPane().add(AY, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, 150, -1));
+
+        tit_val_to_clien.setText("VALOR AL CLIENTE CALCULADO");
+        getContentPane().add(tit_val_to_clien, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 480, -1, -1));
+        getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 542, 670, 10));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -310,13 +318,13 @@ public class crear_prov extends javax.swing.JFrame {
      */
     void gastronomia(){
         gastronomia = true;
-        obj_proveedor.setText("GASTRONOMIA");
+        obj_proveedor.setText("GASTRONOMIA            VALOR AL CLIENTE SE SUMA EL 30% DEL VALOR BASE");
      
   
     }
     
     void gastronomia2(){   
-        
+         
         archivoos ob14 = new archivoos();
         boolean provedor_gastro = true;
         int id;
@@ -336,18 +344,19 @@ public class crear_prov extends javax.swing.JFrame {
         
         id= Integer.parseInt(rev_id.getText());
         nombre= rev_nom_prov.getText();
-        int prec2=0; 
-        
+    
+        int prec2;
         prec= Integer.parseInt(rev_prec_base.getText());
-        prec2=prec+((prec+60)/100);
+        prec2=/*(float)*/prec+((prec*30)/100) ;
+        /*prec+((prec*60)/100)*/
         String numI2 = Integer.toString(prec2);
-       rev_prec_base.setText(numI2);
+       AY.setText(numI2);
         
         
         serv=rev_servicio.getText();
         art=rev_nomb_art.getText();
         precart=Integer.parseInt(rev_prec_uni.getText());
-        ob14.arcprovcom(id,nombre,prec,serv,provedor_gastro);
+        ob14.arcprovcom(id,nombre,prec2,serv,provedor_gastro);
         ob14.artch(id,art,precart,provedor_gastro);
         gastropol = true;
     }
@@ -384,7 +393,7 @@ public class crear_prov extends javax.swing.JFrame {
     
     void decoracion(){
         decoracion=true;
-        obj_proveedor.setText("DECORACIÓN Y ACONDICIONAMIENTO");
+        obj_proveedor.setText("DECORACIÓN Y ACONDICIONAMIENTO           VALOR AL CLIENTE SE SUMA EL 52% DEL VALOR BASE");
     }
     
     
@@ -407,6 +416,12 @@ public class crear_prov extends javax.swing.JFrame {
          if(rev_inactivo.isSelected()){
            provedor_deco = false;
         }
+        int prec2;
+        prec= Integer.parseInt(rev_prec_base.getText());
+        prec2=/*(float)*/prec+((prec*52)/100) ;
+        /*prec+((prec*60)/100)*/
+        String numI2 = Integer.toString(prec2);
+       AY.setText(numI2);
         
         id= Integer.parseInt(rev_id.getText());
         nombre= rev_nom_prov.getText();
@@ -415,7 +430,7 @@ public class crear_prov extends javax.swing.JFrame {
         art=rev_nomb_art.getText();
         precart=Integer.parseInt(rev_prec_uni.getText());
         
-        ob14.arcprovdeco(id, nombre, prec, serv, provedor_deco);
+        ob14.arcprovdeco(id, nombre, prec2, serv, provedor_deco);
         ob14.artdeco(id,art, precart, provedor_deco);
         decopol=true;
     }
@@ -450,7 +465,7 @@ public class crear_prov extends javax.swing.JFrame {
     
     void servicios(){
         servicios = true;
-        obj_proveedor.setText("SERVICIOS");
+        obj_proveedor.setText("SERVICIOS           VALOR AL CLIENTE SE SUMA EL 60% DEL VALOR BASE");
     }
     void servicios2(){
         archivoos ob14 = new archivoos();
@@ -470,7 +485,12 @@ public class crear_prov extends javax.swing.JFrame {
          if(rev_inactivo.isSelected()){
            provedor_deco = false;
         }
-        
+         int prec2;
+        prec= Integer.parseInt(rev_prec_base.getText());
+        prec2=/*(float)*/prec+((prec*60)/100) ;
+        /*prec+((prec*60)/100)*/
+        String numI2 = Integer.toString(prec2);
+       AY.setText(numI2);
         id= Integer.parseInt(rev_id.getText());
         nombre= rev_nom_prov.getText();
         prec= Integer.parseInt(rev_prec_base.getText());
@@ -478,7 +498,7 @@ public class crear_prov extends javax.swing.JFrame {
         art=rev_nomb_art.getText();
         precart=Integer.parseInt(rev_prec_uni.getText());
         
-        ob14.arcprovserv(id, nombre, prec, serv, provedor_deco);
+        ob14.arcprovserv(id, nombre, prec2, serv, provedor_deco);
         ob14.artserv(id,art, precart, provedor_deco);
         servpol=true;
     }
@@ -513,7 +533,7 @@ public class crear_prov extends javax.swing.JFrame {
     
     void lugar(){
         lugar=true;
-        obj_proveedor.setText("LUGAR");
+        obj_proveedor.setText("LUGAR           VALOR AL CLIENTE SE SUMA EL 20% DEL VALOR BASE");
     }
     void lugar2(){
         archivoos ob14 = new archivoos();
@@ -533,6 +553,12 @@ public class crear_prov extends javax.swing.JFrame {
          if(rev_inactivo.isSelected()){
            provedor_deco = false;
         }
+        int prec2;
+        prec= Integer.parseInt(rev_prec_base.getText());
+        prec2=/*(float)*/prec+((prec*20)/100) ;
+        /*prec+((prec*60)/100)*/
+        String numI2 = Integer.toString(prec2);
+       AY.setText(numI2);
         
         id= Integer.parseInt(rev_id.getText());
         nombre= rev_nom_prov.getText();
@@ -541,7 +567,7 @@ public class crear_prov extends javax.swing.JFrame {
         art=rev_nomb_art.getText();
         precart=Integer.parseInt(rev_prec_uni.getText());
         
-        ob14.arcprovlug(id, nombre, prec, serv, provedor_deco);
+        ob14.arcprovlug(id, nombre, prec2, serv, provedor_deco);
         ob14.artlug(id,art, precart, provedor_deco);
         lugarpol=true;
     }
@@ -610,6 +636,7 @@ public class crear_prov extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ARTICULO_EXTRA;
     private javax.swing.JLabel ARTICULO_EXTRA2;
+    private javax.swing.JTextField AY;
     private javax.swing.JLabel ESTADO;
     private javax.swing.JLabel ID;
     private javax.swing.JLabel NOMBRE_ARTICULO;
@@ -627,6 +654,7 @@ public class crear_prov extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JLabel obj_proveedor;
     private javax.swing.JRadioButton rev_activo;
     private javax.swing.JTextField rev_id;
@@ -639,6 +667,7 @@ public class crear_prov extends javax.swing.JFrame {
     private javax.swing.JTextField rev_prec_uni2;
     private javax.swing.JTextField rev_servicio;
     private javax.swing.ButtonGroup selec_estado;
+    private javax.swing.JLabel tit_val_to_clien;
     private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }

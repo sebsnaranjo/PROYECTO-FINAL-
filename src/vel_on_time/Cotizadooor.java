@@ -604,7 +604,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
      void gastronomia2(){
         gastro=true;
         String a;
-       
+       unit_prov.setText(" ");
+         art_unit.setText(" ");
        
         File archivo = null;  //apuntar al archivo almancenado DD
         FileReader contenido = null;  //acceder a todo el contenido del archivo
@@ -944,6 +945,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
    
     void servicios2(){
         serv=true;
+        unit_prov.setText(" ");
+         art_unit.setText(" ");
         String a;
         File archivo = null;  //apuntar al archivo almancenado DD
         FileReader contenido = null;  //acceder a todo el contenido del archivo
@@ -1105,7 +1108,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }
     
     void lugar2(){
-        
+        unit_prov.setText(" ");
+         art_unit.setText(" ");
         lug=true;
         String a;
         File archivo = null;  //apuntar al archivo almancenado DD
