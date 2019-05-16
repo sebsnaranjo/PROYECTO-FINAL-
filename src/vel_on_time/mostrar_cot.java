@@ -5,17 +5,25 @@
  */
 package vel_on_time;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  *
  * @author jose noel mantilla
  */
 public class mostrar_cot extends javax.swing.JFrame {
-
+private int randomico2;
+private int prec2;
     /**
      * Creates new form mostrar_cot
      */
     public mostrar_cot() {
         initComponents();
+        
     }
 
     /**
@@ -28,15 +36,15 @@ public class mostrar_cot extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        cajita_grande = new javax.swing.JTextArea();
         volver = new javax.swing.JButton();
         imprimir_contrato = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        cajita_grande.setColumns(20);
+        cajita_grande.setRows(5);
+        jScrollPane1.setViewportView(cajita_grande);
 
         volver.setText("VOLVER");
         volver.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,7 +96,85 @@ public class mostrar_cot extends javax.swing.JFrame {
      */
     
     void mostrar(int randomico, int precio){
+       randomico2=randomico;
+       prec2=precio;
+       this.randomico2=randomico2;
+       this.prec2= prec2;
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+        String a;
+        int nmuI = 0;
+        int valorTglobIn=0;
+        String fid = null;
+        String fnombre;
+        String fni;
+        String ffecha;
+        String fvalorgastro;
+        String fdeco;
+        String fserv;
+        String flug;
+        String fvalortglob;
+        String fartgast;
+        String fartdeco;
+        String fartserv;
+        String fartlug;
+            
         
+        try {
+            archivo = new File("src\\archivos\\Cotizaciones Realizadas.txt.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+             
+                 String nmu[]= cadena.split(";");
+                 nmuI= Integer.parseInt(nmu[1]);
+                 String id[]= cadena.split(";");
+                 fid= id[2];
+                 String nombre[]= cadena.split(";");
+                 String nI[]= cadena.split(";");
+                 String fecha[]= cadena.split(";");
+                 String valorGastro[]= cadena.split(";");}
+                 String valortdaceo[]= cadena.split(";");
+                 String valortserv[]= cadena.split(";");
+                 String valortlug[]= cadena.split(";");
+                 String valorTglob[]= cadena.split(";");
+                 valorTglobIn= Integer.parseInt(valorTglob[10]);
+                 String artGast[]= cadena.split(";");
+                 String artDeco[]= cadena.split(";");
+                 String artServ[]= cadena.split(";");
+                 String artLug[]= cadena.split(";");
+                 
+                 if (randomico2==nmuI&& prec2==valorTglobIn){
+                
+                     cajita_grande.append("Numero de cotización: "+ nmuI);
+                     cajita_grande.append("Numero de cotización: "+ fid );
+                     
+                
+                     
+                     
+                 }
+                
+                
+                 
+                 
+      
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+    
     }
     
     
@@ -125,9 +211,9 @@ public class mostrar_cot extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea cajita_grande;
     private javax.swing.JButton imprimir_contrato;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }
