@@ -29,6 +29,8 @@ public class Gerente extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         VOLVER_QUIEN = new javax.swing.JButton();
+        enviar = new javax.swing.JButton();
+        clave_c = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,6 +51,15 @@ public class Gerente extends javax.swing.JFrame {
         });
         getContentPane().add(VOLVER_QUIEN, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 257, 70, 30));
 
+        enviar.setText("enviar");
+        enviar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                enviarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 110, 40));
+        getContentPane().add(clave_c, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 220, -1));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
@@ -60,6 +71,19 @@ public class Gerente extends javax.swing.JFrame {
         ob12.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_VOLVER_QUIENMouseClicked
+
+    private void enviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviarMouseClicked
+        String clave = "sarasebasandres";
+        String clave_clie;
+        clave_clie=clave_c.getText();
+        
+        if(clave_clie.equals(clave)){
+            contabilidad ob40 = new contabilidad();
+            ob40.archCli(WIDTH, clave, ERROR, NORMAL, clave);
+       
+        }
+      
+    }//GEN-LAST:event_enviarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -98,6 +122,8 @@ public class Gerente extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton VOLVER_QUIEN;
+    private javax.swing.JPasswordField clave_c;
+    private javax.swing.JButton enviar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

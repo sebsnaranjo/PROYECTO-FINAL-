@@ -62,3 +62,5 @@
 ;12;rttr;2500;sees;true;
 ;12;rttr;4500;sees;true;
 ;4;as;4500;axsd;true;
+;4;sarita;4800;ytr;true;
+;4;sarita;0; ;true;

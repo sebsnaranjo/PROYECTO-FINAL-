@@ -723,9 +723,11 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                         b= "Nombre del proveedor: "+ name+"\n";
                          unit_prov.append(b);
                     }else {
-                         b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
+                        int prec2_gastro;
+                        prec2_gastro=/*(float)*/prec+((prec*30)/100);
+                         b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec2_gastro +"\n";
                       unit_prov.append(b);
-                      c=id3+","+name+","+prec;
+                      c=id3+","+name+","+prec2_gastro;
                       combo_gastro.addItem(c);
                       
                     }
@@ -894,9 +896,11 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                         b= "Nombre del proveedor: "+ name+"\n";
                          unit_prov.append(b);
                     }else {
-                         b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
+                        int prec2_deco;
+                        prec2_deco=/*(float)*/prec+((prec*52)/100);
+                         b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec2_deco +"\n";
                       unit_prov.append(b);
-                      c=id3+","+name+","+prec;
+                      c=id3+","+name+","+prec2_deco;
                       combo_deco.addItem(c);
                       
                     }
@@ -1064,9 +1068,11 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                         b= "Nombre del proveedor: "+ name+"\n";
                          unit_prov.append(b);
                     }else {
-                         b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
+                        int prec2_serv;
+                        prec2_serv=/*(float)*/prec+((prec*60)/100);
+                         b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec2_serv +"\n";
                       unit_prov.append(b);
-                       c=id3+","+name+","+prec;
+                       c=id3+","+name+","+prec2_serv;
                       combo_serv.addItem(c);
                       
                     }
@@ -1228,9 +1234,11 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                         b= "Nombre del proveedor: "+ name+"\n";
                          unit_prov.append(b);
                     }else {
-                         b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec +"\n";
+                        int prec2_lug;
+                        prec2_lug=/*(float)*/prec+((prec*20)/100);
+                         b= "Nombre del proveedor: " + name+"  Servicios basicos: "+serv+"  Precio: "+prec2_lug +"\n";
                       unit_prov.append(b);
-                      c=id3+","+name+","+prec;
+                      c=id3+","+name+","+prec2_lug;
                       combo_lugar.addItem(c);
                     }
                      
