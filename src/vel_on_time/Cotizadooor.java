@@ -444,8 +444,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         ob28.llegada_oculta(id2,name2,pres2,numIn,fecha);
         ob28.llegada_fantasma(gast,servi,deocr,lrgs);
         ob28.llegada_final(prec_gastro,prec_deco,prec_serv,prec_lug,cont, cont2, cont3, cont4);
-        
-        this.setVisible(false);
+ 
     }//GEN-LAST:event_env_finalMouseClicked
     
     private void mutiplicadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mutiplicadoActionPerformed

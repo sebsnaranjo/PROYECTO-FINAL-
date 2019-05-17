@@ -41,7 +41,6 @@ private int prec2;
         cajita_grande = new javax.swing.JTextArea();
         volver = new javax.swing.JButton();
         imprimir_contrato = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,13 +57,6 @@ private int prec2;
 
         imprimir_contrato.setText("IMPRIMIR CONTRATO");
 
-        jButton1.setText("jButton1");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -76,17 +68,11 @@ private int prec2;
                 .addComponent(imprimir_contrato)
                 .addGap(238, 238, 238))
             .addComponent(jScrollPane1)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(398, 398, 398)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(32, 32, 32)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -104,10 +90,6 @@ private int prec2;
         this.setVisible(false);
     }//GEN-LAST:event_volverMouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-         mostrar();
-    }//GEN-LAST:event_jButton1MouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -116,6 +98,7 @@ private int prec2;
        prec2=precio;
        this.randomico2=randomico2;
        this.prec2= prec2;
+       mostrar();
       
       }
     void mostrar(){
@@ -253,7 +236,6 @@ private int prec2;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea cajita_grande;
     private javax.swing.JButton imprimir_contrato;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables

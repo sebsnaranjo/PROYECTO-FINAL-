@@ -78,6 +78,7 @@ private String art_lug;
         tit_final = new javax.swing.JLabel();
         ver_cot = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        volver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -161,6 +162,14 @@ private String art_lug;
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 380));
 
+        volver.setText("volver");
+        volver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                volverMouseClicked(evt);
+            }
+        });
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -181,6 +190,10 @@ private String art_lug;
             archivoos ob32 = new archivoos();
             ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug);
     }//GEN-LAST:event_otra_cotMouseClicked
+
+    private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
+        this.setVisible(false);
+    }//GEN-LAST:event_volverMouseClicked
     public void llegada_oculta(int id,String nombre,int presupuesto,int numIn,String fecha){
         System.out.println(id+"c");
         id2=id;
@@ -333,5 +346,6 @@ private String art_lug;
     private javax.swing.JLabel tit_lug;
     private javax.swing.JLabel tit_serv;
     private javax.swing.JButton ver_cot;
+    private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }
