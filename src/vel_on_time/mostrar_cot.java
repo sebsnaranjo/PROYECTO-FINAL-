@@ -124,8 +124,8 @@ private int prec2;
         FileReader contenido = null;  //acceder a todo el contenido del archivo
         BufferedReader linea = null; //accede linea a linea al contenido
         String a;
-        int nmuI = 0;
-        int valorTglobIn=0;
+        int nmuI;
+        int valorTglobIn;
         String fid = null;
         String fnombre;
         String fni;
@@ -180,7 +180,7 @@ private int prec2;
                  String artLug[]= cadena.split(";");
                  fartlug= artLug[14];
                                 
-                // if (randomico2==nmuI && prec2==valorTglobIn){
+                 if (randomico2==nmuI && prec2==valorTglobIn){
                 
                      cajita_grande.append("Numero de cotización: "+ nmuI+"\n");
                      cajita_grande.append("Identificacion del cliente: "+ fid +"\n");
@@ -196,7 +196,7 @@ private int prec2;
                      cajita_grande.append("Articulos de Decoracion: "+ fartdeco+"\n");
                      cajita_grande.append("Articulos de Servicios "+ fartserv+"\n");
                      cajita_grande.append("Articulos de lugar "+ fartlug+"\n");
-              //   }
+                 }
                 
                 
                  

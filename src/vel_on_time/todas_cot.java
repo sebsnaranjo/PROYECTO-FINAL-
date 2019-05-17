@@ -170,7 +170,7 @@ private String fecha2;
              
                 String vlrt[]= cadena.split(";");
                 if (value[2].equals(rev_id.getText())){
-                  a=nombre[2]+","+vlrt[10];
+                  a=nombre[1]+","+vlrt[10];
                    combo_cotizacion.addItem(a);
                 }
                

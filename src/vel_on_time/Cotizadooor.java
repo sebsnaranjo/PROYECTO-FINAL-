@@ -367,7 +367,7 @@ int prec_lug;
         String id[] = gastro_rev_uni.split(",");
         String p[] = gastro_rev_uni.split(",");
         gast=gast+id[0]+","+p[1]+",";
-        System.out.println(gast+"gast");
+        System.out.println("hola");
         int almax= Integer.parseInt(id[1]);
         cont=cont+almax;
         this.gast=gast;
