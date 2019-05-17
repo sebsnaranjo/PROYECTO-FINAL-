@@ -1,3 +1,3 @@
- ;7820;Molienda;1234;Mesas;true;
-;123;Molienda;0; ;
-;123;Molienda;0; ;
+ ;7850;Molienda;17500;Mesas;true;
+;535;Molienda;0; ;true;
+;535;Molienda;0; ;true;

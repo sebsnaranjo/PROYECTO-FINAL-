@@ -549,10 +549,11 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
                    String prec[]= linea.split(";");
                    String serv[]= linea.split(";");
                    String name[]=nCadena.split(";");
+                   String op[]= linea.split(";");
                    
                    if(nombre[2].equals(aCadena) && prec[3].equals("0") && serv[4].equals(" ")){
                        String aux;
-                       aux=";"+id[1]+";"+name[2]+";"+prec[3]+";"+serv[4]+";"+ "\n";
+                       aux=";"+id[1]+";"+name[2]+";"+prec[3]+";"+serv[4]+";"+op[5]+";" +"\n";
                         System.out.print(aux);
                          Escribir(fNuevo,aux);
                        
@@ -807,8 +808,8 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
                 Paragraph parrafo21= new Paragraph("Proveedor                                                         Articulos",fuente_dos);
                 Paragraph parrafo22= new Paragraph("Gastronomia: "+fartgast,fuente);
                 Paragraph parrafo23= new Paragraph("Lugar: "+fartlug,fuente);
-                Paragraph parrafo24= new Paragraph("Servicios: "+fartserv,fuente);
-                Paragraph parrafo25= new Paragraph("Decoracion: "+fartdeco,fuente);
+                Paragraph parrafo24= new Paragraph("Servicios: "+fartdeco,fuente);
+                Paragraph parrafo25= new Paragraph("Decoracion: "+fartserv,fuente);
                 
                 Paragraph parrafo26= new Paragraph(" ");
                 Paragraph parrafo27= new Paragraph("Valores: ", fuente_dos);

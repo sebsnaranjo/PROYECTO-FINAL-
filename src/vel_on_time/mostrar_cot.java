@@ -289,8 +289,8 @@ private String fecha2;
                      cajita_grande.append("Valor total de servicios: "+ fvalorserv+"\n");
                      cajita_grande.append("Valor total de lugares: "+ fvalorlug+"\n");
                      cajita_grande.append("Articulos de Gastronomia: "+ fartgast+"\n");
-                     cajita_grande.append("Articulos de Decoracion: "+ fartdeco+"\n");
-                     cajita_grande.append("Articulos de Servicios "+ fartserv+"\n");
+                     cajita_grande.append("Articulos de Decoracion: "+ fartserv+"\n");
+                     cajita_grande.append("Articulos de Servicios "+ fartdeco+"\n");
                      cajita_grande.append("Articulos de lugar "+ fartlug+"\n");
                  }
  

@@ -223,7 +223,7 @@ archivoos ob38 = new archivoos();
   
    
     try {
-        ob38.generarPDF(id2p,nombre2,pres,numIn2p, fecha2, gastro2p, deco2p, serv2p, lug2p,fin , art_gastro, art_deco, art_serv, art_lug);
+        ob38.generarPDF(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug);
     } catch (DocumentException ex) {
         Logger.getLogger(cotizacion_finalll.class.getName()).log(Level.SEVERE, null, ex);
     } catch (FileNotFoundException ex) {
