@@ -45,6 +45,14 @@ int prec_gastro;
 int prec_deco;
 int prec_serv;
 int prec_lug;
+String gastro_rev_uni;
+String lugar_rev_uni;
+String deco_rev_uni;
+String serv_rev_uni;
+String gastro_rev_uni2;
+String lugar_rev_uni2;
+String deco_rev_uni2;
+String serv_rev_uni2;
     /**
      * Creates new form Cotizador
      */
@@ -363,9 +371,9 @@ int prec_lug;
     
     
     private void ar_car_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_1MouseClicked
-         String gastro_rev_uni = (String) combo_art_gastro.getSelectedItem();
-        String id[] = gastro_rev_uni.split(",");
-        String p[] = gastro_rev_uni.split(",");
+         gastro_rev_uni2 = (String) combo_art_gastro.getSelectedItem();
+        String id[] = gastro_rev_uni2.split(",");
+        String p[] = gastro_rev_uni2.split(",");
         gast=gast+id[0]+","+p[1]+",";
         System.out.println("hola");
         int almax= Integer.parseInt(id[1]);
@@ -377,9 +385,7 @@ int prec_lug;
     }//GEN-LAST:event_ar_car_1MouseClicked
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
-       Evento ob21 = new Evento();
        
-       ob21.setVisible(true);
        this.setVisible(false);
        
     }//GEN-LAST:event_volverMouseClicked
@@ -433,7 +439,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
 
     private void env_finalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_env_finalMouseClicked
        
-         cotizacion_finalll ob28 = new cotizacion_finalll();
+        cotizacion_finalll ob28 = new cotizacion_finalll();
         ob28.setVisible(true);
         cont=cont*numIn;
         cont2=cont2*numIn;
@@ -444,7 +450,8 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         ob28.llegada_oculta(id2,name2,pres2,numIn,fecha);
         ob28.llegada_fantasma(gast,servi,deocr,lrgs);
         ob28.llegada_final(prec_gastro,prec_deco,prec_serv,prec_lug,cont, cont2, cont3, cont4);
- 
+        this.setVisible(false);
+       
     }//GEN-LAST:event_env_finalMouseClicked
     
     private void mutiplicadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mutiplicadoActionPerformed
@@ -459,7 +466,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         archivoos ob27 = new archivoos();
         id_en=id2;
         this.id_en=id_en;
-        String gastro_rev_uni = (String) combo_gastro.getSelectedItem();
+        gastro_rev_uni = (String) combo_gastro.getSelectedItem();
         String id[] = gastro_rev_uni.split(",");
         String nme[] = gastro_rev_uni.split(",");
         String prec[] = gastro_rev_uni.split(",");
@@ -489,11 +496,11 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         archivoos ob27 = new archivoos();
         id_en=id2;
         this.id_en=id_en;
-        String gastro_rev_uni = (String) combo_deco.getSelectedItem();
-        String id[] = gastro_rev_uni.split(",");
-        String nme[] = gastro_rev_uni.split(",");
+        deco_rev_uni = (String) combo_deco.getSelectedItem();
+        String id[] = deco_rev_uni.split(",");
+        String nme[] = deco_rev_uni.split(",");
         String id5 = id[0];
-        String prec[] = gastro_rev_uni.split(",");
+        String prec[] = deco_rev_uni.split(",");
         prec_deco= Integer.parseInt(prec[2]);
        this.prec_deco=prec_deco;
         ob27.archprovar(2,nme[1], id5);
@@ -505,13 +512,13 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         archivoos ob27 = new archivoos();
         id_en=id2;
         this.id_en=id_en;
-        String gastro_rev_uni = (String) combo_serv.getSelectedItem();
-        String id[] = gastro_rev_uni.split(",");
-        String nme[] = gastro_rev_uni.split(",");
+        serv_rev_uni = (String) combo_serv.getSelectedItem();
+        String id[] = serv_rev_uni.split(",");
+        String nme[] = serv_rev_uni.split(",");
         String id5 = id[0];
-         String prec[] = gastro_rev_uni.split(",");
+        String prec[] = serv_rev_uni.split(",");
         prec_serv= Integer.parseInt(prec[2]);
-       this.prec_serv=prec_serv;
+        this.prec_serv=prec_serv;
         ob27.archprovar(3,nme[1], id5);
         servicio(id5);
     }//GEN-LAST:event_elec_servMouseClicked
@@ -520,23 +527,23 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         archivoos ob27 = new archivoos();
         id_en=id2;
         this.id_en=id_en;
-        String gastro_rev_uni = (String) combo_lugar.getSelectedItem();
-        String id[] = gastro_rev_uni.split(",");
-        String nme[] = gastro_rev_uni.split(",");
+        lugar_rev_uni = (String) combo_lugar.getSelectedItem();
+        String id[] = lugar_rev_uni.split(",");
+        String nme[] = lugar_rev_uni.split(",");
         String id5 = id[0];
-         String prec[] = gastro_rev_uni.split(",");
+        String prec[] = lugar_rev_uni.split(",");
         prec_lug= Integer.parseInt(prec[2]);
-       this.prec_lug=prec_lug;
+        this.prec_lug=prec_lug;
         ob27.archprovar(4,nme[1], id5);
         lugar(id5);
     }//GEN-LAST:event_elec_lugarMouseClicked
 
     private void ar_car_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_2MouseClicked
-      String gastro_rev_uni = (String) combo_art_deco.getSelectedItem();
+     lugar_rev_uni2 = (String) combo_art_deco.getSelectedItem();
     
-        String id[] = gastro_rev_uni.split(",");
+        String id[] = lugar_rev_uni2.split(",");
         int almax= Integer.parseInt(id[1]);
-        String p[] = gastro_rev_uni.split(",");
+        String p[] = lugar_rev_uni2.split(",");
         deocr=deocr+id[0]+","+p[1]+",";
         cont2=cont2+almax;
         System.out.println(cont2);
@@ -546,11 +553,11 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_ar_car_2MouseClicked
 
     private void ar_car_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_3MouseClicked
-    String gastro_rev_uni = (String) combo_art_serv.getSelectedItem();
+    serv_rev_uni2 = (String) combo_art_serv.getSelectedItem();
    
-        String id[] = gastro_rev_uni.split(",");
+        String id[] = serv_rev_uni2.split(",");
         int almax= Integer.parseInt(id[1]);
-        String p[] = gastro_rev_uni.split(",");
+        String p[] = serv_rev_uni2.split(",");
         servi=servi+id[0]+","+p[1]+",";
         cont3=cont3+almax;
         System.out.println(cont3);
@@ -559,11 +566,11 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_ar_car_3MouseClicked
 
     private void ar_car_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_4MouseClicked
-         String gastro_rev_uni = (String) combo_art_lugar.getSelectedItem();
+         deco_rev_uni2 = (String) combo_art_lugar.getSelectedItem();
        
-        String id[] = gastro_rev_uni.split(",");
+        String id[] = deco_rev_uni2.split(",");
         int almax= Integer.parseInt(id[1]);
-        String p[] = gastro_rev_uni.split(",");
+        String p[] = deco_rev_uni2.split(",");
         lrgs=lrgs+id[0]+","+p[1]+",";
         cont4=cont4+almax;
         System.out.println(cont4);

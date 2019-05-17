@@ -16,12 +16,15 @@ import java.io.PrintWriter;
  * @author jose noel mantilla
  */
 public class contabilidad {
+    
      void archCli(int id, String name, int pres, int numI, String fecha) {
+         
         String dato; 
         String cadena; 
         String cadena1="";
         FileWriter fichero = null; 
         PrintWriter linea = null;  
+        
         
         try{
             fichero = new FileWriter("src\\archivos\\Datos Cliente.txt",true); //crea el archivo 

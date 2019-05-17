@@ -107,6 +107,11 @@ public class Evento extends javax.swing.JFrame {
                 enviar_clienteMouseClicked(evt);
             }
         });
+        enviar_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enviar_clienteActionPerformed(evt);
+            }
+        });
         getContentPane().add(enviar_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 100, 40));
 
         RESET.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
@@ -194,7 +199,7 @@ public class Evento extends javax.swing.JFrame {
        ob29.llegada(id,name,pres,numI,dia,mes,ano);
    
        ob29.setVisible(true);
-       this.setVisible(false);
+      
   
     }//GEN-LAST:event_enviar_clienteMouseClicked
 
@@ -210,6 +215,10 @@ public class Evento extends javax.swing.JFrame {
        ob26.setVisible(true);
        this.setVisible(false);
     }//GEN-LAST:event_VOLVERMouseClicked
+
+    private void enviar_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviar_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enviar_clienteActionPerformed
 
     void quince(){
         

@@ -188,10 +188,12 @@ private String art_lug;
 
     private void otra_cotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_otra_cotMouseClicked
             archivoos ob32 = new archivoos();
+            this.setVisible(false);
             ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug);
     }//GEN-LAST:event_otra_cotMouseClicked
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
+
         this.setVisible(false);
     }//GEN-LAST:event_volverMouseClicked
     public void llegada_oculta(int id,String nombre,int presupuesto,int numIn,String fecha){
