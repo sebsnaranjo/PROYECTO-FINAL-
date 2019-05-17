@@ -37,21 +37,21 @@ public class Sockets extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         campo1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        enviar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("ENVIAR MENSAJE");
 
-        jButton1.setText("ENVIAR");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        enviar.setText("ENVIAR");
+        enviar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                enviarMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        enviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                enviarActionPerformed(evt);
             }
         });
 
@@ -70,7 +70,7 @@ public class Sockets extends javax.swing.JFrame {
                 .addContainerGap(39, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(enviar)
                 .addGap(146, 146, 146))
         );
         layout.setVerticalGroup(
@@ -81,22 +81,22 @@ public class Sockets extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(campo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
-                .addComponent(jButton1)
+                .addComponent(enviar)
                 .addContainerGap(242, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void enviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviarMouseClicked
           
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_enviarMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
          EnviarTexto mitxt = new EnviarTexto();
-           //jButton1.addActionListener(mitxt);
+         //jButton1.addActionListener(mitxt);
          mitxt.actionPerformed(evt);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_enviarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,21 +139,20 @@ private class EnviarTexto implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
           try {
-              
                 //System.out.println("Hola Funciona");
-               Socket misocket = new Socket("192.168.1.13",9999);
+               Socket misocket = new Socket("192.168.0.7",9999);
                DataOutputStream salida=new DataOutputStream(misocket.getOutputStream());
                salida.writeUTF(campo1.getText());
                salida.close();
                 
             } catch (IOException ex) {
-              System.out.println(ex);
+               System.out.println("error");
             }
     }
 }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField campo1;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton enviar;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

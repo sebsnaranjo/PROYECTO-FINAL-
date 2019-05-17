@@ -210,7 +210,8 @@ private String art_lug;
     }//GEN-LAST:event_volverMouseClicked
 
     private void finalizar_clienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finalizar_clienteMouseClicked
-archivoos ob38 = new archivoos();
+        archivoos ob38 = new archivoos();
+        
         String pres= Integer.toString(presupuesto2);
         String gastro2p= Integer.toString(gastro2);
         String deco2p= Integer.toString(deco2);
@@ -220,7 +221,7 @@ archivoos ob38 = new archivoos();
         String id2p= Integer.toString(id2);
         String numIn2p= Integer.toString(numIn2);
         
-  
+ ob38.cot_totales(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug); 
    
     try {
         ob38.generarPDF(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug);
