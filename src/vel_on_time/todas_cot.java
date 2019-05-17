@@ -135,7 +135,7 @@ private String fecha2;
         int randomico= Integer.parseInt(id_cot[0]);
         String precio_final[] = cotizacion.split(",");
         int precio= Integer.parseInt(precio_final[1]);
-        ob32.mostrar2(randomico,precio);
+        ob32.mostrar2(randomico,precio,nombre2,presupuesto2,numIn2,fecha2);
         ob32.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_verMouseClicked

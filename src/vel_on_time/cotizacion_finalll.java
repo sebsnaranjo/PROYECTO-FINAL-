@@ -5,6 +5,11 @@
  */
 package vel_on_time;
 
+import com.itextpdf.text.DocumentException;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author jose noel mantilla
@@ -132,6 +137,11 @@ private String art_lug;
 
         finalizar_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         finalizar_cliente.setText("Imprimir contrato de esta");
+        finalizar_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                finalizar_clienteMouseClicked(evt);
+            }
+        });
         getContentPane().add(finalizar_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, 30));
 
         otra_cot.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
@@ -183,19 +193,44 @@ private String art_lug;
        ob30.buscar(id2,nombre2,presupuesto2,numIn2,fecha2);
        ob30.setVisible(true);
        this.setVisible(false);
+       archivoos ob32 = new archivoos();
+       ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug,presupuesto2);
        
     }//GEN-LAST:event_ver_cotMouseClicked
 
     private void otra_cotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_otra_cotMouseClicked
             archivoos ob32 = new archivoos();
             this.setVisible(false);
-            ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug);
+            ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug,presupuesto2);
     }//GEN-LAST:event_otra_cotMouseClicked
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
 
         this.setVisible(false);
     }//GEN-LAST:event_volverMouseClicked
+
+    private void finalizar_clienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finalizar_clienteMouseClicked
+archivoos ob38 = new archivoos();
+        String pres= Integer.toString(presupuesto2);
+        String gastro2p= Integer.toString(gastro2);
+        String deco2p= Integer.toString(deco2);
+        String serv2p= Integer.toString(serv2);
+        String lug2p= Integer.toString(lug2);
+        String fin = Integer.toString(tot_fin );
+        String id2p= Integer.toString(id2);
+        String numIn2p= Integer.toString(numIn2);
+        
+  
+   
+    try {
+        ob38.generarPDF(id2p,nombre2,pres,numIn2p, fecha2, gastro2p, deco2p, serv2p, lug2p,fin , art_gastro, art_deco, art_serv, art_lug);
+    } catch (DocumentException ex) {
+        Logger.getLogger(cotizacion_finalll.class.getName()).log(Level.SEVERE, null, ex);
+    } catch (FileNotFoundException ex) {
+        Logger.getLogger(cotizacion_finalll.class.getName()).log(Level.SEVERE, null, ex);
+    }
+   
+    }//GEN-LAST:event_finalizar_clienteMouseClicked
     public void llegada_oculta(int id,String nombre,int presupuesto,int numIn,String fecha){
         System.out.println(id+"c");
         id2=id;

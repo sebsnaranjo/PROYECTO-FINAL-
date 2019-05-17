@@ -5,20 +5,28 @@
  */
 package vel_on_time;
 
+import com.itextpdf.text.DocumentException;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author jose noel mantilla
  */
 public class mostrar_cot extends javax.swing.JFrame {
+
 private int randomico2;
 private int prec2;
+private String nombre2;
+private int presupuesto2;
+private int numIn2;
+private String fecha2;
     /**
      * Creates new form mostrar_cot
      */
@@ -56,6 +64,11 @@ private int prec2;
         });
 
         imprimir_contrato.setText("IMPRIMIR CONTRATO");
+        imprimir_contrato.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imprimir_contratoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,14 +103,109 @@ private int prec2;
         this.setVisible(false);
     }//GEN-LAST:event_volverMouseClicked
 
+    private void imprimir_contratoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imprimir_contratoMouseClicked
+           archivoos ob37= new archivoos();
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+        int nmuI;
+        int valorTglobIn;
+        String fid = null;
+        String fnombre;
+        String fni;
+        String ffecha;
+        String fvalorgastro;
+        String fvalordeco;
+        String fvalorserv;
+        String fvalorlug;
+        String fvalortglob;
+        String fartgast;
+        String fartdeco;
+        String fartserv;
+        String fartlug;
+        String fpresu;
+            
+        
+        try {
+            archivo = new File("src\\archivos\\Cotizaciones Realizadas.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+             
+                 String nmu[]= cadena.split(";");
+                 nmuI= Integer.parseInt(nmu[1]);
+                 String id[]= cadena.split(";");
+                 fid= id[2];
+                 String nombre[]= cadena.split(";");
+                 fnombre=nombre[3];
+                 String nI[]= cadena.split(";");
+                 fni= nI[4];
+                 String fecha[]= cadena.split(";");
+                 ffecha=fecha[5];
+                 String valorGastro[]= cadena.split(";");
+                 fvalorgastro=valorGastro[6];
+                 String valortdaceo[]= cadena.split(";");
+                 fvalordeco=valortdaceo[7];
+                 String valortserv[]= cadena.split(";");
+                 fvalorserv= valortserv[8];
+                 String valortlug[]= cadena.split(";");
+                 fvalorlug= valortlug[9];
+                 String valorTglob[]= cadena.split(";");
+                 valorTglobIn= Integer.parseInt(valorTglob[10]);
+                 fvalortglob=valorTglob[10];
+                 String artGast[]= cadena.split(";");
+                 fartgast= artGast[11];
+                 String artDeco[]= cadena.split(";");
+                 fartdeco= artDeco[12];
+                 String artServ[]= cadena.split(";");
+                 fartserv= artServ[13];
+                 String artLug[]= cadena.split(";");
+                 fartlug= artLug[14];
+                 String presu2[]= cadena.split(";");
+                 fpresu=presu2[15];
+                                
+                 if (randomico2==nmuI && prec2==valorTglobIn){
+                    ob37.generarPDF(fid,fnombre,fpresu,fni,ffecha,fvalortglob,fvalorgastro,fvalordeco,fvalorserv,fvalorlug,fartgast,fartdeco,fartserv,fartlug);
+                    }
+ 
+            }  
+        
+      
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } catch (DocumentException ex) {
+        Logger.getLogger(mostrar_cot.class.getName()).log(Level.SEVERE, null, ex);
+    } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+    }//GEN-LAST:event_imprimir_contratoMouseClicked
+
     /**
      * @param args the command line arguments
      */
-      void mostrar2(int randomico, int precio){
+          void mostrar2(int randomico, int precio,String nombre,int presupuesto,int numIn, String fecha){
        randomico2=randomico;
        prec2=precio;
+       nombre2=nombre;
+       presupuesto2=presupuesto;
+       numIn2=numIn;
+       fecha2=fecha;
        this.randomico2=randomico2;
        this.prec2= prec2;
+       this.nombre2=nombre2;
+       this.presupuesto2=presupuesto2;
+       this.numIn2=numIn2;
+       this.fecha2=fecha2;
        mostrar();
       
       }
@@ -162,12 +270,17 @@ private int prec2;
                  fartserv= artServ[13];
                  String artLug[]= cadena.split(";");
                  fartlug= artLug[14];
+                 String presu2[]= cadena.split(";");
+                 String fpresu = presu2[15];
+                                
                                 
                  if (randomico2==nmuI && prec2==valorTglobIn){
-                
                      cajita_grande.append("Numero de cotización: "+ nmuI+"\n");
+                     cajita_grande.append("\n"); // Ejemplo para que se vea mas seprado
+                     cajita_grande.append("\n");
                      cajita_grande.append("Identificacion del cliente: "+ fid +"\n");
                      cajita_grande.append("Nombre del cliente: "+ fnombre+"\n");
+                     cajita_grande.append("Presupuesto: "+ fpresu +"\n");
                      cajita_grande.append("Numero de invidados: "+ fni+"\n");
                      cajita_grande.append("Fecha del evento: "+ ffecha+"\n");
                      cajita_grande.append("Valor total del evento: "+fvalortglob+"\n");
@@ -180,10 +293,9 @@ private int prec2;
                      cajita_grande.append("Articulos de Servicios "+ fartserv+"\n");
                      cajita_grande.append("Articulos de lugar "+ fartlug+"\n");
                  }
-                
-                
-                 
-            }        
+ 
+            }  
+        
       
 
         } catch (IOException e) {
@@ -199,7 +311,6 @@ private int prec2;
         }
     
     }
-    
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

@@ -666,7 +666,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
                 boolean op;
               
               String id[] = cadena.split(";");
-             int id3=Integer.parseInt(id[1]);
+                int id3=Integer.parseInt(id[1]);
                 
                 String nombre[] = cadena.split(";");
                 info = nombre[2];

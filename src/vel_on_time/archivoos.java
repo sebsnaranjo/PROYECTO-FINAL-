@@ -7,6 +7,7 @@ package vel_on_time;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Font;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.BufferedReader;
@@ -549,7 +550,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
                    String serv[]= linea.split(";");
                    String name[]=nCadena.split(";");
                    
-                   if(nombre[2].equals(aCadena) && id[1].equals("0")){
+                   if(nombre[2].equals(aCadena) && prec[3].equals("0") && serv[4].equals(" ")){
                        String aux;
                        aux=";"+id[1]+";"+name[2]+";"+prec[3]+";"+serv[4]+";"+ "\n";
                         System.out.print(aux);
@@ -630,6 +631,68 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
        
        
     }
+       void modificarart(File fAntiguo,String aCadena,String nCadena)
+    {
+      // System.out.println(aCadena+" \n "+ nCadena);
+        Random numaleatorio = new Random(3816L);
+        String cadena1="";
+        String nFnuevo = fAntiguo.getParent()+"/auxiliar"+String.valueOf(Math.abs(numaleatorio.nextInt()))+".txt";
+           nCadena=nCadena+"\n";
+           String aux;
+           // System.out.print(nCadena);
+        File fNuevo= new File(nFnuevo);
+     
+        BufferedReader br;
+        try
+        {
+           
+            if(fAntiguo.exists())
+            {
+                br = new BufferedReader(new FileReader(fAntiguo));
+
+                String linea;
+
+                while((linea=br.readLine()) != null)
+                {
+                   String id[]= linea.split(";");
+                   String nombre[] = linea.split(";");
+                   String prec[]= linea.split(";");
+                 //  String band[]=linea.split(";");
+                   if(aCadena.equals(id[1])){
+                      String id2[]=nCadena.split(";");
+                      String bands[]=nCadena.split(";");
+                       aux=cadena1+";"+id2[0]+";"+nombre[2]+";"+prec[3]+";"+bands[1]+";"+"\n";
+                       Escribir(fNuevo,aux);
+                   }
+                  
+                   
+                }
+
+           
+                br.close();
+
+              
+                String nAntiguo = fAntiguo.getName();
+               
+                borrar(fAntiguo);
+                
+                fNuevo.renameTo(fAntiguo);
+
+
+
+
+            }
+            else
+            {
+                System.out.println("Fichero no Existe");
+            }
+
+        }catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
    
   /* boolean comprobar(int x){
        boolean y=false;
@@ -669,7 +732,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             }
         }
    }
-   void atccod(int id, String nombre, int nI,String fecha, int valortgast,int valortdeco,int valortserv,int valortlug, int valorTglo,String artGast,String artDeco,String artServ,String artLug ){
+   void atccod(int id, String nombre, int nI,String fecha, int valortgast,int valortdeco,int valortserv,int valortlug, int valorTglo,String artGast,String artDeco,String artServ,String artLug,int presu2){
         String dato; 
         String cadena; 
          String cadena1="";
@@ -683,7 +746,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             
          
             
-            cadena = cadena1 + ";"+ random+ ";"+id+";"+nombre+";"+nI+";"+fecha+";"+valortgast+";"+valortdeco+";"+valortserv+";"+valortlug+";"+valorTglo+";"+artGast+";"+artDeco+";"+artServ+";"+artLug+";";
+            cadena = cadena1 + ";"+ random+ ";"+id+";"+nombre+";"+nI+";"+fecha+";"+valortgast+";"+valortdeco+";"+valortserv+";"+valortlug+";"+valorTglo+";"+artGast+";"+artDeco+";"+artServ+";"+artLug+";"+presu2+";";
             
             linea.println(cadena); //escribiendo en el archivo
             
@@ -700,28 +763,125 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             }
         }
    }
-       void generarPdf() throws FileNotFoundException, DocumentException{
-           try{
-        String nombre="otra1";
+     void generarPDF(String fid, String fnombre,String pres, String fni, String ffecha, String fvalortglob, String fvalorgastro, String fvalordeco, String fvalorserv, String fvalorlug, String fartgast, String fartdeco, String fartserv, String fartlug) throws DocumentException, FileNotFoundException {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        String nombre;
+        nombre ="src\\archivos\\"+fid+" "+fnombre;
+        
+        Font fuente= new Font();
+        Font fuente_dos= new Font();
                FileOutputStream archivo = new FileOutputStream(nombre+".pdf");
                Document documento= new Document();
+               
+               fuente.setFamily("COURIER");
+               fuente.setFamily(Font.FontFamily.COURIER.toString());
+               
+               //fuente.setStyle(Font.BOLD);
+               //-------------------------------------------------------------------
+               fuente_dos.setStyle(Font.BOLD);
+               //-------------------------------------------------------------------
+               
                PdfWriter.getInstance(documento,archivo);
                 documento.open();
-                Paragraph parrafo= new Paragraph("Datsos personales");
+                Paragraph parrafo= new Paragraph("CONTRATO");
+                Paragraph parrafo2= new Paragraph("SALON DE EVENTOS VEL ON TIME",fuente_dos);
+                Paragraph parrafo3= new Paragraph(" ");
+                Paragraph parrafo4= new Paragraph(" ");
+                Paragraph parrafo5= new Paragraph("Contrato de prestación de servicios para eventos, en esta ocasión con una celebración de tipo " + /*tipo de evento*/ ", a cargo por la empresa Vel On Time. A continuación, se definirá la información del prestatario y los servicios solicitados.");
+                Paragraph parrafo6= new Paragraph(" ");
+                Paragraph parrafo7= new Paragraph(" ");
+                Paragraph parrafo8= new Paragraph("Informacion del cliente",fuente_dos);
+                Paragraph parrafo9= new Paragraph(" ");
+                Paragraph parrafo10= new Paragraph("ID: "+ fid,fuente);
+                Paragraph parrafo11= new Paragraph("Nombre del cliente: "+ fnombre,fuente);
+                Paragraph parrafo12= new Paragraph(" ");
+                Paragraph parrafo13= new Paragraph("Informacion del evento",fuente_dos);
+                Paragraph parrafo14= new Paragraph(" ");
+                Paragraph parrafo15= new Paragraph("Presupuesto del cliente: "+pres,fuente);
+                Paragraph parrafo16= new Paragraph("Numero de invitados: "+fni,fuente);
+                Paragraph parrafo17= new Paragraph("Fecha: "+ffecha,fuente);
+                Paragraph parrafo18= new Paragraph(" ");
+                Paragraph parrafo19= new Paragraph("Los articulos cotizados son: ",fuente_dos);
+                Paragraph parrafo20= new Paragraph(" ");
+                Paragraph parrafo21= new Paragraph("Proveedor                                                         Articulos",fuente_dos);
+                Paragraph parrafo22= new Paragraph("Gastronomia: "+fartgast,fuente);
+                Paragraph parrafo23= new Paragraph("Lugar: "+fartlug,fuente);
+                Paragraph parrafo24= new Paragraph("Servicios: "+fartserv,fuente);
+                Paragraph parrafo25= new Paragraph("Decoracion: "+fartdeco,fuente);
+                
+                Paragraph parrafo26= new Paragraph(" ");
+                Paragraph parrafo27= new Paragraph("Valores: ", fuente_dos);
+                Paragraph parrafo28= new Paragraph("Valor total de Gastronomia:  "+fvalorgastro,fuente);
+                Paragraph parrafo29= new Paragraph("Valor total de Lugar:  "+fvalorlug,fuente);
+                Paragraph parrafo30= new Paragraph("Valor total de Servicios:  "+fvalorserv,fuente);
+                Paragraph parrafo31= new Paragraph("Valor total de Decoracion:  "+fvalordeco,fuente);
+                Paragraph parrafo32= new Paragraph(" ");
+                
+                
+                Paragraph parrafo33= new Paragraph("VALOR TOTAL DEL EVENTO: "+ fvalortglob,fuente);
+                
+                Paragraph parrafo34= new Paragraph(" ");
+                Paragraph parrafo35= new Paragraph(" ");
+                Paragraph parrafo36= new Paragraph(" ");
+                Paragraph parrafo37= new Paragraph("__________________________");
+                Paragraph parrafo38= new Paragraph("Firma prestatario");
+                Paragraph parrafo39= new Paragraph(" ");
+                Paragraph parrafo40= new Paragraph(" ");
+                Paragraph parrafo41= new Paragraph("__________________________");
+                Paragraph parrafo42= new Paragraph("Firma empresa");
+                
+                
                 parrafo.setAlignment(1);
+                parrafo2.setAlignment(1);
+                
                 documento.add(parrafo);
-                documento.add(new Paragraph("Nombre: "+ " Andres"  ));
-                documento.add(new Paragraph("Id "+ " 10074740234" ));
+                documento.add(parrafo2);
+                documento.add(parrafo3);
+                documento.add(parrafo4);
+                documento.add(parrafo5);
+                documento.add(parrafo6);
+                documento.add(parrafo7);
+                documento.add(parrafo8);
+                documento.add(parrafo9);
+                documento.add(parrafo10);
+                documento.add(parrafo11);
+                documento.add(parrafo12);
+                documento.add(parrafo13);
+                documento.add(parrafo14);
+                documento.add(parrafo15);
+                documento.add(parrafo16);
+                documento.add(parrafo17);
+                documento.add(parrafo18);
+                documento.add(parrafo19);
+                documento.add(parrafo20);
+                documento.add(parrafo21);
+                documento.add(parrafo22);
+                documento.add(parrafo23);
+                documento.add(parrafo24);
+                documento.add(parrafo25);
+                documento.add(parrafo26);
+                documento.add(parrafo27);
+                documento.add(parrafo28);
+                documento.add(parrafo29);
+                documento.add(parrafo30);
+                documento.add(parrafo31);
+                documento.add(parrafo32);
+                documento.add(parrafo33);
+                documento.add(parrafo34);
+                documento.add(parrafo35);
+                documento.add(parrafo36);
+                documento.add(parrafo37);
+                documento.add(parrafo38);
+                documento.add(parrafo39);
+                documento.add(parrafo40);
+                documento.add(parrafo41);
+                documento.add(parrafo42);
+                documento.close();
+   
               
-               
-                documento.add(new Paragraph("Correo : "+ " andreslab7@gmial.com" ));
-
-                documento.close();}catch(IOException e){
-           System.out.print("Error creando archivo");
-        }
-           
+        
     }
-    
     
 
 ////////////////////////////////////////END /////////////////////////////////////////////////////////////////////////////////////////

@@ -60,6 +60,8 @@ boolean lugar;
         digite = new javax.swing.JLabel();
         rev_prov = new javax.swing.JTextField();
         met = new javax.swing.JButton();
+        id_aft = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -170,6 +172,10 @@ boolean lugar;
             }
         });
         getContentPane().add(met, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 130, -1));
+        getContentPane().add(id_aft, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 50, 20));
+
+        jLabel2.setText("ID:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 520));
@@ -252,6 +258,7 @@ boolean lugar;
                     cont=cont+1;
                      if(cont==1){
                  rev_id.setText(id[1]);
+                 id_aft.setText(id[1]);
                  rev_nom_prov.setText(nombre[2]);
                  rev_prec_base.setText(precbase[3]); 
                  rev_servicio.setText(serv[4]);
@@ -296,6 +303,7 @@ boolean lugar;
                     cont=cont+1;
                      if(cont==1){
                  rev_id.setText(id[1]);
+                 id_aft.setText(id[1]);
                  rev_nom_prov.setText(nombre[2]);
                  rev_prec_base.setText(precbase[3]); 
                  rev_servicio.setText(serv[4]);
@@ -339,6 +347,7 @@ boolean lugar;
                     cont=cont+1;
                      if(cont==1){
                  rev_id.setText(id[1]);
+                 id_aft.setText(id[1]);
                  rev_nom_prov.setText(nombre[2]);
                  rev_prec_base.setText(precbase[3]); 
                  rev_servicio.setText(serv[4]);
@@ -382,6 +391,7 @@ boolean lugar;
                     cont=cont+1;
                      if(cont==1){
                  rev_id.setText(id[1]);
+                 id_aft.setText(id[1]);
                  rev_nom_prov.setText(nombre[2]);
                  rev_prec_base.setText(precbase[3]); 
                  rev_servicio.setText(serv[4]);
@@ -436,9 +446,11 @@ boolean lugar;
        }
          archivoos obj26 = new archivoos();
         File fNuevo = new File("src\\archivos\\Provedores Comida.txt");
+        File fNuevo2= new File("src\\archivos\\Articulos Comida.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
-       
+         String lnewar = id+";"+band+";";
+        obj26.modificarart(fNuevo2, id_aft.getText(),lnewar);
        
         
     }
@@ -469,8 +481,12 @@ boolean lugar;
        }
          archivoos obj26 = new archivoos();
         File fNuevo = new File("src\\archivos\\Provedores Decoración y ambientación.txt");
+        File fNuevo2= new File("src\\archivos\\Articulos Decoración y ambientación.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
+        String lnewar = id+";"+band+";";
+        obj26.modificarart(fNuevo2, id_aft.getText(),lnewar);
+        
         
     }
     void servicios(){
@@ -497,10 +513,13 @@ boolean lugar;
         if(rev_inactivo.isSelected()){
            band=false;
        }
-         archivoos obj26 = new archivoos();
+          archivoos obj26 = new archivoos();
         File fNuevo = new File("src\\archivos\\Provedores servicios.txt");
+        File fNuevo2= new File("src\\archivos\\Articulos servicios.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
+        String lnewar = id+";"+band+";";
+        obj26.modificarart(fNuevo2, id_aft.getText(),lnewar);
     }
     void lugar(){
         lugar=true;
@@ -528,8 +547,11 @@ boolean lugar;
        }
          archivoos obj26 = new archivoos();
         File fNuevo = new File("src\\archivos\\Provedores lugar.txt");
+        File fNuevo2= new File("src\\archivos\\Articulos lugar.txt");
         lnew= cadena1 + ";"+id+ ";"+nombre+ ";"+precBase+ ";"+serv+";"+ band +";";
         obj26.modificar(fNuevo,cam,lnew);
+        String lnewar = id+";"+band+";";
+        obj26.modificarart(fNuevo2, id_aft.getText(),lnewar);
         
     }
     
@@ -575,7 +597,9 @@ boolean lugar;
     private javax.swing.JLabel TITULO_GASTRO;
     private javax.swing.JLabel digite;
     private javax.swing.JButton enviar_all1;
+    private javax.swing.JLabel id_aft;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
