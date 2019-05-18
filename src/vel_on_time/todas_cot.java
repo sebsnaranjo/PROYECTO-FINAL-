@@ -26,6 +26,7 @@ private String fecha2;
     /** Creates new form todas_cot */
     public todas_cot() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /** This method is called from within the constructor to
@@ -45,85 +46,60 @@ private String fecha2;
         ver = new javax.swing.JButton();
         VOLVER = new javax.swing.JButton();
         rev_id = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("USUARIO:");
+        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Usuario:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 104, 37));
 
+        buscar_id.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/xmag_search_find_export_locate_5984.png"))); // NOI18N
         buscar_id.setText("BUSCAR");
         buscar_id.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 buscar_idMouseClicked(evt);
             }
         });
+        buscar_id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscar_idActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buscar_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, -1, 38));
+        getContentPane().add(combo_cotizacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 290, 32));
 
-        jLabel2.setText("QUE COTIZACION DESEA VER:");
+        jLabel2.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Que cotizacion desea ver:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 660, 40));
 
-        jLabel3.setText("EL PRIMER VALOR REPRESENTA EL NUMERO DE LA COTIZACION Y EL SEGUNDO EL VALOR FINAL DE LA COTIZACION");
+        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("El primer valor representa el número de cotización y el segundo el valor final de la cotización");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 660, 60));
 
-        ver.setText("VER");
+        ver.setText("Ver");
         ver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 verMouseClicked(evt);
             }
         });
+        getContentPane().add(ver, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, 30));
 
-        VOLVER.setText("VOLVER");
+        VOLVER.setText("Volver");
         VOLVER.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 VOLVERMouseClicked(evt);
             }
         });
+        getContentPane().add(VOLVER, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, 30));
+        getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 247, 38));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rev_id, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(49, 49, 49)
-                                .addComponent(buscar_id))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(236, 236, 236)
-                        .addComponent(VOLVER)
-                        .addGap(137, 137, 137)
-                        .addComponent(ver))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(combo_cotizacion, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(65, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(buscar_id)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(rev_id, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(105, 105, 105)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(50, 50, 50)
-                .addComponent(combo_cotizacion, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ver)
-                    .addComponent(VOLVER))
-                .addContainerGap(111, Short.MAX_VALUE))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -190,6 +166,10 @@ private String fecha2;
         }
     
     }//GEN-LAST:event_buscar_idMouseClicked
+
+    private void buscar_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscar_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buscar_idActionPerformed
 
     /**
      * @param args the command line arguments
@@ -263,6 +243,7 @@ private String fecha2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField rev_id;
     private javax.swing.JButton ver;
     // End of variables declaration//GEN-END:variables

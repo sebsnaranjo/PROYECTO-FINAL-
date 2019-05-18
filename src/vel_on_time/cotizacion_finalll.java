@@ -86,8 +86,8 @@ private int lug_desc;
         final_cot = new javax.swing.JTextField();
         tit_final = new javax.swing.JLabel();
         ver_cot = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         volver = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -96,7 +96,7 @@ private int lug_desc;
         tit_cot.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tit_cot.setText("COTIZACION DEL CLIENTE");
         tit_cot.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(tit_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 500, 60));
+        getContentPane().add(tit_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 540, 60));
 
         tit_gastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         tit_gastro.setText("Gastronomia total:");
@@ -134,19 +134,20 @@ private int lug_desc;
         tit_fecha.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         tit_fecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tit_fecha.setText("Fecha del evento");
-        getContentPane().add(tit_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 170, 20));
+        getContentPane().add(tit_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 170, 20));
 
         rev_fecha.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
-        getContentPane().add(rev_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 178, -1));
+        getContentPane().add(rev_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 178, -1));
 
         finalizar_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        finalizar_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/printer_print_22133.png"))); // NOI18N
         finalizar_cliente.setText("Imprimir contrato de esta");
         finalizar_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 finalizar_clienteMouseClicked(evt);
             }
         });
-        getContentPane().add(finalizar_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, 30));
+        getContentPane().add(finalizar_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 220, 30));
 
         otra_cot.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         otra_cot.setText("Hacer otra cotización");
@@ -155,34 +156,36 @@ private int lug_desc;
                 otra_cotMouseClicked(evt);
             }
         });
-        getContentPane().add(otra_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, 30));
+        getContentPane().add(otra_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, -1, 30));
 
         final_cot.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        getContentPane().add(final_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 180, -1));
+        getContentPane().add(final_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 180, -1));
 
         tit_final.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         tit_final.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tit_final.setText("Final");
-        getContentPane().add(tit_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 180, -1));
+        getContentPane().add(tit_final, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 180, -1));
 
+        ver_cot.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ver_cot.setText("Ver cotizaciones");
         ver_cot.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ver_cotMouseClicked(evt);
             }
         });
-        getContentPane().add(ver_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 140, 30));
+        getContentPane().add(ver_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 130, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 380));
-
-        volver.setText("volver");
+        volver.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        volver.setText("Volver");
         volver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverMouseClicked(evt);
             }
         });
-        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, -1, -1));
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 390));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

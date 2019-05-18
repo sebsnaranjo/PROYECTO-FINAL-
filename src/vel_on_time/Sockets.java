@@ -24,6 +24,7 @@ public class Sockets extends javax.swing.JFrame {
      */
     public Sockets() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -40,12 +41,19 @@ public class Sockets extends javax.swing.JFrame {
         volver = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         campo1 = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("ENVIAR CONTABILIDAD");
+        jLabel1.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Enviar contabilidad");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 6, 550, 60));
 
-        enviar.setText("ENVIAR");
+        enviar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        enviar.setText("Enviar");
         enviar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 enviarMouseClicked(evt);
@@ -56,51 +64,26 @@ public class Sockets extends javax.swing.JFrame {
                 enviarActionPerformed(evt);
             }
         });
+        getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 440, 90, 30));
 
-        volver.setText("volver");
+        volver.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        volver.setText("Volver");
         volver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverMouseClicked(evt);
             }
         });
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, -1, 30));
 
         campo1.setColumns(20);
         campo1.setRows(5);
+        campo1.setBorder(null);
         jScrollPane1.setViewportView(campo1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(enviar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(volver)
-                .addGap(213, 213, 213))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(107, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(volver)
-                    .addComponent(enviar))
-                .addGap(39, 39, 39))
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 84, 382, 337));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -187,6 +170,7 @@ private class EnviarTexto implements ActionListener{
     private javax.swing.JTextArea campo1;
     private javax.swing.JButton enviar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables

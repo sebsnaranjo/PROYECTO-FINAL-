@@ -16,6 +16,7 @@ public class Gerente extends javax.swing.JFrame {
      */
     public Gerente() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,6 +32,7 @@ public class Gerente extends javax.swing.JFrame {
         VOLVER_QUIEN = new javax.swing.JButton();
         enviar = new javax.swing.JButton();
         clave_c = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,6 +44,7 @@ public class Gerente extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 380, 58));
 
+        VOLVER_QUIEN.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         VOLVER_QUIEN.setText("Volver");
         VOLVER_QUIEN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VOLVER_QUIEN.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -49,18 +52,24 @@ public class Gerente extends javax.swing.JFrame {
                 VOLVER_QUIENMouseClicked(evt);
             }
         });
-        getContentPane().add(VOLVER_QUIEN, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 257, 70, 30));
+        getContentPane().add(VOLVER_QUIEN, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 70, 30));
 
-        enviar.setText("enviar");
+        enviar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        enviar.setText("Enviar");
         enviar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 enviarMouseClicked(evt);
             }
         });
-        getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 110, 40));
+        getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 70, 30));
 
         clave_c.setText("sarasebasandres");
-        getContentPane().add(clave_c, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 220, -1));
+        getContentPane().add(clave_c, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 220, 30));
+
+        jLabel3.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Ingrese la contraseña:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 380, 20));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
@@ -128,5 +137,6 @@ public class Gerente extends javax.swing.JFrame {
     private javax.swing.JButton enviar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

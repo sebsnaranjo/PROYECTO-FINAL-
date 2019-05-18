@@ -32,6 +32,7 @@ private String fecha2;
      */
     public mostrar_cot() {
         initComponents();
+        this.setLocationRelativeTo(null);
         
         
     }
@@ -49,12 +50,17 @@ private String fecha2;
         cajita_grande = new javax.swing.JTextArea();
         volver = new javax.swing.JButton();
         imprimir_contrato = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cajita_grande.setColumns(20);
         cajita_grande.setRows(5);
         jScrollPane1.setViewportView(cajita_grande);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 67, 510, 490));
 
         volver.setText("VOLVER");
         volver.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -62,37 +68,25 @@ private String fecha2;
                 volverMouseClicked(evt);
             }
         });
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 570, -1, 30));
 
+        imprimir_contrato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/printer_print_22133.png"))); // NOI18N
         imprimir_contrato.setText("IMPRIMIR CONTRATO");
         imprimir_contrato.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imprimir_contratoMouseClicked(evt);
             }
         });
+        getContentPane().add(imprimir_contrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, -1, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(221, 221, 221)
-                .addComponent(volver)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
-                .addComponent(imprimir_contrato)
-                .addGap(238, 238, 238))
-            .addComponent(jScrollPane1)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 554, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(volver)
-                    .addComponent(imprimir_contrato))
-                .addContainerGap())
-        );
+        jLabel1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Cotización a ver");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 580, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -347,6 +341,8 @@ private String fecha2;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea cajita_grande;
     private javax.swing.JButton imprimir_contrato;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
