@@ -58,6 +58,8 @@ public class Gerente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 110, 40));
+
+        clave_c.setText("sarasebasandres");
         getContentPane().add(clave_c, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 220, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
@@ -79,8 +81,8 @@ public class Gerente extends javax.swing.JFrame {
         
         if(clave_clie.equals(clave)){
             contabilidad ob40 = new contabilidad();
-            ob40.archCli(WIDTH, clave, ERROR, NORMAL, clave);
-       
+            ob40.archCli();
+            this.setVisible(false);
         }
       
     }//GEN-LAST:event_enviarMouseClicked

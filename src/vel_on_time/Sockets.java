@@ -36,12 +36,14 @@ public class Sockets extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        campo1 = new javax.swing.JTextField();
         enviar = new javax.swing.JButton();
+        volver = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        campo1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("ENVIAR MENSAJE");
+        jLabel1.setText("ENVIAR CONTABILIDAD");
 
         enviar.setText("ENVIAR");
         enviar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -55,34 +57,49 @@ public class Sockets extends javax.swing.JFrame {
             }
         });
 
+        volver.setText("volver");
+        volver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                volverMouseClicked(evt);
+            }
+        });
+
+        campo1.setColumns(20);
+        campo1.setRows(5);
+        jScrollPane1.setViewportView(campo1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(enviar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(volver)
+                .addGap(213, 213, 213))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(157, 157, 157)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(campo1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(39, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(enviar)
-                .addGap(146, 146, 146))
+                        .addGap(85, 85, 85)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addComponent(jLabel1)
-                .addGap(30, 30, 30)
-                .addComponent(campo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(enviar)
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(volver)
+                    .addComponent(enviar))
+                .addGap(39, 39, 39))
         );
 
         pack();
@@ -98,11 +115,27 @@ public class Sockets extends javax.swing.JFrame {
          mitxt.actionPerformed(evt);
     }//GEN-LAST:event_enviarActionPerformed
 
+    private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
+        Quien ob46 = new Quien();
+        ob46.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_volverMouseClicked
+
     /**
      * @param args the command line arguments
      */
     
-    
+    void llegada(int cont,float cont_gastro_tot,float cont_deco_tot,float cont_serv_tot,float cont_lug_tot){
+        String cont2 = Integer.toString(cont);
+       float total_ganancias= cont_gastro_tot+cont_deco_tot+cont_serv_tot+cont_lug_tot;
+       campo1.append(cont+"\n");
+       campo1.append(cont_gastro_tot+"\n");
+       campo1.append(cont_deco_tot+"\n");
+       campo1.append(cont_serv_tot+"\n");
+       campo1.append(cont_lug_tot+"\n");
+       campo1.append(total_ganancias+"\n");
+       
+    }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -151,9 +184,11 @@ private class EnviarTexto implements ActionListener{
     }
 }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField campo1;
+    private javax.swing.JTextArea campo1;
     private javax.swing.JButton enviar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }
   

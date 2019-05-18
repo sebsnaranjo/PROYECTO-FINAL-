@@ -883,7 +883,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
               
         
     }
-   void cot_totales(String fid, String fnombre,String pres, String fni, String ffecha, String fvalortglob, String fvalorgastro, String fvalordeco, String fvalorserv, String fvalorlug, String fartgast, String fartdeco, String fartserv, String fartlug){
+   void cot_totales(String fid, String fnombre,String pres, String fni, String ffecha, String fvalortglob, String fvalorgastro, String fvalordeco, String fvalorserv, String fvalorlug, String fartgast, String fartdeco, String fartserv, String fartlug,int gastro_desc,int deco_desc,int lug_desc,int serv_desc){
          String cadena; 
         String cadena1="";
         FileWriter fichero = null; 
@@ -896,7 +896,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             
          
             
-            cadena = cadena1 + ";"+fid+ ";"+fnombre+ ";"+pres+ ";"+fni+";"+ffecha +";"+fvalortglob+";"+fvalorgastro+";"+fvalordeco+";"+fvalorserv+";"+fvalorlug+";"+fartgast+";"+fartdeco+";"+fartserv+";"+fartlug+";";
+            cadena = cadena1 + ";"+fid+ ";"+fnombre+ ";"+pres+ ";"+fni+";"+ffecha +";"+fvalortglob+";"+fvalorgastro+";"+fvalordeco+";"+fvalorserv+";"+fvalorlug+";"+fartgast+";"+fartdeco+";"+fartserv+";"+fartlug+";"+gastro_desc+";"+deco_desc+";"+serv_desc+";"+lug_desc+";";
             
             linea.println(cadena); //escribiendo en el archivo
             

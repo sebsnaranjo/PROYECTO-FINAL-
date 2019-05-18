@@ -46,6 +46,10 @@ private String art_lug;
  String base_serv_fin;
  String base_lug_fin;
 
+private int gastro_desc;
+private int deco_desc;
+private int serv_desc;
+private int lug_desc;
 
 
 
@@ -211,7 +215,7 @@ private String art_lug;
 
     private void finalizar_clienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finalizar_clienteMouseClicked
         archivoos ob38 = new archivoos();
-        
+        contabilidad ob46 = new contabilidad();
         String pres= Integer.toString(presupuesto2);
         String gastro2p= Integer.toString(gastro2);
         String deco2p= Integer.toString(deco2);
@@ -220,8 +224,9 @@ private String art_lug;
         String fin = Integer.toString(tot_fin );
         String id2p= Integer.toString(id2);
         String numIn2p= Integer.toString(numIn2);
-        
- ob38.cot_totales(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug); 
+      
+   ob46.llegada_falsa(art_gastro, art_deco, art_serv, art_lug);
+ ob38.cot_totales(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug,gastro_desc,deco_desc,lug_desc,serv_desc); 
    
     try {
         ob38.generarPDF(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug);
@@ -258,7 +263,7 @@ private String art_lug;
         this.art_lug=art_lug;
         this.art_serv=art_serv;
     }
-    public void llegada_final(int prec_gastro, int prec_deco,int prec_serv,int prec_lug,int gastro,int deco,int serv,int lug){
+    public void llegada_final(int prec_gastro, int prec_deco,int prec_serv,int prec_lug,int gastro,int deco,int serv,int lug,int conta,int contb,int contc,int contd){
         
          base_gastro= prec_gastro;
          base_deco=prec_deco;
@@ -267,8 +272,11 @@ private String art_lug;
          gastro2= gastro;
          deco2=deco;
          serv2=serv;
-   
-         
+         lug2=lug;
+         gastro_desc= conta;
+         deco_desc=contb;
+         serv_desc=contc;
+         lug_desc=contd;
          this.base_gastro=base_gastro;
          this.base_deco=base_deco;
          this.base_serv=base_serv;
@@ -277,7 +285,10 @@ private String art_lug;
          this.deco2=deco2;
          this.serv2=serv2;
          this.lug2=lug2;
-      
+       this.gastro_desc=gastro_desc;
+         this.deco_desc=deco_desc;
+         this.serv_desc=serv_desc;
+         this.lug_desc=lug_desc;
          cotizacion();
          
     }

@@ -441,15 +441,25 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
        
         cotizacion_finalll ob28 = new cotizacion_finalll();
         ob28.setVisible(true);
+        int conta;
+        int contb;
+        int contc;
+        int contd;
+        conta=cont;
+        contb=cont2;
+        contc=cont3;
+        contd=cont4;
+        System.out.println(conta+"a");
+        System.out.println(contb+"b");
+        System.out.println(contc+"c");
+        System.out.println(contd+"d");
         cont=cont*numIn;
         cont2=cont2*numIn;
         cont3=cont3*numIn;
         cont4=cont4*numIn;
-        
-        System.out.println(id_en+"f");
         ob28.llegada_oculta(id2,name2,pres2,numIn,fecha);
         ob28.llegada_fantasma(gast,servi,deocr,lrgs);
-        ob28.llegada_final(prec_gastro,prec_deco,prec_serv,prec_lug,cont, cont2, cont3, cont4);
+        ob28.llegada_final(prec_gastro,prec_deco,prec_serv,prec_lug,cont, cont2, cont3, cont4,conta,contb,contc,contd);
         this.setVisible(false);
        
     }//GEN-LAST:event_env_finalMouseClicked
