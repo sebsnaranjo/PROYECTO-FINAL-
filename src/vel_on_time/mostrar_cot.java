@@ -27,6 +27,23 @@ private String nombre2;
 private int presupuesto2;
 private int numIn2;
 private String fecha2;
+ private  int nmuI;
+ private       int valorTglobIn;
+ private       String fid = null;
+ private       String fnombre;
+ private       String fni;
+ private       String ffecha;
+ private       String fvalorgastro;
+ private       String fvalordeco;
+ private       String fvalorserv;
+ private       String fvalorlug;
+ private       String fvalortglob;
+ private       String fartgast;
+  private       String fartgast2;
+ private       String fartdeco;
+  private      String fartserv;
+  private      String fartlug;
+  private      String fpresu;
     /**
      * Creates new form mostrar_cot
      */
@@ -98,26 +115,11 @@ private String fecha2;
     }//GEN-LAST:event_volverMouseClicked
 
     private void imprimir_contratoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imprimir_contratoMouseClicked
-           archivoos ob37= new archivoos();
+        archivoos ob37= new archivoos();
         File archivo = null;  //apuntar al archivo almancenado DD
         FileReader contenido = null;  //acceder a todo el contenido del archivo
         BufferedReader linea = null; //accede linea a linea al contenido
-        int nmuI;
-        int valorTglobIn;
-        String fid = null;
-        String fnombre;
-        String fni;
-        String ffecha;
-        String fvalorgastro;
-        String fvalordeco;
-        String fvalorserv;
-        String fvalorlug;
-        String fvalortglob;
-        String fartgast;
-        String fartdeco;
-        String fartserv;
-        String fartlug;
-        String fpresu;
+     
             
         
         try {
@@ -160,13 +162,104 @@ private String fecha2;
                  fartlug= artLug[14];
                  String presu2[]= cadena.split(";");
                  fpresu=presu2[15];
-                                
+            
+                     
                  if (randomico2==nmuI && prec2==valorTglobIn){
-                    ob37.generarPDF(fid,fnombre,fpresu,fni,ffecha,fvalortglob,fvalorgastro,fvalordeco,fvalorserv,fvalorlug,fartgast,fartdeco,fartserv,fartlug);
+                    
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////                  
+                int tot_gas=0;
+                  String prec_gastro[]=fartgast.split(",");
+                  int final_tot_gas=0;
+                  
+                for(int i=0;i<fartgast.length();i++){
+                    if(fartgast.charAt(i)==','){
+                     tot_gas+=1;   
                     }
+                }
+                for(int i=1;i<tot_gas;i=i+2){
+                    int x=Integer.parseInt(prec_gastro[i]);
+                    
+                    final_tot_gas=final_tot_gas+x;
+                }
+                     
+                     System.out.println(final_tot_gas+"dar");
+                     
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////                   
+                               
+                int tot_deco=0;
+                  String prec_deco[]=fartdeco.split(",");
+                  int final_tot_deco=0;
+                  
+                for(int i=0;i<fartdeco.length();i++){
+                    if(fartdeco.charAt(i)==','){
+                     tot_deco+=1;   
+                    }
+                }
+                for(int i=1;i<tot_deco;i=i+2){
+                    int x=Integer.parseInt(prec_deco[i]);
+                    
+                    final_tot_deco=final_tot_deco+x;
+                }
+                     
+                     System.out.println(final_tot_deco+"dar3");
+                     
+                     
+   //////////////////////////////////////////////////////////////////////////////////////////////////////////////                 
+                     
+                     
+                               
+                int tot_serv=0;
+                  String prec_serv[]=fartserv.split(",");
+                  int final_tot_serv=0;
+                  
+                for(int i=0;i<fartserv.length();i++){
+                    if(fartserv.charAt(i)==','){
+                     tot_serv+=1;   
+                    }
+                }
+                for(int i=1;i<tot_serv;i=i+2){
+                    int x=Integer.parseInt(prec_serv[i]);
+                    
+                    final_tot_serv=final_tot_serv+x;
+                }
+                     
+                     System.out.println(final_tot_serv+"dar2");
+                     
+                     
+                     
+                     
+    ///////////////////////////////////////////////////////////////////////////////////////////                 
+                     
+                               
+                int tot_lug=0;
+                  String prec_lug[]=fartlug.split(",");
+                  int final_tot_lug=0;
+                  
+                for(int i=0;i<fartlug.length();i++){
+                    if(fartlug.charAt(i)==','){
+                     tot_lug+=1;   
+                    }
+                }
+                for(int i=1;i<tot_lug;i=i+2){
+                    int x=Integer.parseInt(prec_lug[i]);
+                    
+                    final_tot_lug=final_tot_lug+x;
+                }
+                     
+                     System.out.println(final_tot_lug+"dar4");
+                     
+                     
+                     
+           ////////////////////////////////////////////////////////////////////////////////////////////////////////////          
+                     ob37.cot_totales2(fid,fnombre,fpresu,fni,ffecha,fvalortglob,fvalorgastro,fvalordeco,fvalorserv,fvalorlug,final_tot_gas,final_tot_deco,final_tot_serv,final_tot_lug);
+                     
+                     
+                     ob37.generarPDF(fid,fnombre,fpresu,fni,ffecha,fvalortglob,fvalorgastro,fvalordeco,fvalorserv,fvalorlug,fartgast,fartdeco,fartserv,fartlug);
+                 }
  
             }  
         
+          
       
 
         } catch (IOException e) {
@@ -184,6 +277,7 @@ private String fecha2;
         }
     }//GEN-LAST:event_imprimir_contratoMouseClicked
 
+   
     /**
      * @param args the command line arguments
      */

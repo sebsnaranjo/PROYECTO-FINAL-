@@ -108,15 +108,19 @@ public class Sockets extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     
-    void llegada(int cont,float cont_gastro_tot,float cont_deco_tot,float cont_serv_tot,float cont_lug_tot){
+    void llegada(int cont,float cont_gastro_tot,float cont_deco_tot,float cont_serv_tot,float cont_lug_tot,float sa,float sa2,float sa3,float sa4,float a,float a2,float a3,float a4){
         String cont2 = Integer.toString(cont);
-       float total_ganancias= cont_gastro_tot+cont_deco_tot+cont_serv_tot+cont_lug_tot;
-       campo1.append(cont+"\n");
-       campo1.append(cont_gastro_tot+"\n");
-       campo1.append(cont_deco_tot+"\n");
-       campo1.append(cont_serv_tot+"\n");
-       campo1.append(cont_lug_tot+"\n");
-       campo1.append(total_ganancias+"\n");
+       float total_desc= cont_gastro_tot+cont_deco_tot+cont_serv_tot+cont_lug_tot;
+       float total_ganancias = sa+sa2+sa3+sa4;
+       float total_sin_desc = a+a2+a3+a4;
+       campo1.append("Total de eventos hechos:  "+cont+"\n");
+       campo1.append("Gastronomia ganancia:  "+sa+"\n");
+       campo1.append("Decoración ganancia:  "+sa2+"\n");
+       campo1.append("Servicios ganancia:  "+sa3+"\n");
+       campo1.append("Lugar ganancia:  "+sa4+"\n");
+       campo1.append("suma de todo sin el incremento"+total_desc+"\n");
+       campo1.append("suma de todo con el incremento"+total_sin_desc+"\n");
+       campo1.append("total ganancias"+total_ganancias+"\n");
        
     }
     

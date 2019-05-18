@@ -228,7 +228,7 @@ private int lug_desc;
         String id2p= Integer.toString(id2);
         String numIn2p= Integer.toString(numIn2);
       
-   ob46.llegada_falsa(art_gastro, art_deco, art_serv, art_lug);
+
  ob38.cot_totales(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug,gastro_desc,deco_desc,lug_desc,serv_desc); 
    
     try {
@@ -288,7 +288,7 @@ private int lug_desc;
          this.deco2=deco2;
          this.serv2=serv2;
          this.lug2=lug2;
-       this.gastro_desc=gastro_desc;
+         this.gastro_desc=gastro_desc;
          this.deco_desc=deco_desc;
          this.serv_desc=serv_desc;
          this.lug_desc=lug_desc;

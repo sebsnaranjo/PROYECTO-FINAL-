@@ -913,6 +913,36 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             }
         }
     }
+    void cot_totales2(String fid, String fnombre,String pres, String fni, String ffecha, String fvalortglob, String fvalorgastro, String fvalordeco, String fvalorserv, String fvalorlug, int fartgast, int fartdeco, int fartserv, int fartlug){
+         String cadena2; 
+        String cadena1="";
+        FileWriter fichero = null; 
+        PrintWriter linea = null;  
+        
+        try{
+            fichero = new FileWriter("src\\archivos\\Cot_finales2.txt",true); //crea el archivo 
+            linea = new PrintWriter(fichero); //
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+         
+            
+            cadena2 = cadena1 + ";"+fid+ ";"+fnombre+ ";"+pres+ ";"+fni+";"+ffecha +";"+fvalortglob+";"+fvalorgastro+";"+fvalordeco+";"+fvalorserv+";"+fvalorlug+";"+fartgast+";"+fartdeco+";"+fartserv+";"+fartlug+";"+0+";"+0+";"+0+";"+0+";"+0+";";
+            
+            linea.println(cadena2); //escribiendo en el archivo
+            
+      }catch(IOException e){
+           System.out.print("Error creando archivo");
+        }
+        finally{
+            try{
+                if(fichero != null){
+                    fichero.close();
+                }
+            }catch(IOException e1){
+                System.out.print("Error cerrando archivo");
+            }
+        }
+    }
 
 ////////////////////////////////////////END /////////////////////////////////////////////////////////////////////////////////////////
 

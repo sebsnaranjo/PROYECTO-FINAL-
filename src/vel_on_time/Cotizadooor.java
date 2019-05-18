@@ -25,13 +25,13 @@ boolean serv;
 boolean lug;
 private int id2;
 private int id_en;
-private String name2;
+private String name2=" ";
 private int pres2;
 private int dia2;
 private int mes2;
 private int ano2;
 private int numIn;
-private String fecha;
+private String fecha=" ";
 int cont =0;
 int cont2=0;
 int cont4=0;
@@ -45,14 +45,14 @@ int prec_gastro;
 int prec_deco;
 int prec_serv;
 int prec_lug;
-String gastro_rev_uni;
-String lugar_rev_uni;
-String deco_rev_uni;
-String serv_rev_uni;
-String gastro_rev_uni2;
-String lugar_rev_uni2;
-String deco_rev_uni2;
-String serv_rev_uni2;
+String gastro_rev_uni=" ";
+String lugar_rev_uni=" ";
+String deco_rev_uni=" ";
+String serv_rev_uni=" ";
+String gastro_rev_uni2=" ";
+String lugar_rev_uni2=" ";
+String deco_rev_uni2=" ";
+String serv_rev_uni2=" ";
     /**
      * Creates new form Cotizador
      */
@@ -453,10 +453,12 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         System.out.println(contb+"b");
         System.out.println(contc+"c");
         System.out.println(contd+"d");
+        
         cont=cont*numIn;
         cont2=cont2*numIn;
         cont3=cont3*numIn;
         cont4=cont4*numIn;
+        
         ob28.llegada_oculta(id2,name2,pres2,numIn,fecha);
         ob28.llegada_fantasma(gast,servi,deocr,lrgs);
         ob28.llegada_final(prec_gastro,prec_deco,prec_serv,prec_lug,cont, cont2, cont3, cont4,conta,contb,contc,contd);

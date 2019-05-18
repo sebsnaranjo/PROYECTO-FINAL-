@@ -90,7 +90,8 @@ public class Gerente extends javax.swing.JFrame {
         
         if(clave_clie.equals(clave)){
             contabilidad ob40 = new contabilidad();
-            ob40.archCli();
+            
+            ob40.archCli2();
             this.setVisible(false);
         }
       
