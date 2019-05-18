@@ -37,6 +37,7 @@ public final class Quien extends javax.swing.JFrame {
         gerente = new javax.swing.JRadioButton();
         empleado = new javax.swing.JRadioButton();
         enviar = new javax.swing.JButton();
+        WEB = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -81,7 +82,15 @@ public final class Quien extends javax.swing.JFrame {
                 enviarMouseClicked(evt);
             }
         });
-        getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 240, 48));
+        getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 240, 48));
+
+        WEB.setText("WEB");
+        WEB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                WEBMouseClicked(evt);
+            }
+        });
+        getContentPane().add(WEB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 270, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 340));
@@ -126,6 +135,12 @@ public final class Quien extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_gerenteActionPerformed
 
+    private void WEBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_WEBMouseClicked
+        Codigo_qr ob47 = new Codigo_qr();
+        ob47.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_WEBMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -163,6 +178,7 @@ public final class Quien extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup ELEC_QUIEN;
+    private javax.swing.JButton WEB;
     private javax.swing.JLabel bienvenido;
     private javax.swing.JLabel bienvenido1;
     private javax.swing.JRadioButton empleado;
