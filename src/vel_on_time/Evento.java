@@ -86,7 +86,6 @@ public class Evento extends javax.swing.JFrame {
         getContentPane().add(id_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 85, 34));
 
         rev_id.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        rev_id.setText("454");
         rev_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rev_idActionPerformed(evt);
@@ -100,7 +99,6 @@ public class Evento extends javax.swing.JFrame {
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 103, -1));
 
         rev_nombre.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        rev_nombre.setText("saraaaa");
         rev_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rev_nombreKeyTyped(evt);
@@ -109,7 +107,6 @@ public class Evento extends javax.swing.JFrame {
         getContentPane().add(rev_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 160, -1));
 
         rev_presupuesto.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        rev_presupuesto.setText("4548");
         rev_presupuesto.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rev_presupuestoKeyTyped(evt);
@@ -118,7 +115,6 @@ public class Evento extends javax.swing.JFrame {
         getContentPane().add(rev_presupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 103, -1));
 
         rev_invitados.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        rev_invitados.setText("4848");
         rev_invitados.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rev_invitadosKeyTyped(evt);
@@ -160,7 +156,11 @@ public class Evento extends javax.swing.JFrame {
         getContentPane().add(DIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 36, 34));
 
         rev_dia.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        rev_dia.setText("12");
+        rev_dia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rev_diaActionPerformed(evt);
+            }
+        });
         rev_dia.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rev_diaKeyTyped(evt);
@@ -169,7 +169,6 @@ public class Evento extends javax.swing.JFrame {
         getContentPane().add(rev_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 60, -1));
 
         rev_mes.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        rev_mes.setText("2");
         rev_mes.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rev_mesKeyTyped(evt);
@@ -178,7 +177,6 @@ public class Evento extends javax.swing.JFrame {
         getContentPane().add(rev_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 61, -1));
 
         rev_ano.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        rev_ano.setText("2019");
         rev_ano.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 rev_anoKeyTyped(evt);
@@ -237,10 +235,12 @@ public class Evento extends javax.swing.JFrame {
        int ano;
        int horai,horaf;
        
-      if(rev_id.getText().length()==0){
+      if( (rev_nombre.getText().length()==0)){
+          //|| (rev_nombre.getText().length()==0) || (rev_presupuesto.getText().length()==0) || (rev_invitados.getText().length()==0)||(rev_dia.getText().length()==0)||(rev_mes.getText().length()==0)||(rev_ano.getText().length()==0)||(horaInicio.getText().length()==0)||(horafinal.getText().length()==0)
           JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
       }
       else{
+          
           
        
        id= Integer.parseInt(rev_id.getText());
@@ -366,6 +366,10 @@ public class Evento extends javax.swing.JFrame {
         char c=evt.getKeyChar();
         if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_horafinalKeyTyped
+
+    private void rev_diaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rev_diaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rev_diaActionPerformed
 
     void quince(){
         evento.setText("15 años");
