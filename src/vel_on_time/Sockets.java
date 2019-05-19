@@ -159,8 +159,8 @@ private class EnviarTexto implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
           try {
-                //System.out.println("Hola Funciona");
-               Socket misocket = new Socket("192.168.0.7",9999);
+               
+               Socket misocket = new Socket("192.168.0.3",9999);
                DataOutputStream salida=new DataOutputStream(misocket.getOutputStream());
                salida.writeUTF(campo1.getText());
                salida.close();

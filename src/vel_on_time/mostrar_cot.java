@@ -252,7 +252,7 @@ private String fecha2;
                     }
                 }
                 for(int i=0;i<tot_lugk;i=i+2){
-                   System.out.println("Envio: "+prec_lugk[i]);
+                 
                     String arch;
                      arch=ob49.buscprovlug(prec_lugk[i]);
                     ob49.llenarfinal(arch, ffechak);   
@@ -352,7 +352,7 @@ private String fecha2;
                     final_tot_gas=final_tot_gas+x;
                 }
                      
-                     System.out.println(final_tot_gas+"dar");
+                    
                      
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////                   
                                
@@ -371,7 +371,7 @@ private String fecha2;
                     final_tot_deco=final_tot_deco+x;
                 }
                      
-                     System.out.println(final_tot_deco+"dar3");
+                    
                      
                      
    //////////////////////////////////////////////////////////////////////////////////////////////////////////////                 
@@ -393,7 +393,7 @@ private String fecha2;
                     final_tot_serv=final_tot_serv+x;
                 }
                      
-                     System.out.println(final_tot_serv+"dar2");
+                    
                      
                      
                      
@@ -416,7 +416,7 @@ private String fecha2;
                     final_tot_lug=final_tot_lug+x;
                 }
                      
-                     System.out.println(final_tot_lug+"dar4");
+                     
                      
                      
                      

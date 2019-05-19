@@ -464,11 +464,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         contb=cont2;
         contc=cont3;
         contd=cont4;
-        System.out.println(conta+"a");
-        System.out.println(contb+"b");
-        System.out.println(contc+"c");
-        System.out.println(contd+"d");
-        
+      
         cont=cont*numIn;
         cont2=cont2*numIn;
         cont3=cont3*numIn;
@@ -582,8 +578,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         
         deocr=deocr+id[0]+","+p[1]+",";
         cont2=cont2+almax;
-        System.out.println(cont2);
-        System.out.println("deocr"+deocr);
+       
         this.deocr=deocr;
         }
             
@@ -604,8 +599,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         }else{
         servi=servi+id[0]+","+p[1]+",";
         cont3=cont3+almax;
-        System.out.println(cont3);
-        System.out.println("serv"+servi);
+        
         this.servi=servi;}
     }//GEN-LAST:event_ar_car_3MouseClicked
 
@@ -625,9 +619,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         }else{
         lrgs=lrgs+id[0]+","+p[1]+",";
         cont4=cont4+almax;
-        System.out.println(cont4);
-       
-        System.out.println("lrgs"+lrgs);
+      
         this.lrgs=lrgs;
        }
     }//GEN-LAST:event_ar_car_4MouseClicked

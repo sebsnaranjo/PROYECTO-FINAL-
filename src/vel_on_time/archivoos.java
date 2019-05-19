@@ -234,7 +234,7 @@ public class archivoos {
 ///////////////////////////ARTICULO DE DECORACION /////////////////////////////////////////////////////////////////////////////
  
  void artdeco(int id,String art, int precart, boolean provedor_deco) {
-     System.out.println("hola");
+     
         String dato; 
         String cadena; 
          String cadena1="";
@@ -339,7 +339,7 @@ public class archivoos {
 ///////////////////////////// ARTICULO SERVICIOS ////////////////////////////////////////////////////////////////////////
 
 void artserv(int id,String art, int precart, boolean provedor_deco) {
-     System.out.println("hola");
+     
         String dato; 
         String cadena; 
          String cadena1="";
@@ -445,7 +445,7 @@ void arcprovlug(int id, String nombre, int prec, String serv,boolean provedor_de
 ////////////////////////////// ARTICULO LUGAR ////////////////////////////////////////////////////////////////////////////////////////
 
 void artlug(int id,String art, int precart, boolean provedor_deco) {
-     System.out.println("hola");
+     
         String dato; 
         String cadena; 
          String cadena1="";
@@ -971,8 +971,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
         File fNuevo= new File(nFnuevo);
         String anN[]= aCadena.split(";");
         String dateN[]= aCadena.split(";");
-        System.out.println(anN[0]);
-        System.out.println(dateN[1]+"Fecha");
+  
         String nID[]=nCadena.split(";");
         String nNm[]=nCadena.split(";");
         String nPrest[]=nCadena.split(";");
@@ -1139,9 +1138,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             horaii2=Integer.parseInt(horai2[3]);
             horafi2=Integer.parseInt(horaf2[4]);
                    if(id.equals(idf[1])&& hroaFS.equals(hroaFS2)){
-                       System.out.println(horaii2);
-                       System.out.println(horaii);
-                       System.out.println(horafi2);
+                     
                       if(horaii2<=horaii&&horaii<=horafi2){
                        op=true;
                       }
@@ -1341,7 +1338,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
         Random numaleatorio = new Random(3816L);
         String nFnuevo = fAntiguo.getParent()+"/auxiliar"+String.valueOf(Math.abs(numaleatorio.nextInt()))+".txt";
            
-            System.out.println(nCadena);
+           
         File fNuevo= new File(nFnuevo);
         String cadena1= "";
         BufferedReader br;
@@ -1363,8 +1360,6 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
                    String name[]=nCadena.split(";");
                    String op[]= linea.split(";");
                    
-                    System.out.println(aCadena+"f");
-                    System.out.println(nombre[2]);
                    if(aCadena.equals(nombre[2])){
                        
                        String aux;

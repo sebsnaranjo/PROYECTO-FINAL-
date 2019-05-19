@@ -1,2 +1,0 @@
-;862;1;sebastiancastillo;34;12/3/2019/6/7;427500;106000;858000;240000;1631500;pizzamediterranea,12000,;aseadores,25000,;globos,2000,;;3423;Despedida de soltero;
-;683;2;sofia;32;4/3/2019/2/3;666000;167600;988800;240000;2062400;carneasada,10000,carneasada,10000,;meseros,30000,;manteles,5000,;;2500000;Comunion;

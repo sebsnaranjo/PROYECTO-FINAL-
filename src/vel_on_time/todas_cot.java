@@ -225,7 +225,7 @@ private String fecha2;
         rev_numIN.setText(numIn3);
         rev_fecha.setText(fecha2);*/
         
-        System.out.println(id3+"x");
+       
     }
     
     public static void main(String args[]) {

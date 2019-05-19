@@ -478,8 +478,7 @@ private String nombre_lug;
                 op=Boolean.parseBoolean(band[4]);
                
                 if (op==true){
-                    System.out.println(select_id);
-                    System.out.println(id[1]);
+                  
                     if(select_id.equals(id[1])){
                        
                         a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";

@@ -104,7 +104,7 @@ public class contabilidad {
                 cont_gastro_tot2=(float) (as/1.30);
                 
                sas=as-cont_gastro_tot2;
-                System.out.println(sas+"fin s");
+               
                ////////////////////////////////////////////////////////////////////////////////////// 
             cont_deco_art2=cont_deco_art2+(total_desc_serv2*numIn2s);
                cont_deco2=cont_deco2+total_decoa2;
@@ -112,7 +112,7 @@ public class contabilidad {
                 cont_deco_tot2=(float) (a2s/1.52);
                    
                sa2s=a2s-cont_deco_tot2;
-                System.out.println(sa2s+"fin2");
+               
                 ////////////////////////////////////////////////////////////////////////////////////
                   cont_serv_art2=cont_serv_art2+(total_desc_deco2*numIn2s);
                cont_serv2=cont_serv2+total_serva2;
@@ -120,7 +120,7 @@ public class contabilidad {
                 cont_serv_tot2=(float) (a3s/1.60);
                    
                sa3s=a3s-cont_serv_tot2;
-                System.out.println(sa3s+"fin3");
+                
                 //////////////////////////////////////////////////////////////////////////////////
                  cont_lug_art2=cont_lug_art2+(total_desc_lug2*numIn2s);
                cont_lug2=cont_lug2+total_lugara2;
@@ -128,7 +128,7 @@ public class contabilidad {
                 cont_lug_tot2=(float) (a4s/1.20);
                    
                sa4s=a4s-cont_lug_tot2;
-                System.out.println(sa4s+"fin4 s");
+               
                  }
          
 
@@ -242,7 +242,7 @@ public class contabilidad {
                 cont_gastro_tot=(float) (a/1.30);
                 
                sa=a-cont_gastro_tot;
-                System.out.println(sa+"fin");
+                
                ////////////////////////////////////////////////////////////////////////////////////// 
                 cont_deco_art=cont_deco_art+(total_desc_deco*numIn2);
                cont_deco=cont_deco+total_decoa;
@@ -250,7 +250,7 @@ public class contabilidad {
                 cont_deco_tot=(float) (a2/1.52);
                    
                sa2=a2-cont_deco_tot;
-                System.out.println(sa2+"fin2");
+              
                 ////////////////////////////////////////////////////////////////////////////////////
                   cont_serv_art=cont_serv_art+(total_desc_serv*numIn2);
                cont_serv=cont_serv+total_serva;
@@ -258,7 +258,7 @@ public class contabilidad {
                 cont_serv_tot=(float) (a3/1.60);
                    
                sa3=a3-cont_serv_tot;
-                System.out.println(sa3+"fin3");
+               
                 //////////////////////////////////////////////////////////////////////////////////
                  cont_lug_art=cont_lug_art+(total_desc_lug*numIn2);
                cont_lug=cont_lug+total_lugara;
@@ -266,7 +266,7 @@ public class contabilidad {
                 cont_lug_tot=(float) (a4/1.20);
                    
                sa4=a4-cont_lug_tot;
-                System.out.println(sa4+"fin4");
+                
                  }
          
 

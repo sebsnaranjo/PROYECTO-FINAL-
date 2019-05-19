@@ -102,7 +102,7 @@ public final class Admon extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public void transparenciaBotones(){
-    
+        
         mod_gastro.setOpaque(false);
         mod_gastro.setContentAreaFilled(false);
         mod_gastro.setBorderPainted(true);

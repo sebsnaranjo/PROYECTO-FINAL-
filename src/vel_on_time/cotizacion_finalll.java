@@ -232,10 +232,12 @@ private int lug_desc;
           JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
       }
          else{
-        
+         if(tot_fin>presupuesto2){
+         JOptionPane.showMessageDialog(null, "Has pasado tu presupuesto,aun asi imprimimos la factura por si deseas seguir");  
+      }
         
         todas_cot ob30 = new todas_cot();
-        System.out.println(id2 +"a");
+        
        ob30.buscar(id2,nombre2,presupuesto2,numIn2,fecha2);
        ob30.setVisible(true);
        this.setVisible(false);
@@ -250,7 +252,9 @@ private int lug_desc;
           JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
       }
          else{
-        
+         if(tot_fin>presupuesto2){
+         JOptionPane.showMessageDialog(null, "Has pasado tu presupuesto,aun asi imprimimos la factura por si deseas seguir");  
+      }
         archivoos ob32 = new archivoos();
             this.setVisible(false);
             ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug,presupuesto2,tip_event2);
@@ -282,7 +286,9 @@ private int lug_desc;
         String fin = Integer.toString(tot_fin );
         String id2p= Integer.toString(id2);
         String numIn2p= Integer.toString(numIn2);
-      
+      if(tot_fin>presupuesto2){
+         JOptionPane.showMessageDialog(null, "Has pasado tu presupuesto,aun asi imprimimos la factura por si deseas seguir");  
+      }
 
  ob38.cot_totales(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug,gastro_desc,deco_desc,lug_desc,serv_desc,tip_event2); 
    
@@ -354,14 +360,14 @@ private int lug_desc;
         if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_final_cotKeyTyped
     public void llegada_oculta(int id,String nombre,int presupuesto,int numIn,String fecha,String tip_event){
-        System.out.println(id+"c");
+       
         id2=id;
         nombre2=nombre;
         presupuesto2=presupuesto;
         numIn2=numIn;
         fecha2=fecha;
         tip_event2=tip_event;
-        System.out.println(id+"b");
+       
         this.id2=id2;
         this.nombre2=nombre2;
         this.presupuesto2=presupuesto2;
@@ -417,8 +423,7 @@ private int lug_desc;
         base_deco_fin = Integer.toString(base_deco);
         base_serv_fin = Integer.toString(base_serv);
         base_lug_fin = Integer.toString(base_lug);*/
-        System.out.println(base_gastro);
-        System.out.println(gastro2);
+       
        gastro2=gastro2+base_gastro;
        deco2=deco2+base_deco;
        serv2=serv2+base_serv;

@@ -389,7 +389,7 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                                String cadbus;
                                String cadcam;
                                cadbus=REV_CLIEN.getText()+";"+rev_dia.getText()+"/"+rev_mes.getText()+"/"+rev_ano.getText()+"/"+rev_horiI1.getText()+"/"+rev_horaf1.getText();
-                               System.out.println(cadbus);
+                               
                                cadcam=id+";"+nombre+";"+prest+";"+numI+";"+date;
                                obj39.clientemodf(fNuevo, cadbus, cadcam);
                           }
@@ -428,7 +428,7 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String dateobtanin;
             dateobtanin= rev_dia.getText()+"/"+rev_mes.getText()+"/"+rev_ano.getText()+"/"+rev_horiI1.getText()+"/"+rev_horaf1.getText();
-            System.out.println(dateobtanin);
+            
             String cadena = ""; //variable captura los datos del archivo
             while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
                     String id[]= cadena.split(";");
@@ -436,8 +436,7 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                     String prestu[]= cadena.split(";");
                     String numI[]= cadena.split(";");
                     String date[]= cadena.split(";");
-                    System.out.println(REV_CLIEN);
-                    System.out.println(nombre[3]);
+                    
                     
                     
                     if(REV_CLIEN.getText().equals(nombre[3])&& dateobtanin.equals(date[5])){
