@@ -167,6 +167,10 @@ public class Mod_selec extends javax.swing.JFrame {
         selec_cliente.setOpaque(false);
         selec_cliente.setContentAreaFilled(false);
         selec_cliente.setBorderPainted(true);
+        
+        selec_art.setOpaque(false);
+        selec_art.setContentAreaFilled(false);
+        selec_art.setBorderPainted(true);
     }
     
     

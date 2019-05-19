@@ -1,2 +1,2 @@
-;768;tyyy;8900;true;
-;768;Atril;12000;true;
+;8;clubelcubo;50000;true;
+;7;salondefiestatierralinda;250000;true;

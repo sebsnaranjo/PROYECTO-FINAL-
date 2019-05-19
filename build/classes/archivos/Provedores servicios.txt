@@ -1,3 +1,2 @@
-;567;Precott;7850;Escoba;true;
-;567;Precott;0; ;true;
-;122;ambulancia;7895;recojer;true;
+;3;servigenerales;5000;aseo;true;
+;4;logisticslegal;18000;logistica;true;

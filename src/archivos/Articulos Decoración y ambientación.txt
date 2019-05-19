@@ -1,2 +1,2 @@
-;890;bombas;7000;true;
-;890;peroxido;7580;true;
+;5;globos;2000;true;
+;6;manteles;5000;true;

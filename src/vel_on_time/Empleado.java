@@ -38,6 +38,9 @@ public class Empleado extends javax.swing.JFrame {
         admon.setOpaque(false);
         admon.setContentAreaFilled(false);
         admon.setBorderPainted(true);
+        ver_cot.setOpaque(false);
+        ver_cot.setContentAreaFilled(false);
+        ver_cot.setBorderPainted(true);
     }
     
     
@@ -93,7 +96,7 @@ public class Empleado extends javax.swing.JFrame {
                 VOLVER_DESEOMouseClicked(evt);
             }
         });
-        getContentPane().add(VOLVER_DESEO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 70, 30));
+        getContentPane().add(VOLVER_DESEO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 70, 30));
 
         ENVIAR_DESEO1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ENVIAR_DESEO1.setText("Aceptar");
@@ -108,7 +111,7 @@ public class Empleado extends javax.swing.JFrame {
                 ENVIAR_DESEO1ActionPerformed(evt);
             }
         });
-        getContentPane().add(ENVIAR_DESEO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 80, 30));
+        getContentPane().add(ENVIAR_DESEO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 80, 30));
 
         jLabel2.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -116,11 +119,13 @@ public class Empleado extends javax.swing.JFrame {
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 520, 40));
 
+        ver_cot.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         ver_cot.setText("Ver cotizaciones ya realizadas");
-        getContentPane().add(ver_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
+        ver_cot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/archive_12957.png"))); // NOI18N
+        getContentPane().add(ver_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, 50));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 280));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

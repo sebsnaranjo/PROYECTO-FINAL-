@@ -1,2 +1,2 @@
-;890;Diana;7850;Nana;true;
-;890;Diana;0; ;true;
+;5;globomania;25000;decoracion;true;
+;6;creativegroup;5000;decoracion;true;

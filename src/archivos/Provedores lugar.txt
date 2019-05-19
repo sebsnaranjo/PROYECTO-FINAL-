@@ -1,2 +1,2 @@
-;768;Cala;780000;Locacion;true;
-;768;Cala;0; ;true;
+;8;logisticevent;200000;lugarenclubes;true;
+;7;eventoslugar;50000;lugareseconomicos;true;
