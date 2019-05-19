@@ -338,13 +338,13 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
             nombre= rev_nombre.getText();
             prest=rev_presupuesto.getText();
             numI=rev_invitados.getText();
-           int dia= Integer.parseInt(rev_dia.getText());
-           int mes= Integer.parseInt(rev_mes.getText());
-           int ano= Integer.parseInt(rev_ano.getText());
+           int dia= Integer.parseInt(rev_dia1.getText());
+           int mes= Integer.parseInt(rev_mes1.getText());
+           int ano= Integer.parseInt(rev_ano1.getText());
            int horai=Integer.parseInt(rev_horiI.getText());
            int horaf=Integer.parseInt(rev_horaf.getText()); 
-            int pres= Integer.parseInt(rev_presupuesto.getText());
-             int numInv= Integer.parseInt(rev_invitados.getText());
+           int pres= Integer.parseInt(rev_presupuesto.getText());
+           int numInv= Integer.parseInt(rev_invitados.getText());
             
             
            if(ano<2019|| ano>3000 ){
@@ -361,7 +361,8 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
              else{
                  if(horai>24 || horaf>24 ||horai<=0 ||horaf<=0 ){
                     JOptionPane.showMessageDialog(null, "No es valido");
-                 }else{
+                 }
+                 else{
 
                      if(dia==31 && mes==12){
                         JOptionPane.showMessageDialog(null, "Este dia no trabajamos"); 
