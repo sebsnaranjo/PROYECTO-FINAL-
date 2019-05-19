@@ -42,13 +42,13 @@ public class proveedor extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SELEC_MODIFI.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        SELEC_MODIFI.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         SELEC_MODIFI.setText("Modificar");
         SELEC_MODIFI.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         SELEC_MODIFI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/databaseprocess_basededatos_12922.png"))); // NOI18N
         getContentPane().add(SELEC_MODIFI, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 170, -1));
 
-        SELEC_CREAR.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        SELEC_CREAR.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         SELEC_CREAR.setText("Crear");
         SELEC_CREAR.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         SELEC_CREAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/database_add_12927.png"))); // NOI18N

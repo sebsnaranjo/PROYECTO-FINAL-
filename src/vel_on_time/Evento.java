@@ -160,9 +160,10 @@ public class Evento extends javax.swing.JFrame {
         });
         getContentPane().add(VOLVER, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 70, 40));
 
-        jLabel2.setText("Hora y fecha de inicio");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, -1, -1));
-        getContentPane().add(horaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 50, -1));
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        jLabel2.setText("Hora de inicio   Hora de fin");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 160, -1));
+        getContentPane().add(horaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 50, -1));
         getContentPane().add(horafinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 50, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N

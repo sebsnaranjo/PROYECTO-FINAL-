@@ -61,7 +61,7 @@ public class Empleado extends javax.swing.JFrame {
         jLabel1.setText("¿Que deses hacer?");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 63, 520, 28));
 
-        cotizar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        cotizar.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         cotizar.setText("Cotizar un servicio");
         cotizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cotizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shoppingcart_accept_compra_12832.png"))); // NOI18N
@@ -72,7 +72,7 @@ public class Empleado extends javax.swing.JFrame {
         });
         getContentPane().add(cotizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 220, 50));
 
-        admon.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        admon.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         admon.setText("Administrar");
         admon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         admon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/databasesearch_basededato_12920.png"))); // NOI18N

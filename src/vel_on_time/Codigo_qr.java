@@ -73,8 +73,8 @@ public class Codigo_qr extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         gen = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         txt = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -85,25 +85,23 @@ public class Codigo_qr extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 380, 52));
 
-        gen.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        gen.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         gen.setText("Generar codigo QR");
         gen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 genActionPerformed(evt);
             }
         });
-        getContentPane().add(gen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 270, 55));
+        getContentPane().add(gen, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 270, 55));
 
-        jButton1.setText("VOLVER");
+        jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jButton1.setText("Volver");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 240, 60));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 210));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 110, 30));
 
         txt.setText("https://velontime.000webhostapp.com/");
         txt.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +109,10 @@ public class Codigo_qr extends javax.swing.JFrame {
                 txtActionPerformed(evt);
             }
         });
-        getContentPane().add(txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 81, 380, 36));
+        getContentPane().add(txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 170, 36));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 220));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

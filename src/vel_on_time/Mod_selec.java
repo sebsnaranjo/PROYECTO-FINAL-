@@ -49,8 +49,8 @@ public class Mod_selec extends javax.swing.JFrame {
         modificar = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         TIT_USU1 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         selec_art = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -69,32 +69,32 @@ public class Mod_selec extends javax.swing.JFrame {
                 VOLVERMouseClicked(evt);
             }
         });
-        getContentPane().add(VOLVER, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 530, 70, 30));
+        getContentPane().add(VOLVER, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 70, 30));
 
         deseo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         deseo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         deseo.setText("¿Que proveedor desea modificar?");
         getContentPane().add(deseo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 540, 30));
 
-        selec_gastronomia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        selec_gastronomia.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         selec_gastronomia.setText("Gastronomia");
         selec_gastronomia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         selec_gastronomia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/32395greensalad_98843.png"))); // NOI18N
-        getContentPane().add(selec_gastronomia, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
+        getContentPane().add(selec_gastronomia, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 200, -1));
 
-        selec_decoracion.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        selec_decoracion.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         selec_decoracion.setText("Decoración");
         selec_decoracion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         selec_decoracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/4_balloon_decoration_christmas_xmas_celebration_party_icon-icons.com_77039.png"))); // NOI18N
-        getContentPane().add(selec_decoracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 150, -1));
+        getContentPane().add(selec_decoracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 200, -1));
 
-        selec_servicio.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        selec_servicio.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         selec_servicio.setText("Servicio");
         selec_servicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         selec_servicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shopping_22120.png"))); // NOI18N
         getContentPane().add(selec_servicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 150, -1));
 
-        selec_lugar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        selec_lugar.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         selec_lugar.setText("Lugar");
         selec_lugar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         selec_lugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/location_map_directions_geography_gps_icon-icons.com_55988.png"))); // NOI18N
@@ -111,9 +111,9 @@ public class Mod_selec extends javax.swing.JFrame {
         TIT_USU.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         TIT_USU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TIT_USU.setText("¿Desea modificar los articulos?");
-        getContentPane().add(TIT_USU, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 530, 30));
+        getContentPane().add(TIT_USU, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 530, 30));
 
-        selec_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        selec_cliente.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         selec_cliente.setText("Cliente");
         selec_cliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         selec_cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/businessapplication_edit_male_user_thepencil_theclient_negocio_2321.png"))); // NOI18N
@@ -127,19 +127,21 @@ public class Mod_selec extends javax.swing.JFrame {
                 modificarMouseClicked(evt);
             }
         });
-        getContentPane().add(modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 530, 110, 30));
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 402, 550, 10));
+        getContentPane().add(modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 520, 110, 30));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 402, 530, 10));
 
         TIT_USU1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         TIT_USU1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TIT_USU1.setText("¿Desea modificar el cliente?");
         getContentPane().add(TIT_USU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 530, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 470));
+        selec_art.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        selec_art.setText("Articulos");
+        selec_art.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shoppaymentorderbuy-34_icon-icons.com_73865.png"))); // NOI18N
+        getContentPane().add(selec_art, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, -1, -1));
 
-        selec_art.setText("articulos");
-        getContentPane().add(selec_art, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

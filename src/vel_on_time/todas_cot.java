@@ -56,8 +56,9 @@ private String fecha2;
         jLabel1.setText("Usuario:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 104, 37));
 
+        buscar_id.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         buscar_id.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/xmag_search_find_export_locate_5984.png"))); // NOI18N
-        buscar_id.setText("BUSCAR");
+        buscar_id.setText("Buscar");
         buscar_id.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 buscar_idMouseClicked(evt);
@@ -81,6 +82,7 @@ private String fecha2;
         jLabel3.setText("El primer valor representa el número de cotización y el segundo el valor final de la cotización");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 660, 60));
 
+        ver.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ver.setText("Ver");
         ver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -89,6 +91,7 @@ private String fecha2;
         });
         getContentPane().add(ver, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, 30));
 
+        VOLVER.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         VOLVER.setText("Volver");
         VOLVER.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

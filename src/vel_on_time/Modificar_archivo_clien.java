@@ -66,7 +66,11 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
         rev_horaf = new javax.swing.JTextField();
         rev_horiI1 = new javax.swing.JTextField();
         rev_horaf1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -84,7 +88,7 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
 
         nombre_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         nombre_cliente.setText("Nombre cliente:");
-        getContentPane().add(nombre_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 119, 34));
+        getContentPane().add(nombre_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 119, 34));
 
         MES.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         MES.setText("MES:");
@@ -92,15 +96,15 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
 
         numero_invitados.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         numero_invitados.setText("Numero de invitados:");
-        getContentPane().add(numero_invitados, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 129, 34));
+        getContentPane().add(numero_invitados, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 129, 34));
 
         id_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         id_cliente.setText("Id del cliente:");
-        getContentPane().add(id_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 85, 34));
+        getContentPane().add(id_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 85, 34));
 
         presupuesto1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         presupuesto1.setText("Presupuesto:");
-        getContentPane().add(presupuesto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 85, 34));
+        getContentPane().add(presupuesto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 85, 34));
 
         ANO.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ANO.setText("AÑO:");
@@ -108,10 +112,10 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
 
         DIA.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         DIA.setText("DIA:");
-        getContentPane().add(DIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 36, 34));
+        getContentPane().add(DIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 36, 34));
 
         rev_dia.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        getContentPane().add(rev_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 60, -1));
+        getContentPane().add(rev_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 60, -1));
 
         rev_mes.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(rev_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 61, -1));
@@ -125,16 +129,16 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                 rev_idActionPerformed(evt);
             }
         });
-        getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 103, -1));
+        getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 103, -1));
 
         rev_nombre.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        getContentPane().add(rev_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 160, -1));
+        getContentPane().add(rev_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 160, -1));
 
         rev_presupuesto.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        getContentPane().add(rev_presupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 103, -1));
+        getContentPane().add(rev_presupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 103, -1));
 
         rev_invitados.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        getContentPane().add(rev_invitados, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 130, -1));
+        getContentPane().add(rev_invitados, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 130, -1));
 
         selec_mod.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         selec_mod.setText("Modificar");
@@ -144,7 +148,7 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                 selec_modMouseClicked(evt);
             }
         });
-        getContentPane().add(selec_mod, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 100, 30));
+        getContentPane().add(selec_mod, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 100, 30));
 
         jLabel1.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -160,8 +164,8 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                 volverMouseClicked(evt);
             }
         });
-        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 70, 30));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 570, 10));
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 70, 30));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 560, 10));
 
         deseo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         deseo.setText("Ingrese el nombre del cliente y la fecha del evento a modificar");
@@ -170,6 +174,7 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
         REV_CLIEN.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         getContentPane().add(REV_CLIEN, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 150, -1));
 
+        buscar_re.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         buscar_re.setText("Buscar");
         buscar_re.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -181,35 +186,52 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                 buscar_reActionPerformed(evt);
             }
         });
-        getContentPane().add(buscar_re, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, -1, -1));
+        getContentPane().add(buscar_re, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, -1, -1));
 
         MES1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         MES1.setText("MES:");
-        getContentPane().add(MES1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, -1, 34));
+        getContentPane().add(MES1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, -1, 34));
 
         ANO1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ANO1.setText("AÑO:");
-        getContentPane().add(ANO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 39, 34));
+        getContentPane().add(ANO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 39, 34));
 
         DIA1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         DIA1.setText("DIA:");
-        getContentPane().add(DIA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 36, 34));
+        getContentPane().add(DIA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 36, 34));
 
         rev_dia1.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        getContentPane().add(rev_dia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 60, -1));
+        getContentPane().add(rev_dia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 60, -1));
 
         rev_mes1.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        getContentPane().add(rev_mes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 61, -1));
+        getContentPane().add(rev_mes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 61, -1));
 
         rev_ano1.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
-        getContentPane().add(rev_ano1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, 68, -1));
-        getContentPane().add(rev_horiI, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 40, 20));
-        getContentPane().add(rev_horaf, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 40, 20));
-        getContentPane().add(rev_horiI1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 40, 20));
-        getContentPane().add(rev_horaf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 40, 20));
+        getContentPane().add(rev_ano1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 68, -1));
+        getContentPane().add(rev_horiI, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 40, 19));
+        getContentPane().add(rev_horaf, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 40, 19));
+        getContentPane().add(rev_horiI1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 40, 19));
+        getContentPane().add(rev_horaf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, 40, 19));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 440));
+        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        jLabel3.setText("Hora de inicio:");
+        jLabel3.setToolTipText("");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        jLabel2.setText("Hora de fin:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        jLabel4.setText("Hora de inicio:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        jLabel5.setText("Hora de fin:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -364,6 +386,10 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
     private javax.swing.JLabel id_cliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel nombre_cliente;

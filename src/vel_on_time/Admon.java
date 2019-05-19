@@ -62,21 +62,25 @@ public final class Admon extends javax.swing.JFrame {
         });
         getContentPane().add(VOLVER_SELEC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 70, 30));
 
+        mod_gastro.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         mod_gastro.setText("Gastronomia");
         mod_gastro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mod_gastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/32395greensalad_98843.png"))); // NOI18N
-        getContentPane().add(mod_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 150, -1));
+        getContentPane().add(mod_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 180, -1));
 
+        mod_deco.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         mod_deco.setText("Decoración");
         mod_deco.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mod_deco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/4_balloon_decoration_christmas_xmas_celebration_party_icon-icons.com_77039.png"))); // NOI18N
-        getContentPane().add(mod_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 150, -1));
+        getContentPane().add(mod_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 180, -1));
 
+        mod_servi.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         mod_servi.setText("Servicios");
         mod_servi.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mod_servi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
         getContentPane().add(mod_servi, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 150, 60));
 
+        mod_lugar.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
         mod_lugar.setText("Lugar");
         mod_lugar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mod_lugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/location_map_directions_geography_gps_icon-icons.com_55988.png"))); // NOI18N

@@ -20,6 +20,7 @@ public final class Quien extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         ELEC_QUIEN.add(gerente);
         ELEC_QUIEN.add(empleado);
+        ELEC_QUIEN.add(WEB);
     }
 
     /**
@@ -37,7 +38,7 @@ public final class Quien extends javax.swing.JFrame {
         gerente = new javax.swing.JRadioButton();
         empleado = new javax.swing.JRadioButton();
         enviar = new javax.swing.JButton();
-        WEB = new javax.swing.JButton();
+        WEB = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,18 +83,23 @@ public final class Quien extends javax.swing.JFrame {
                 enviarMouseClicked(evt);
             }
         });
-        getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 240, 48));
+        getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 240, 48));
 
-        WEB.setText("WEB");
-        WEB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                WEBMouseClicked(evt);
+        WEB.setBackground(javax.swing.UIManager.getDefaults().getColor("CheckBox.light"));
+        WEB.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
+        WEB.setText("Pagina Web");
+        WEB.setActionCommand("WEB");
+        WEB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WEB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/1562687-code-computer-creative-html-process-technology-web-development_107058.png"))); // NOI18N
+        WEB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WEBActionPerformed(evt);
             }
         });
-        getContentPane().add(WEB, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 270, 60));
+        getContentPane().add(WEB, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 240, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 340));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -109,6 +115,10 @@ public final class Quien extends javax.swing.JFrame {
         empleado.setContentAreaFilled(false);
         empleado.setBorderPainted(true);
         
+        WEB.setOpaque(false);
+        WEB.setContentAreaFilled(false);
+        WEB.setBorderPainted(true);
+        
     }
     
     
@@ -117,6 +127,7 @@ public final class Quien extends javax.swing.JFrame {
         
          Empleado ob3 = new Empleado(); 
          Gerente ob11 = new Gerente();
+         Codigo_qr ob_cod = new Codigo_qr();
            
                     if(empleado.isSelected()){
                         ob3.setVisible(true);
@@ -128,6 +139,10 @@ public final class Quien extends javax.swing.JFrame {
                         this.setVisible(false);
                           
                     }
+                    if(WEB.isSelected()){
+                        ob_cod.setVisible(true);
+                        this.setVisible(false);
+                    }
                     
     }//GEN-LAST:event_enviarMouseClicked
 
@@ -135,11 +150,9 @@ public final class Quien extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_gerenteActionPerformed
 
-    private void WEBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_WEBMouseClicked
-        Codigo_qr ob47 = new Codigo_qr();
-        ob47.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_WEBMouseClicked
+    private void WEBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WEBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_WEBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,7 +191,7 @@ public final class Quien extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup ELEC_QUIEN;
-    private javax.swing.JButton WEB;
+    private javax.swing.JRadioButton WEB;
     private javax.swing.JLabel bienvenido;
     private javax.swing.JLabel bienvenido1;
     private javax.swing.JRadioButton empleado;
