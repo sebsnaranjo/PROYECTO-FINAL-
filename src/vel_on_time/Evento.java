@@ -236,6 +236,13 @@ public class Evento extends javax.swing.JFrame {
        int mes;
        int ano;
        int horai,horaf;
+       
+      if(rev_id.getText().length()==0){
+          JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+      }
+      else{
+          
+       
        id= Integer.parseInt(rev_id.getText());
        name= rev_nombre.getText();
        pres= Integer.parseInt(rev_presupuesto.getText());
@@ -249,6 +256,9 @@ public class Evento extends javax.swing.JFrame {
        horaf=Integer.parseInt(horafinal.getText());
       String tip_evento=(evento.getText());
        
+     
+      
+      
        if(ano<2019|| ano>3000 ){
             JOptionPane.showMessageDialog(null, "No es valido");
        }
@@ -296,7 +306,7 @@ public class Evento extends javax.swing.JFrame {
            }
        }
        
-        
+      }  
     }//GEN-LAST:event_enviar_clienteMouseClicked
 
     private void RESETMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RESETMouseClicked
