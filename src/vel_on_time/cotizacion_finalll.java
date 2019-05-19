@@ -50,7 +50,7 @@ private String art_lug;
  String base_deco_fin;
  String base_serv_fin;
  String base_lug_fin;
-
+private String tip_event2;
 private int gastro_desc;
 private int deco_desc;
 private int serv_desc;
@@ -231,14 +231,14 @@ private int lug_desc;
        ob30.setVisible(true);
        this.setVisible(false);
        archivoos ob32 = new archivoos();
-       ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug,presupuesto2);
+       ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug,presupuesto2,tip_event2);
        
     }//GEN-LAST:event_ver_cotMouseClicked
 
     private void otra_cotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_otra_cotMouseClicked
             archivoos ob32 = new archivoos();
             this.setVisible(false);
-            ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug,presupuesto2);
+            ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug,presupuesto2,tip_event2);
     }//GEN-LAST:event_otra_cotMouseClicked
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
@@ -259,10 +259,10 @@ private int lug_desc;
         String numIn2p= Integer.toString(numIn2);
       
 
- ob38.cot_totales(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug,gastro_desc,deco_desc,lug_desc,serv_desc); 
+ ob38.cot_totales(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug,gastro_desc,deco_desc,lug_desc,serv_desc,tip_event2); 
    
     try {
-        ob38.generarPDF(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug);
+        ob38.generarPDF(id2p,nombre2,pres,numIn2p, fecha2, fin, gastro2p, deco2p, serv2p,lug2p, art_gastro, art_deco, art_serv, art_lug,tip_event2);
     } catch (DocumentException ex) {
         Logger.getLogger(cotizacion_finalll.class.getName()).log(Level.SEVERE, null, ex);
     } catch (FileNotFoundException ex) {
@@ -328,19 +328,22 @@ private int lug_desc;
              char c=evt.getKeyChar();
         if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_final_cotKeyTyped
-    public void llegada_oculta(int id,String nombre,int presupuesto,int numIn,String fecha){
+    public void llegada_oculta(int id,String nombre,int presupuesto,int numIn,String fecha,String tip_event){
         System.out.println(id+"c");
         id2=id;
         nombre2=nombre;
         presupuesto2=presupuesto;
         numIn2=numIn;
         fecha2=fecha;
+        tip_event2=tip_event;
         System.out.println(id+"b");
         this.id2=id2;
         this.nombre2=nombre2;
         this.presupuesto2=presupuesto2;
         this.numIn2=numIn2;
         this.fecha2=fecha2;
+        this.tip_event2=tip_event2;
+        
       
     }
     public void llegada_fantasma(String gastro, String deco, String serv, String lugar){

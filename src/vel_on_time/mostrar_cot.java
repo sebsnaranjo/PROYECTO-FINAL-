@@ -44,6 +44,7 @@ private String fecha2;
   private      String fartserv;
   private      String fartlug;
   private      String fpresu;
+  private String tip_event5;
     /**
      * Creates new form mostrar_cot
      */
@@ -329,7 +330,9 @@ private String fecha2;
                  fartlug= artLug[14];
                  String presu2[]= cadena.split(";");
                  fpresu=presu2[15];
-            
+                String tip_event[]= cadena.split(";");
+                 tip_event5=tip_event[16];
+                 this.tip_event5=tip_event5;
                      
                  if (randomico2==nmuI && prec2==valorTglobIn){
                     
@@ -421,7 +424,7 @@ private String fecha2;
                      ob37.cot_totales2(fid,fnombre,fpresu,fni,ffecha,fvalortglob,fvalorgastro,fvalordeco,fvalorserv,fvalorlug,final_tot_gas,final_tot_deco,final_tot_serv,final_tot_lug);
                      
                      
-                     ob37.generarPDF(fid,fnombre,fpresu,fni,ffecha,fvalortglob,fvalorgastro,fvalordeco,fvalorserv,fvalorlug,fartgast,fartdeco,fartserv,fartlug);
+                     ob37.generarPDF(fid,fnombre,fpresu,fni,ffecha,fvalortglob,fvalorgastro,fvalordeco,fvalorserv,fvalorlug,fartgast,fartdeco,fartserv,fartlug,tip_event5);
                  }
  
             }  
@@ -526,8 +529,9 @@ private String fecha2;
                  String artLug[]= cadena.split(";");
                  fartlug= artLug[14];
                  String presu2[]= cadena.split(";");
+                 String tip_event3[]= cadena.split(";");
                  String fpresu = presu2[15];
-                                
+                 String tip_event2 = tip_event3[16];              
                                 
                  if (randomico2==nmuI && prec2==valorTglobIn){
                      cajita_grande.append("Numero de cotización: "+ nmuI+"\n");
@@ -537,6 +541,10 @@ private String fecha2;
                      cajita_grande.append("Nombre del cliente: "+ fnombre+"\n");
                      cajita_grande.append("\n");
                      cajita_grande.append("\n");
+                     cajita_grande.append("Tipo de evento: "+ tip_event2 +"\n");
+                     cajita_grande.append("\n");
+                     cajita_grande.append("\n");
+                     
                      cajita_grande.append("Presupuesto: "+ fpresu +"\n");
                      cajita_grande.append("Numero de invidados: "+ fni+"\n");
                      cajita_grande.append("Fecha del evento: "+ ffecha+"\n");

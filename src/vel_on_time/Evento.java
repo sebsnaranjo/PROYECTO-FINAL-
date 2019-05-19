@@ -247,7 +247,7 @@ public class Evento extends javax.swing.JFrame {
       
        horai=Integer.parseInt(horaInicio.getText());
        horaf=Integer.parseInt(horafinal.getText());
-      
+      String tip_evento=(evento.getText());
        
        if(ano<2019|| ano>3000 ){
             JOptionPane.showMessageDialog(null, "No es valido");
@@ -279,9 +279,9 @@ public class Evento extends javax.swing.JFrame {
                             else{
                                 fecha = dia+"/"+mes+"/"+ano;
                                 String fechaenh="/"+horai+"/"+horaf;
-                                ob4.archCli(id,name,pres,numI,fecha+fechaenh);
+                                ob4.archCli(id,name,pres,numI,fecha+fechaenh,tip_evento);
                                 Cotizadooor ob29= new Cotizadooor();
-                                ob29.llegada(id,name,pres,numI,dia,mes,ano,horai,horaf);
+                                ob29.llegada(id,name,pres,numI,dia,mes,ano,horai,horaf,tip_evento);
                                 ob29.setVisible(true);
                                 this.setVisible(false);   
                             }
@@ -358,7 +358,6 @@ public class Evento extends javax.swing.JFrame {
     }//GEN-LAST:event_horafinalKeyTyped
 
     void quince(){
-        
         evento.setText("15 años");
     }
     void aniversario(){

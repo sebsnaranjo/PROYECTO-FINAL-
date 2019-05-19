@@ -31,7 +31,7 @@ public class archivoos {
     
     
 ///////////////////////////////ARCHIVO CLIENTE/////////////////////////////////////////////////////////////////////////////////
-    void archCli(int id, String name, int pres, int numI, String fecha) {
+    void archCli(int id, String name, int pres, int numI, String fecha,String tipo_evet) {
         String dato; 
         String cadena; 
         String cadena1="";
@@ -733,7 +733,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             }
         }
    }
-   void atccod(int id, String nombre, int nI,String fecha, int valortgast,int valortdeco,int valortserv,int valortlug, int valorTglo,String artGast,String artDeco,String artServ,String artLug,int presu2){
+   void atccod(int id, String nombre, int nI,String fecha, int valortgast,int valortdeco,int valortserv,int valortlug, int valorTglo,String artGast,String artDeco,String artServ,String artLug,int presu2,String tip_event){
         String dato; 
         String cadena; 
          String cadena1="";
@@ -747,7 +747,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             
          
             
-            cadena = cadena1 + ";"+ random+ ";"+id+";"+nombre+";"+nI+";"+fecha+";"+valortgast+";"+valortdeco+";"+valortserv+";"+valortlug+";"+valorTglo+";"+artGast+";"+artDeco+";"+artServ+";"+artLug+";"+presu2+";";
+            cadena = cadena1 + ";"+ random+ ";"+id+";"+nombre+";"+nI+";"+fecha+";"+valortgast+";"+valortdeco+";"+valortserv+";"+valortlug+";"+valorTglo+";"+artGast+";"+artDeco+";"+artServ+";"+artLug+";"+presu2+";"+tip_event+";";
             
             linea.println(cadena); //escribiendo en el archivo
             
@@ -764,7 +764,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             }
         }
    }
-     void generarPDF(String fid, String fnombre,String pres, String fni, String ffecha, String fvalortglob, String fvalorgastro, String fvalordeco, String fvalorserv, String fvalorlug, String fartgast, String fartdeco, String fartserv, String fartlug) throws DocumentException, FileNotFoundException {
+     void generarPDF(String fid, String fnombre,String pres, String fni, String ffecha, String fvalortglob, String fvalorgastro, String fvalordeco, String fvalorserv, String fvalorlug, String fartgast, String fartdeco, String fartserv, String fartlug,String tip_event) throws DocumentException, FileNotFoundException {
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
         String nombre;
@@ -789,7 +789,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
                 Paragraph parrafo2= new Paragraph("SALON DE EVENTOS VEL ON TIME",fuente_dos);
                 Paragraph parrafo3= new Paragraph(" ");
                 Paragraph parrafo4= new Paragraph(" ");
-                Paragraph parrafo5= new Paragraph("Contrato de prestación de servicios para eventos, en esta ocasión con una celebración de tipo " + /*tipo de evento*/ ", a cargo por la empresa Vel On Time. A continuación, se definirá la información del prestatario y los servicios solicitados.");
+                Paragraph parrafo5= new Paragraph("Contrato de prestación de servicios para eventos, en esta ocasión con una celebración de tipo " + tip_event+ ", a cargo por la empresa Vel On Time. A continuación, se definirá la información del prestatario y los servicios solicitados.");
                 Paragraph parrafo6= new Paragraph(" ");
                 Paragraph parrafo7= new Paragraph(" ");
                 Paragraph parrafo8= new Paragraph("Informacion del cliente",fuente_dos);
@@ -883,7 +883,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
               
         
     }
-   void cot_totales(String fid, String fnombre,String pres, String fni, String ffecha, String fvalortglob, String fvalorgastro, String fvalordeco, String fvalorserv, String fvalorlug, String fartgast, String fartdeco, String fartserv, String fartlug,int gastro_desc,int deco_desc,int lug_desc,int serv_desc){
+   void cot_totales(String fid, String fnombre,String pres, String fni, String ffecha, String fvalortglob, String fvalorgastro, String fvalordeco, String fvalorserv, String fvalorlug, String fartgast, String fartdeco, String fartserv, String fartlug,int gastro_desc,int deco_desc,int lug_desc,int serv_desc,String tip_event){
          String cadena; 
         String cadena1="";
         FileWriter fichero = null; 
@@ -896,7 +896,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             
          
             
-            cadena = cadena1 + ";"+fid+ ";"+fnombre+ ";"+pres+ ";"+fni+";"+ffecha +";"+fvalortglob+";"+fvalorgastro+";"+fvalordeco+";"+fvalorserv+";"+fvalorlug+";"+fartgast+";"+fartdeco+";"+fartserv+";"+fartlug+";"+gastro_desc+";"+deco_desc+";"+serv_desc+";"+lug_desc+";";
+            cadena = cadena1 + ";"+fid+ ";"+fnombre+ ";"+pres+ ";"+fni+";"+ffecha +";"+fvalortglob+";"+fvalorgastro+";"+fvalordeco+";"+fvalorserv+";"+fvalorlug+";"+fartgast+";"+fartdeco+";"+fartserv+";"+fartlug+";"+gastro_desc+";"+deco_desc+";"+serv_desc+";"+lug_desc+";"+tip_event+";";
             
             linea.println(cadena); //escribiendo en el archivo
             

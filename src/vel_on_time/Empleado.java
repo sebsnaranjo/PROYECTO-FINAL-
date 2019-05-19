@@ -20,6 +20,7 @@ public class Empleado extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         SELEC_DESEO.add(cotizar);
         SELEC_DESEO.add(admon);
+        SELEC_DESEO.add(ver_cot);
     }
 
     /**
@@ -51,6 +52,7 @@ public class Empleado extends javax.swing.JFrame {
         VOLVER_DESEO = new javax.swing.JButton();
         ENVIAR_DESEO1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        ver_cot = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -91,7 +93,7 @@ public class Empleado extends javax.swing.JFrame {
                 VOLVER_DESEOMouseClicked(evt);
             }
         });
-        getContentPane().add(VOLVER_DESEO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 70, 30));
+        getContentPane().add(VOLVER_DESEO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 70, 30));
 
         ENVIAR_DESEO1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ENVIAR_DESEO1.setText("Aceptar");
@@ -106,13 +108,16 @@ public class Empleado extends javax.swing.JFrame {
                 ENVIAR_DESEO1ActionPerformed(evt);
             }
         });
-        getContentPane().add(ENVIAR_DESEO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 80, 30));
+        getContentPane().add(ENVIAR_DESEO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 80, 30));
 
         jLabel2.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("BIENVENIDO EMPLEADO");
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 520, 40));
+
+        ver_cot.setText("Ver cotizaciones ya realizadas");
+        getContentPane().add(ver_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 280));
@@ -137,6 +142,7 @@ public class Empleado extends javax.swing.JFrame {
     private void ENVIAR_DESEO1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ENVIAR_DESEO1MouseClicked
         Selec_evento ob6 = new Selec_evento();
         proveedor ob10 = new proveedor();
+        todas_cot ob52 = new todas_cot();
         if(cotizar.isSelected()){
             ob6.setVisible(true);
             this.setVisible(false);
@@ -144,6 +150,11 @@ public class Empleado extends javax.swing.JFrame {
         }
         if(admon.isSelected()){
             ob10.setVisible(true);
+            this.setVisible(false);
+                          
+        }
+         if(ver_cot.isSelected()){
+            ob52.setVisible(true);
             this.setVisible(false);
                           
         }
@@ -202,5 +213,6 @@ public class Empleado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JRadioButton ver_cot;
     // End of variables declaration//GEN-END:variables
 }

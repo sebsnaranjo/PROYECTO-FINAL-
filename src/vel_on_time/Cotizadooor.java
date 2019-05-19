@@ -48,6 +48,7 @@ int prec_gastro;
 int prec_deco;
 int prec_serv;
 int prec_lug;
+private String tip_event2;
 String gastro_rev_uni=" ";
 String lugar_rev_uni=" ";
 String deco_rev_uni=" ";
@@ -399,7 +400,7 @@ String serv_rev_uni2=" ";
        this.setVisible(false);
        
     }//GEN-LAST:event_volverMouseClicked
-public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano,int horai,int horaf){
+public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano,int horai,int horaf, String tip_event){
          numIn= numI;
          
          id2=id;
@@ -411,6 +412,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
          mes2=mes;
          ano2=ano;
          fecha = dia+"/"+mes+"/"+ano+"/"+horai+"/"+horaf;
+         tip_event2=tip_event;
          this.horai2=horai2;
          this.horaf2=horaf2;
          this.id2=id2;
@@ -418,6 +420,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
          this.pres2=pres2;
          this.numIn=numIn;
          this.fecha=fecha;
+         this.tip_event2=tip_event2;
          
          
     }
@@ -470,7 +473,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         cont3=cont3*numIn;
         cont4=cont4*numIn;
         
-        ob28.llegada_oculta(id2,name2,pres2,numIn,fecha);
+        ob28.llegada_oculta(id2,name2,pres2,numIn,fecha,tip_event2);
         ob28.llegada_fantasma(gast,servi,deocr,lrgs);
         ob28.llegada_final(prec_gastro,prec_deco,prec_serv,prec_lug,cont, cont2, cont3, cont4,conta,contb,contc,contd);
         this.setVisible(false);
