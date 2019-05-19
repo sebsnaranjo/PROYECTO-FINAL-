@@ -115,12 +115,27 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
         getContentPane().add(DIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 36, 34));
 
         rev_dia.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        rev_dia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_diaKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 60, -1));
 
         rev_mes.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        rev_mes.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_mesKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 61, -1));
 
         rev_ano.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        rev_ano.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_anoKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_ano, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 68, -1));
 
         rev_id.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
@@ -129,15 +144,35 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                 rev_idActionPerformed(evt);
             }
         });
+        rev_id.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_idKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 103, -1));
 
         rev_nombre.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        rev_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_nombreKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 160, -1));
 
         rev_presupuesto.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        rev_presupuesto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_presupuestoKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_presupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 103, -1));
 
         rev_invitados.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        rev_invitados.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_invitadosKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_invitados, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 130, -1));
 
         selec_mod.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
@@ -172,6 +207,11 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
         getContentPane().add(deseo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 30));
 
         REV_CLIEN.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        REV_CLIEN.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                REV_CLIENKeyTyped(evt);
+            }
+        });
         getContentPane().add(REV_CLIEN, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 150, -1));
 
         buscar_re.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
@@ -201,16 +241,55 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
         getContentPane().add(DIA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 36, 34));
 
         rev_dia1.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        rev_dia1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_dia1KeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_dia1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 60, -1));
 
         rev_mes1.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        rev_mes1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_mes1KeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_mes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 61, -1));
 
         rev_ano1.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        rev_ano1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_ano1KeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_ano1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 68, -1));
+
+        rev_horiI.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_horiIKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_horiI, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 40, 19));
+
+        rev_horaf.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_horafKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_horaf, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 40, 19));
+
+        rev_horiI1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_horiI1KeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_horiI1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 40, 19));
+
+        rev_horaf1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_horaf1KeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_horaf1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, 40, 19));
 
         jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
@@ -333,6 +412,87 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_buscar_reMouseClicked
+
+    private void REV_CLIENKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_REV_CLIENKeyTyped
+     char c=evt.getKeyChar();
+        if(c<'a'|| c>'z')evt.consume();
+    }//GEN-LAST:event_REV_CLIENKeyTyped
+
+    private void rev_diaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_diaKeyTyped
+         char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_diaKeyTyped
+
+    private void rev_mesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_mesKeyTyped
+        // TODO add your handling code here:
+         char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_mesKeyTyped
+
+    private void rev_anoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_anoKeyTyped
+        // TODO add your handling code here:
+        char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_anoKeyTyped
+
+    private void rev_horiI1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_horiI1KeyTyped
+        char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_horiI1KeyTyped
+
+    private void rev_horaf1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_horaf1KeyTyped
+       char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_horaf1KeyTyped
+
+    private void rev_idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_idKeyTyped
+        // TODO add your handling code here:
+        char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_idKeyTyped
+
+    private void rev_nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_nombreKeyTyped
+        // TODO add your handling code here:
+        char c=evt.getKeyChar();
+        if(c<'a'|| c>'z')evt.consume();
+    }//GEN-LAST:event_rev_nombreKeyTyped
+
+    private void rev_presupuestoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_presupuestoKeyTyped
+       char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_presupuestoKeyTyped
+
+    private void rev_invitadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_invitadosKeyTyped
+        // TODO add your handling code here:
+        char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_invitadosKeyTyped
+
+    private void rev_dia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_dia1KeyTyped
+       char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_dia1KeyTyped
+
+    private void rev_mes1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_mes1KeyTyped
+        // TODO add your handling code here:
+        char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_mes1KeyTyped
+
+    private void rev_ano1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_ano1KeyTyped
+        char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_ano1KeyTyped
+
+    private void rev_horiIKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_horiIKeyTyped
+       char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_horiIKeyTyped
+
+    private void rev_horafKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_horafKeyTyped
+        char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_horafKeyTyped
 
     /**
      * @param args the command line arguments

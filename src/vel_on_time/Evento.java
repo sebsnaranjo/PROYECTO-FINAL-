@@ -91,18 +91,38 @@ public class Evento extends javax.swing.JFrame {
                 rev_idActionPerformed(evt);
             }
         });
+        rev_id.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_idKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 103, -1));
 
         rev_nombre.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_nombre.setText("saraaaa");
+        rev_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_nombreKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 160, -1));
 
         rev_presupuesto.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_presupuesto.setText("4548");
+        rev_presupuesto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_presupuestoKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_presupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 103, -1));
 
         rev_invitados.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_invitados.setText("4848");
+        rev_invitados.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_invitadosKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_invitados, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 130, -1));
 
         enviar_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
@@ -140,14 +160,29 @@ public class Evento extends javax.swing.JFrame {
 
         rev_dia.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_dia.setText("12");
+        rev_dia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_diaKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 60, -1));
 
         rev_mes.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_mes.setText("2");
+        rev_mes.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_mesKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 61, -1));
 
         rev_ano.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_ano.setText("2019");
+        rev_ano.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_anoKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_ano, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 68, -1));
 
         VOLVER.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
@@ -163,7 +198,19 @@ public class Evento extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         jLabel2.setText("Hora de inicio   Hora de fin");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 160, -1));
+
+        horaInicio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                horaInicioKeyTyped(evt);
+            }
+        });
         getContentPane().add(horaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 50, -1));
+
+        horafinal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                horafinalKeyTyped(evt);
+            }
+        });
         getContentPane().add(horafinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 50, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
@@ -218,6 +265,51 @@ public class Evento extends javax.swing.JFrame {
        ob26.setVisible(true);
        this.setVisible(false);
     }//GEN-LAST:event_VOLVERMouseClicked
+
+    private void rev_idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_idKeyTyped
+        char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_idKeyTyped
+
+    private void rev_nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_nombreKeyTyped
+         char c=evt.getKeyChar();
+        if(c<'a'|| c>'z')evt.consume();
+    }//GEN-LAST:event_rev_nombreKeyTyped
+
+    private void rev_presupuestoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_presupuestoKeyTyped
+         char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_presupuestoKeyTyped
+
+    private void rev_invitadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_invitadosKeyTyped
+        char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_invitadosKeyTyped
+
+    private void rev_diaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_diaKeyTyped
+         char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_diaKeyTyped
+
+    private void rev_mesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_mesKeyTyped
+       char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_mesKeyTyped
+
+    private void rev_anoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_anoKeyTyped
+         char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_anoKeyTyped
+
+    private void horaInicioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_horaInicioKeyTyped
+         char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_horaInicioKeyTyped
+
+    private void horafinalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_horafinalKeyTyped
+        char c=evt.getKeyChar();
+        if(c<'1'|| c>'9')evt.consume();
+    }//GEN-LAST:event_horafinalKeyTyped
 
     void quince(){
         
