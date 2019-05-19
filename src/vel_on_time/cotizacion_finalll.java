@@ -120,6 +120,11 @@ private int lug_desc;
         getContentPane().add(tit_lug, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 150, 20));
 
         rev_tot_gastro.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        rev_tot_gastro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_tot_gastroKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_tot_gastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 131, -1));
 
         rev_tot_deco.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
@@ -128,12 +133,27 @@ private int lug_desc;
                 rev_tot_decoActionPerformed(evt);
             }
         });
+        rev_tot_deco.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_tot_decoKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_tot_deco, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 131, -1));
 
         rev_tot_serv.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        rev_tot_serv.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_tot_servKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_tot_serv, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 131, -1));
 
         rev_tot_lug.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        rev_tot_lug.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_tot_lugKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_tot_lug, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 131, -1));
 
         tit_fecha.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
@@ -164,6 +184,11 @@ private int lug_desc;
         getContentPane().add(otra_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, -1, 30));
 
         final_cot.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
+        final_cot.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                final_cotKeyTyped(evt);
+            }
+        });
         getContentPane().add(final_cot, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 180, -1));
 
         tit_final.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
@@ -275,6 +300,34 @@ private int lug_desc;
    
    
     }//GEN-LAST:event_finalizar_clienteMouseClicked
+
+    private void rev_tot_gastroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_tot_gastroKeyTyped
+        char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_tot_gastroKeyTyped
+
+    private void rev_tot_decoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_tot_decoKeyTyped
+        // TODO add your handling code here:
+             char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_tot_decoKeyTyped
+
+    private void rev_tot_servKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_tot_servKeyTyped
+        // TODO add your handling code here:
+             char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_tot_servKeyTyped
+
+    private void rev_tot_lugKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_tot_lugKeyTyped
+             char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_tot_lugKeyTyped
+
+    private void final_cotKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_final_cotKeyTyped
+        // TODO add your handling code here:
+             char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_final_cotKeyTyped
     public void llegada_oculta(int id,String nombre,int presupuesto,int numIn,String fecha){
         System.out.println(id+"c");
         id2=id;

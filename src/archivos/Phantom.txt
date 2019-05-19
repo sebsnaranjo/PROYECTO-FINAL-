@@ -1,5 +1,0 @@
-;1;sara;96;
-;4;Cala;768;
-;3;Precott;567;
-;2;Diana;890;
-;2;Diana;890;

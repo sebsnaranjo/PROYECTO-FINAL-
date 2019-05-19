@@ -53,7 +53,7 @@ private String fecha2;
 
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Usuario:");
+        jLabel1.setText("Id de Usuario:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 104, 37));
 
         buscar_id.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N

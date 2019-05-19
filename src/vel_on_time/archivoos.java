@@ -1075,6 +1075,34 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             }
         }
     }
+      void llenaridfinal(String id) {
+    
+        String cadena; 
+         String cadena1="";
+        FileWriter fichero = null; 
+        PrintWriter linea = null;  
+        
+        try{
+            fichero = new FileWriter("src\\archivos\\Todos ID Finales.txt",true); //crea el archivo 
+            linea = new PrintWriter(fichero); 
+     
+            cadena = cadena1 + ";"+id+";";
+            
+            linea.println(cadena); 
+            
+      }catch(IOException e){
+           System.out.print("Error creando archivo");
+        }
+        finally{
+            try{
+                if(fichero != null){
+                    fichero.close();
+                }
+            }catch(IOException e1){
+                System.out.print("Error cerrando archivo");
+            }
+        }
+    }
     
     boolean Jacom (String id,String feca){
         boolean op = false;
@@ -1372,6 +1400,47 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
         {
             System.out.println(e);
         }
+    }
+
+    boolean cmprobarid(String text) {
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+           boolean result=false;
+        try {
+            archivo = new File("src\\archivos\\Todos ID Finales.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                    String id[]=cadena.split(";");
+                    String name[]=cadena.split(";");
+                    
+                    
+                if (id[1].equals(text)){
+                  
+                    result=true;
+                     
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+        
+        
+        
+        return result;
     }
 
 }//FIN CLASE

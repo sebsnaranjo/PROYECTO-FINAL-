@@ -6,6 +6,7 @@
 package vel_on_time;
 
 import java.io.IOException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -225,7 +226,8 @@ public class Evento extends javax.swing.JFrame {
     }//GEN-LAST:event_rev_idActionPerformed
 
     private void enviar_clienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviar_clienteMouseClicked
-       archivoos ob4= new archivoos();
+       
+        archivoos ob4= new archivoos();
        int id;
        String name;
        int pres;
@@ -242,15 +244,59 @@ public class Evento extends javax.swing.JFrame {
        mes= Integer.parseInt(rev_mes.getText());
        ano= Integer.parseInt(rev_ano.getText());
        String fecha;
-       fecha = dia+"/"+mes+"/"+ano;
+      
        horai=Integer.parseInt(horaInicio.getText());
        horaf=Integer.parseInt(horafinal.getText());
-       String fechaenh="/"+horai+"/"+horaf;
-       ob4.archCli(id,name,pres,numI,fecha+fechaenh);
-       Cotizadooor ob29= new Cotizadooor();
-       ob29.llegada(id,name,pres,numI,dia,mes,ano,horai,horaf);
-       ob29.setVisible(true);
-       this.setVisible(false);
+      
+       
+       if(ano<2019|| ano>3000 ){
+            JOptionPane.showMessageDialog(null, "No es valido");
+       }
+       else{
+           if(mes>13 || mes<=0){
+              JOptionPane.showMessageDialog(null, "No es valido"); 
+           }else{
+        
+            if((mes==1 && dia>31 ||dia<=0) || (mes==2 && dia>28||dia<=0) || (mes==3 && dia>31||dia<=0)||(mes==4 && dia>30||dia<=0)||(mes==5 && dia>31||dia<=0)||(mes==6 && dia>30||dia<=0)||(mes==7 && dia>31||dia<=0)||(mes==8 && dia>31||dia<=0)||(mes==9 && dia>30||dia<=0)||(mes==10 && dia>31||dia<=0)||(mes==11 && dia>30||dia<=0)||(mes==12 && dia>31||dia<=0) ){
+                JOptionPane.showMessageDialog(null, "No es valido");
+            }
+            else{
+                if(horai>24 || horaf>24 ||horai<=0 ||horaf<=0 ){
+                   JOptionPane.showMessageDialog(null, "No es valido");
+                }else{
+                  
+                    if(dia==31 && mes==12){
+                       JOptionPane.showMessageDialog(null, "Este dia no trabajamos"); 
+                    }
+                    else{
+                        if(pres<=0){
+                          JOptionPane.showMessageDialog(null, "Presupuesto invalido");   
+                        }
+                        else{
+                            if(numI<=0){
+                                JOptionPane.showMessageDialog(null, "Invitados invalidos");  
+                            }
+                            else{
+                                fecha = dia+"/"+mes+"/"+ano;
+                                String fechaenh="/"+horai+"/"+horaf;
+                                ob4.archCli(id,name,pres,numI,fecha+fechaenh);
+                                Cotizadooor ob29= new Cotizadooor();
+                                ob29.llegada(id,name,pres,numI,dia,mes,ano,horai,horaf);
+                                ob29.setVisible(true);
+                                this.setVisible(false);   
+                            }
+                          
+                        }
+                        
+                       
+                    }
+                   
+                }
+            }
+           }
+       }
+       
+        
     }//GEN-LAST:event_enviar_clienteMouseClicked
 
     private void RESETMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RESETMouseClicked
@@ -283,32 +329,32 @@ public class Evento extends javax.swing.JFrame {
 
     private void rev_invitadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_invitadosKeyTyped
         char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_invitadosKeyTyped
 
     private void rev_diaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_diaKeyTyped
          char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_diaKeyTyped
 
     private void rev_mesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_mesKeyTyped
        char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_mesKeyTyped
 
     private void rev_anoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_anoKeyTyped
          char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_anoKeyTyped
 
     private void horaInicioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_horaInicioKeyTyped
          char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_horaInicioKeyTyped
 
     private void horafinalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_horafinalKeyTyped
         char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_horafinalKeyTyped
 
     void quince(){

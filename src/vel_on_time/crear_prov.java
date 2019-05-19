@@ -5,6 +5,8 @@
  */
 package vel_on_time;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author jose noel mantilla
@@ -338,7 +340,14 @@ public class crear_prov extends javax.swing.JFrame {
     }//GEN-LAST:event_rev_nomb_art2ActionPerformed
 
     private void enviar_all1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviar_all1MouseClicked
-        
+        archivoos ob50= new archivoos();
+    
+       boolean request=ob50.cmprobarid(rev_id.getText());
+       if(request==true){
+            JOptionPane.showMessageDialog(null, "El ID no esta dispobible");
+       } else{
+           ob50.llenaridfinal(rev_id.getText());
+               
         if(gastronomia == true){
             
             gastronomia2(); 
@@ -355,6 +364,7 @@ public class crear_prov extends javax.swing.JFrame {
        
             lugar2(); 
         }
+       }  
     }//GEN-LAST:event_enviar_all1MouseClicked
 
     private void enviar_all1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviar_all1ActionPerformed

@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -331,20 +332,69 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
             String nombre;
             String prest;
             String numI;
-            File fNuevo = new File("src\\archivos\\Cotizaciones Realizadas.txt");
+          
             String date;
             id=rev_id.getText();
             nombre= rev_nombre.getText();
             prest=rev_presupuesto.getText();
             numI=rev_invitados.getText();
-            date= rev_dia1.getText()+"/"+rev_mes1.getText()+"/"+rev_ano1.getText()+"/"+rev_horiI.getText()+"/"+rev_horaf.getText();
-            String cadbus;
-            String cadcam;
-            cadbus=REV_CLIEN.getText()+";"+rev_dia.getText()+"/"+rev_mes.getText()+"/"+rev_ano.getText()+"/"+rev_horiI1.getText()+"/"+rev_horaf1.getText();
-            System.out.println(cadbus);
-            cadcam=id+";"+nombre+";"+prest+";"+numI+";"+date;
-            obj39.clientemodf(fNuevo, cadbus, cadcam);
-        
+           int dia= Integer.parseInt(rev_dia.getText());
+           int mes= Integer.parseInt(rev_mes.getText());
+           int ano= Integer.parseInt(rev_ano.getText());
+           int horai=Integer.parseInt(rev_horiI.getText());
+           int horaf=Integer.parseInt(rev_horaf.getText()); 
+            int pres= Integer.parseInt(rev_presupuesto.getText());
+             int numInv= Integer.parseInt(rev_invitados.getText());
+            
+           /* 
+           if(ano<2019|| ano>3000 ){
+            JOptionPane.showMessageDialog(null, "No es valido");
+        }
+        else{
+            if(mes>13 || mes<=0){
+               JOptionPane.showMessageDialog(null, "No es valido"); 
+            }else{
+
+             if((mes==1 && dia>31 ||dia<=0) || (mes==2 && dia>28||dia<=0) || (mes==3 && dia>31||dia<=0)||(mes==4 && dia>30||dia<=0)||(mes==5 && dia>31||dia<=0)||(mes==6 && dia>30||dia<=0)||(mes==7 && dia>31||dia<=0)||(mes==8 && dia>31||dia<=0)||(mes==9 && dia>30||dia<=0)||(mes==10 && dia>31||dia<=0)||(mes==11 && dia>30||dia<=0)||(mes==12 && dia>31||dia<=0) ){
+                 JOptionPane.showMessageDialog(null, "No es valido");
+             }
+             else{
+                 if(horai>24 || horaf>24 ||horai<=0 ||horaf<=0 ){
+                    JOptionPane.showMessageDialog(null, "No es valido");
+                 }else{
+
+                     if(dia==31 && mes==12){
+                        JOptionPane.showMessageDialog(null, "Este dia no trabajamos"); 
+                     }
+                     else{
+                          if(pres<=0){
+                          JOptionPane.showMessageDialog(null, "Presupuesto invalido");   
+                        }
+                        else{
+                              if(numInv<=0){
+                                JOptionPane.showMessageDialog(null, "Invitados invalidos");  
+                            }
+                            else{*/
+                                File fNuevo = new File("src\\archivos\\Cotizaciones Realizadas.txt");
+                               date= rev_dia1.getText()+"/"+rev_mes1.getText()+"/"+rev_ano1.getText()+"/"+rev_horiI.getText()+"/"+rev_horaf.getText();
+                               String cadbus;
+                               String cadcam;
+                               cadbus=REV_CLIEN.getText()+";"+rev_dia.getText()+"/"+rev_mes.getText()+"/"+rev_ano.getText()+"/"+rev_horiI1.getText()+"/"+rev_horaf1.getText();
+                               System.out.println(cadbus);
+                               cadcam=id+";"+nombre+";"+prest+";"+numI+";"+date;
+                               obj39.clientemodf(fNuevo, cadbus, cadcam);
+                        /*  }
+                          }
+                     }
+
+                 }
+             }
+            }
+        }*/
+           
+           
+            
+           
             
                     
     }//GEN-LAST:event_selec_modMouseClicked
@@ -377,6 +427,8 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                     String prestu[]= cadena.split(";");
                     String numI[]= cadena.split(";");
                     String date[]= cadena.split(";");
+                    System.out.println(REV_CLIEN);
+                    System.out.println(nombre[3]);
                     
                     
                     if(REV_CLIEN.getText().equals(nombre[3])&& dateobtanin.equals(date[5])){
@@ -420,29 +472,29 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
 
     private void rev_diaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_diaKeyTyped
          char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_diaKeyTyped
 
     private void rev_mesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_mesKeyTyped
         // TODO add your handling code here:
          char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_mesKeyTyped
 
     private void rev_anoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_anoKeyTyped
         // TODO add your handling code here:
         char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_anoKeyTyped
 
     private void rev_horiI1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_horiI1KeyTyped
         char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_horiI1KeyTyped
 
     private void rev_horaf1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_horaf1KeyTyped
        char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_horaf1KeyTyped
 
     private void rev_idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_idKeyTyped
@@ -465,33 +517,33 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
     private void rev_invitadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_invitadosKeyTyped
         // TODO add your handling code here:
         char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_invitadosKeyTyped
 
     private void rev_dia1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_dia1KeyTyped
        char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_dia1KeyTyped
 
     private void rev_mes1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_mes1KeyTyped
         // TODO add your handling code here:
         char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_mes1KeyTyped
 
     private void rev_ano1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_ano1KeyTyped
         char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_ano1KeyTyped
 
     private void rev_horiIKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_horiIKeyTyped
        char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_horiIKeyTyped
 
     private void rev_horafKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_horafKeyTyped
         char c=evt.getKeyChar();
-        if(c<'1'|| c>'9')evt.consume();
+        if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_horafKeyTyped
 
     /**

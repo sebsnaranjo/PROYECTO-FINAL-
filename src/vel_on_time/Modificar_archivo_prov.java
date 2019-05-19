@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -234,7 +235,13 @@ boolean lugar;
     }//GEN-LAST:event_volverActionPerformed
 
     private void enviar_all1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviar_all1MouseClicked
-              if(gastronomia==true){
+          archivoos ob50= new archivoos();
+       boolean request=ob50.cmprobarid(rev_id.getText());
+       if(request==true){
+            JOptionPane.showMessageDialog(null, "El ID no esta dispobible");
+       } else{
+           ob50.llenaridfinal(rev_id.getText());
+        if(gastronomia==true){
                   gastronomia2();
                   
               }
@@ -247,6 +254,7 @@ boolean lugar;
               if(lugar==true){
                   lugar2();
               }
+       }
    
     }//GEN-LAST:event_enviar_all1MouseClicked
 
