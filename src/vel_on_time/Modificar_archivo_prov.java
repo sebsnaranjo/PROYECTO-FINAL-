@@ -235,7 +235,14 @@ boolean lugar;
     }//GEN-LAST:event_volverActionPerformed
 
     private void enviar_all1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviar_all1MouseClicked
-          archivoos ob50= new archivoos();
+        if( (rev_id.getText().length()==0)|| (rev_nom_prov.getText().length()==0) || (rev_prec_base.getText().length()==0) || (rev_servicio.getText().length()==0)){
+          //
+          JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+      } 
+        else{
+            
+        
+        archivoos ob50= new archivoos();
        boolean request=ob50.cmprobarid(rev_id.getText());
        if(request==true){
             JOptionPane.showMessageDialog(null, "El ID no esta dispobible");
@@ -255,7 +262,7 @@ boolean lugar;
                   lugar2();
               }
        }
-   
+    }
     }//GEN-LAST:event_enviar_all1MouseClicked
 
     private void enviar_all1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviar_all1ActionPerformed

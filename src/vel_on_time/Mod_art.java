@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -273,7 +274,13 @@ private String nombre_lug;
     }//GEN-LAST:event_buscarMouseClicked
 
     private void modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseClicked
-          if(gastronom==true){
+          if( (rev_prec.getText().length()==0)|| (rev_nom.getText().length()==0)){
+          //
+          JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+      }
+          else{
+               
+        if(gastronom==true){
            
             cambiogastro2();
             
@@ -292,7 +299,11 @@ private String nombre_lug;
            
            cambiolug2();
             
-       }
+       }  
+          }
+        
+        
+     
     }//GEN-LAST:event_modificarMouseClicked
 
     private void rev_nomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_nomKeyTyped

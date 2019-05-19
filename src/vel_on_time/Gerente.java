@@ -93,6 +93,9 @@ public class Gerente extends javax.swing.JFrame {
         String clave_clie;
         clave_clie=clave_c.getText();
         
+        
+        
+        
         if(clave_clie.equals(clave)){
             contabilidad ob40 = new contabilidad();
             

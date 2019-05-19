@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -225,20 +226,35 @@ private int lug_desc;
     }//GEN-LAST:event_rev_tot_decoActionPerformed
 
     private void ver_cotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ver_cotMouseClicked
-       todas_cot ob30 = new todas_cot();
+       
+          if( (rev_tot_gastro.getText().length()==0)|| (rev_tot_deco.getText().length()==0) || (rev_tot_serv.getText().length()==0) || (rev_tot_lug.getText().length()==0)||(rev_fecha.getText().length()==0)||(final_cot.getText().length()==0)){
+          //
+          JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+      }
+         else{
+        
+        
+        todas_cot ob30 = new todas_cot();
         System.out.println(id2 +"a");
        ob30.buscar(id2,nombre2,presupuesto2,numIn2,fecha2);
        ob30.setVisible(true);
        this.setVisible(false);
        archivoos ob32 = new archivoos();
        ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug,presupuesto2,tip_event2);
-       
+          } 
     }//GEN-LAST:event_ver_cotMouseClicked
 
     private void otra_cotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_otra_cotMouseClicked
-            archivoos ob32 = new archivoos();
+         if( (rev_tot_gastro.getText().length()==0)|| (rev_tot_deco.getText().length()==0) || (rev_tot_serv.getText().length()==0) || (rev_tot_lug.getText().length()==0)||(rev_fecha.getText().length()==0)||(final_cot.getText().length()==0)){
+          //
+          JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+      }
+         else{
+        
+        archivoos ob32 = new archivoos();
             this.setVisible(false);
             ob32.atccod(id2, nombre2, numIn2, fecha2, gastro2, deco2, serv2, lug2,tot_fin , art_gastro, art_deco, art_serv, art_lug,presupuesto2,tip_event2);
+         }
     }//GEN-LAST:event_otra_cotMouseClicked
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
@@ -247,6 +263,15 @@ private int lug_desc;
     }//GEN-LAST:event_volverMouseClicked
 
     private void finalizar_clienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finalizar_clienteMouseClicked
+         if( (rev_tot_gastro.getText().length()==0)|| (rev_tot_deco.getText().length()==0) || (rev_tot_serv.getText().length()==0) || (rev_tot_lug.getText().length()==0)||(rev_fecha.getText().length()==0)||(final_cot.getText().length()==0)){
+          //
+          JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+      }
+         else{
+        
+        
+        
+        
         archivoos ob38 = new archivoos();
         contabilidad ob46 = new contabilidad();
         String pres= Integer.toString(presupuesto2);
@@ -300,7 +325,7 @@ private int lug_desc;
    
    
     }//GEN-LAST:event_finalizar_clienteMouseClicked
-
+    }
     private void rev_tot_gastroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_tot_gastroKeyTyped
         char c=evt.getKeyChar();
         if(c<'0'|| c>'9')evt.consume();

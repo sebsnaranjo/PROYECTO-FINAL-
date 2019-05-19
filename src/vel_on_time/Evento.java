@@ -235,8 +235,8 @@ public class Evento extends javax.swing.JFrame {
        int ano;
        int horai,horaf;
        
-      if( (rev_nombre.getText().length()==0)){
-          //|| (rev_nombre.getText().length()==0) || (rev_presupuesto.getText().length()==0) || (rev_invitados.getText().length()==0)||(rev_dia.getText().length()==0)||(rev_mes.getText().length()==0)||(rev_ano.getText().length()==0)||(horaInicio.getText().length()==0)||(horafinal.getText().length()==0)
+      if( (rev_id.getText().length()==0)|| (rev_nombre.getText().length()==0) || (rev_presupuesto.getText().length()==0) || (rev_invitados.getText().length()==0)||(rev_dia.getText().length()==0)||(rev_mes.getText().length()==0)||(rev_ano.getText().length()==0)||(horaInicio.getText().length()==0)||(horafinal.getText().length()==0)){
+          //
           JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
       }
       else{

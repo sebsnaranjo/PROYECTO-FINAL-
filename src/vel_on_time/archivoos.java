@@ -1086,7 +1086,7 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             fichero = new FileWriter("src\\archivos\\Todos ID Finales.txt",true); //crea el archivo 
             linea = new PrintWriter(fichero); 
      
-            cadena = cadena1 + ";"+id+";";
+            cadena = cadena1+";"+id+";";
             
             linea.println(cadena); 
             

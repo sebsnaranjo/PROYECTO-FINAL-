@@ -327,7 +327,15 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
     }//GEN-LAST:event_volverMouseClicked
 
     private void selec_modMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_selec_modMouseClicked
-            archivoos obj39 = new archivoos();
+            
+        if( (rev_id.getText().length()==0)|| (rev_nombre.getText().length()==0) || (rev_presupuesto.getText().length()==0) || (rev_invitados.getText().length()==0)||(rev_dia1.getText().length()==0)||(rev_mes1.getText().length()==0)||(rev_ano1.getText().length()==0)||(rev_horiI.getText().length()==0)||(rev_horaf.getText().length()==0)){
+          //
+          JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+      }
+        else{
+            
+     
+        archivoos obj39 = new archivoos();
             String id;
             String nombre;
             String prest;
@@ -396,7 +404,7 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
            
             
            
-            
+        }        
                     
     }//GEN-LAST:event_selec_modMouseClicked
 

@@ -306,7 +306,15 @@ public class crear_prov extends javax.swing.JFrame {
     }//GEN-LAST:event_volverActionPerformed
 
     private void enviar_repeatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviar_repeatMouseClicked
-           if(gastropol == true){
+            if( (rev_nomb_art2.getText().length()==0)|| (rev_prec_uni2.getText().length()==0)){
+                JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+            }
+            else{
+                
+            
+         
+        
+        if(gastropol == true){
                gastronomiapol();
            }
             if(decopol == true){
@@ -318,7 +326,7 @@ public class crear_prov extends javax.swing.JFrame {
             if(lugarpol == true){
                lugarpol();
            }
-       
+      } 
     }//GEN-LAST:event_enviar_repeatMouseClicked
 
     private void enviar_repeatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviar_repeatActionPerformed
@@ -340,6 +348,17 @@ public class crear_prov extends javax.swing.JFrame {
     }//GEN-LAST:event_rev_nomb_art2ActionPerformed
 
     private void enviar_all1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviar_all1MouseClicked
+      
+        if( (rev_id.getText().length()==0)|| (rev_nom_prov.getText().length()==0) || (rev_prec_base.getText().length()==0) || (rev_servicio.getText().length()==0)||(rev_nomb_art.getText().length()==0)||(rev_prec_uni.getText().length()==0)){
+          //
+          JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+      }
+        
+        else{
+            
+        
+        
+        
         archivoos ob50= new archivoos();
     
        boolean request=ob50.cmprobarid(rev_id.getText());
@@ -364,7 +383,8 @@ public class crear_prov extends javax.swing.JFrame {
        
             lugar2(); 
         }
-       }  
+       } 
+        }  
     }//GEN-LAST:event_enviar_all1MouseClicked
 
     private void enviar_all1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviar_all1ActionPerformed

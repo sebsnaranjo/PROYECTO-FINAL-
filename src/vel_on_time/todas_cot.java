@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -132,6 +133,15 @@ private String fecha2;
     }//GEN-LAST:event_VOLVERMouseClicked
 
     private void buscar_idMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscar_idMouseClicked
+       
+        if( (rev_id.getText().length()==0)){
+             JOptionPane.showMessageDialog(null, "Caja de texto vacia"); 
+        }
+        else{
+            
+        
+        
+        
         File archivo = null;  //apuntar al archivo almancenado DD
         FileReader contenido = null;  //acceder a todo el contenido del archivo
         BufferedReader linea = null; //accede linea a linea al contenido
@@ -173,7 +183,7 @@ private String fecha2;
                 System.out.print("Error cerrando archivo");
             }
         }
-    
+        }
     }//GEN-LAST:event_buscar_idMouseClicked
 
     private void buscar_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscar_idActionPerformed
