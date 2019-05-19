@@ -346,12 +346,12 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
             int pres= Integer.parseInt(rev_presupuesto.getText());
              int numInv= Integer.parseInt(rev_invitados.getText());
             
-           /* 
+            
            if(ano<2019|| ano>3000 ){
             JOptionPane.showMessageDialog(null, "No es valido");
         }
         else{
-            if(mes>13 || mes<=0){
+            if(mes>=13 || mes<=0){
                JOptionPane.showMessageDialog(null, "No es valido"); 
             }else{
 
@@ -374,8 +374,8 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                               if(numInv<=0){
                                 JOptionPane.showMessageDialog(null, "Invitados invalidos");  
                             }
-                            else{*/
-                                File fNuevo = new File("src\\archivos\\Cotizaciones Realizadas.txt");
+                            else{
+                               File fNuevo = new File("src\\archivos\\Cotizaciones Realizadas.txt");
                                date= rev_dia1.getText()+"/"+rev_mes1.getText()+"/"+rev_ano1.getText()+"/"+rev_horiI.getText()+"/"+rev_horaf.getText();
                                String cadbus;
                                String cadcam;
@@ -383,14 +383,14 @@ public class Modificar_archivo_clien extends javax.swing.JFrame {
                                System.out.println(cadbus);
                                cadcam=id+";"+nombre+";"+prest+";"+numI+";"+date;
                                obj39.clientemodf(fNuevo, cadbus, cadcam);
-                        /*  }
+                          }
                           }
                      }
 
                  }
              }
             }
-        }*/
+        }
            
            
             
