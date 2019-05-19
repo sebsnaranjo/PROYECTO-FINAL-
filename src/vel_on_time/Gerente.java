@@ -64,6 +64,11 @@ public class Gerente extends javax.swing.JFrame {
         getContentPane().add(enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 70, 30));
 
         clave_c.setText("sarasebasandres");
+        clave_c.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                clave_cKeyTyped(evt);
+            }
+        });
         getContentPane().add(clave_c, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 220, 30));
 
         jLabel3.setFont(new java.awt.Font("SFNS Display", 0, 18)); // NOI18N
@@ -96,6 +101,11 @@ public class Gerente extends javax.swing.JFrame {
         }
       
     }//GEN-LAST:event_enviarMouseClicked
+
+    private void clave_cKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_clave_cKeyTyped
+       char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_clave_cKeyTyped
 
     /**
      * @param args the command line arguments

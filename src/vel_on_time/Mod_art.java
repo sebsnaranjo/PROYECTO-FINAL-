@@ -107,7 +107,18 @@ String id="";
                 rev_nomActionPerformed(evt);
             }
         });
+        rev_nom.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_nomKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 333, 199, -1));
+
+        rev_prec.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_precKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_prec, new org.netbeans.lib.awtextra.AbsoluteConstraints(374, 333, 193, -1));
 
         jLabel4.setText("NOMBRE");
@@ -236,6 +247,16 @@ String id="";
     private void modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseClicked
         
     }//GEN-LAST:event_modificarMouseClicked
+
+    private void rev_nomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_nomKeyTyped
+        char c=evt.getKeyChar();
+        if(c<'a'|| c>'z')evt.consume();
+    }//GEN-LAST:event_rev_nomKeyTyped
+
+    private void rev_precKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_precKeyTyped
+       char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_precKeyTyped
     void obtener(){
          select_id = (String) id_prov.getSelectedItem();
         id=select_id;

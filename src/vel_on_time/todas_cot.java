@@ -96,6 +96,12 @@ private String fecha2;
             }
         });
         getContentPane().add(VOLVER, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, 30));
+
+        rev_id.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                rev_idKeyTyped(evt);
+            }
+        });
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 247, 38));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
@@ -170,6 +176,11 @@ private String fecha2;
     private void buscar_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscar_idActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_buscar_idActionPerformed
+
+    private void rev_idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_idKeyTyped
+        char c=evt.getKeyChar();
+        if(c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_rev_idKeyTyped
 
     /**
      * @param args the command line arguments
