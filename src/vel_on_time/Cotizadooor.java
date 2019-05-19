@@ -383,15 +383,16 @@ String serv_rev_uni2=" ";
         String idab[]= rev_uni.split(",");
         boolean acp= obj41.Jacom(idab[0], fecha);
         if(acp==true){
+           
              JOptionPane.showMessageDialog(null, "El provedor no esta disponible Seleccione otro");
+              prec_gastro=0;
         }else{
+            
         gast=gast+id[0]+","+p[1]+",";
         int almax= Integer.parseInt(id[1]);
         cont=cont+almax;
         this.gast=gast;
         }
-       
-        
         
     }//GEN-LAST:event_ar_car_1MouseClicked
 
@@ -576,6 +577,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         
         if(acp==true){
              JOptionPane.showMessageDialog(null, "El provedor no esta disponible Seleccione otro");
+              prec_deco=0;
         }else{
         
         deocr=deocr+id[0]+","+p[1]+",";
@@ -598,6 +600,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         boolean acp= obj41.Jacom(idab[0], fecha);
         if(acp==true){
              JOptionPane.showMessageDialog(null, "El provedor no esta disponible Seleccione otro");
+            prec_serv=0;
         }else{
         servi=servi+id[0]+","+p[1]+",";
         cont3=cont3+almax;
@@ -618,6 +621,7 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
         boolean acp= obj41.Jacom(idab[0],fecha);
         if(acp==true){
              JOptionPane.showMessageDialog(null, "El provedor no esta disponible Seleccione otro");
+              prec_lug=0;
         }else{
         lrgs=lrgs+id[0]+","+p[1]+",";
         cont4=cont4+almax;

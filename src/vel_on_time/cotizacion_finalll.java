@@ -397,6 +397,8 @@ private int lug_desc;
        gastro2=gastro2+base_gastro;
        deco2=deco2+base_deco;
        serv2=serv2+base_serv;
+       
+    
        lug2=lug2+base_lug;
        
        
