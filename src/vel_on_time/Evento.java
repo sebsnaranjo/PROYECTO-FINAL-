@@ -31,6 +31,7 @@ public class Evento extends javax.swing.JFrame {
     private void initComponents() {
 
         elec_cotizar = new javax.swing.ButtonGroup();
+        jTextField1 = new javax.swing.JTextField();
         evento = new javax.swing.JLabel();
         selc_evento1 = new javax.swing.JLabel();
         nombre_cliente = new javax.swing.JLabel();
@@ -50,7 +51,12 @@ public class Evento extends javax.swing.JFrame {
         rev_mes = new javax.swing.JTextField();
         rev_ano = new javax.swing.JTextField();
         VOLVER = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        horaInicio = new javax.swing.JTextField();
+        horafinal = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -68,7 +74,7 @@ public class Evento extends javax.swing.JFrame {
 
         MES.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         MES.setText("MES:");
-        getContentPane().add(MES, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, 34));
+        getContentPane().add(MES, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, -1, 34));
 
         numero_invitados.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         numero_invitados.setText("Numero de invitados:");
@@ -85,38 +91,18 @@ public class Evento extends javax.swing.JFrame {
                 rev_idActionPerformed(evt);
             }
         });
-        rev_id.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                rev_idKeyTyped(evt);
-            }
-        });
         getContentPane().add(rev_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 103, -1));
 
         rev_nombre.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_nombre.setText("saraaaa");
-        rev_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                rev_nombreKeyTyped(evt);
-            }
-        });
         getContentPane().add(rev_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 160, -1));
 
         rev_presupuesto.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_presupuesto.setText("4548");
-        rev_presupuesto.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                rev_presupuestoKeyTyped(evt);
-            }
-        });
         getContentPane().add(rev_presupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 103, -1));
 
         rev_invitados.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_invitados.setText("4848");
-        rev_invitados.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                rev_invitadosKeyTyped(evt);
-            }
-        });
         getContentPane().add(rev_invitados, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 130, -1));
 
         enviar_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
@@ -125,11 +111,6 @@ public class Evento extends javax.swing.JFrame {
         enviar_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 enviar_clienteMouseClicked(evt);
-            }
-        });
-        enviar_cliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enviar_clienteActionPerformed(evt);
             }
         });
         getContentPane().add(enviar_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 100, 40));
@@ -151,38 +132,23 @@ public class Evento extends javax.swing.JFrame {
 
         ANO.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         ANO.setText("AÑO:");
-        getContentPane().add(ANO, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 39, 34));
+        getContentPane().add(ANO, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 39, 34));
 
         DIA.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         DIA.setText("DIA:");
-        getContentPane().add(DIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 36, 34));
+        getContentPane().add(DIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 36, 34));
 
         rev_dia.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_dia.setText("12");
-        rev_dia.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                rev_diaKeyTyped(evt);
-            }
-        });
-        getContentPane().add(rev_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 60, -1));
+        getContentPane().add(rev_dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 60, -1));
 
         rev_mes.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_mes.setText("2");
-        rev_mes.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                rev_mesKeyTyped(evt);
-            }
-        });
-        getContentPane().add(rev_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 61, -1));
+        getContentPane().add(rev_mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 61, -1));
 
         rev_ano.setFont(new java.awt.Font("OCR A Extended", 0, 11)); // NOI18N
         rev_ano.setText("2019");
-        rev_ano.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                rev_anoKeyTyped(evt);
-            }
-        });
-        getContentPane().add(rev_ano, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 68, -1));
+        getContentPane().add(rev_ano, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 68, -1));
 
         VOLVER.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
         VOLVER.setText("Volver");
@@ -193,6 +159,11 @@ public class Evento extends javax.swing.JFrame {
             }
         });
         getContentPane().add(VOLVER, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 70, 40));
+
+        jLabel2.setText("Hora y fecha de inicio");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, -1, -1));
+        getContentPane().add(horaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 50, -1));
+        getContentPane().add(horafinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 50, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -206,7 +177,6 @@ public class Evento extends javax.swing.JFrame {
     }//GEN-LAST:event_rev_idActionPerformed
 
     private void enviar_clienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviar_clienteMouseClicked
-     
        archivoos ob4= new archivoos();
        int id;
        String name;
@@ -215,7 +185,7 @@ public class Evento extends javax.swing.JFrame {
        int dia;
        int mes;
        int ano;
-       
+       int horai,horaf;
        id= Integer.parseInt(rev_id.getText());
        name= rev_nombre.getText();
        pres= Integer.parseInt(rev_presupuesto.getText());
@@ -223,19 +193,16 @@ public class Evento extends javax.swing.JFrame {
        dia= Integer.parseInt(rev_dia.getText());
        mes= Integer.parseInt(rev_mes.getText());
        ano= Integer.parseInt(rev_ano.getText());
-       
        String fecha;
        fecha = dia+"/"+mes+"/"+ano;
-       
-       ob4.archCli(id,name,pres,numI,fecha);
-       
-        System.out.println(id+"z");
+       horai=Integer.parseInt(horaInicio.getText());
+       horaf=Integer.parseInt(horafinal.getText());
+       String fechaenh="/"+horai+"/"+horaf;
+       ob4.archCli(id,name,pres,numI,fecha+fechaenh);
        Cotizadooor ob29= new Cotizadooor();
-       ob29.llegada(id,name,pres,numI,dia,mes,ano);
-   
+       ob29.llegada(id,name,pres,numI,dia,mes,ano,horai,horaf);
        ob29.setVisible(true);
-      
-  
+       this.setVisible(false);
     }//GEN-LAST:event_enviar_clienteMouseClicked
 
     private void RESETMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RESETMouseClicked
@@ -250,45 +217,6 @@ public class Evento extends javax.swing.JFrame {
        ob26.setVisible(true);
        this.setVisible(false);
     }//GEN-LAST:event_VOLVERMouseClicked
-
-    private void enviar_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviar_clienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_enviar_clienteActionPerformed
-
-    private void rev_idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_idKeyTyped
-        char c=evt.getKeyChar();
-        if(c<'0'|| c>'9')evt.consume();
-    }//GEN-LAST:event_rev_idKeyTyped
-
-    private void rev_nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_nombreKeyTyped
-       char c=evt.getKeyChar();
-        if(c<'a'|| c>'z')evt.consume();
-    }//GEN-LAST:event_rev_nombreKeyTyped
-
-    private void rev_presupuestoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_presupuestoKeyTyped
-      char c=evt.getKeyChar();
-        if(c<'0'|| c>'9')evt.consume();
-    }//GEN-LAST:event_rev_presupuestoKeyTyped
-
-    private void rev_invitadosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_invitadosKeyTyped
-        char c=evt.getKeyChar();
-        if(c<'0'|| c>'9')evt.consume();
-    }//GEN-LAST:event_rev_invitadosKeyTyped
-
-    private void rev_diaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_diaKeyTyped
-        char c=evt.getKeyChar();
-        if(c<'0'|| c>'9')evt.consume();
-    }//GEN-LAST:event_rev_diaKeyTyped
-
-    private void rev_mesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_mesKeyTyped
-        char c=evt.getKeyChar();
-        if(c<'0'|| c>'9')evt.consume();
-    }//GEN-LAST:event_rev_mesKeyTyped
-
-    private void rev_anoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_anoKeyTyped
-    char c=evt.getKeyChar();
-        if(c<'0'|| c>'9')evt.consume();
-    }//GEN-LAST:event_rev_anoKeyTyped
 
     void quince(){
         
@@ -351,11 +279,7 @@ public class Evento extends javax.swing.JFrame {
     void navidad(){
         evento.setText("Fiesta navideña");
     }
-        
-    
-    /**
-     * @param args the command line arguments
-     */
+  
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -379,6 +303,7 @@ public class Evento extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -397,8 +322,12 @@ public class Evento extends javax.swing.JFrame {
     private javax.swing.ButtonGroup elec_cotizar;
     private javax.swing.JButton enviar_cliente;
     private javax.swing.JLabel evento;
+    private javax.swing.JTextField horaInicio;
+    private javax.swing.JTextField horafinal;
     private javax.swing.JLabel id_cliente;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel nombre_cliente;
     private javax.swing.JLabel numero_invitados;
     private javax.swing.JLabel presupuesto1;

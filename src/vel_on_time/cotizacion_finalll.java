@@ -6,7 +6,12 @@
 package vel_on_time;
 
 import com.itextpdf.text.DocumentException;
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -238,6 +243,36 @@ private int lug_desc;
     } catch (FileNotFoundException ex) {
         Logger.getLogger(cotizacion_finalll.class.getName()).log(Level.SEVERE, null, ex);
     }
+   archivoos ob40= new archivoos();
+   String a;
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+
+        try {
+            archivo = new File("src\\archivos\\Phantom.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                String id[]= cadena.split(";");
+                ob40.llenarfinal(id[3],fecha2);
+            }
+            ob40.borrar(archivo);
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+   
    
     }//GEN-LAST:event_finalizar_clienteMouseClicked
     public void llegada_oculta(int id,String nombre,int presupuesto,int numIn,String fecha){

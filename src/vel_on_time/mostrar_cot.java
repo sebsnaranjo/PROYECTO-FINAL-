@@ -115,7 +115,174 @@ private String fecha2;
     }//GEN-LAST:event_volverMouseClicked
 
     private void imprimir_contratoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imprimir_contratoMouseClicked
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         archivoos ob37= new archivoos();
+        File archivo2 = null;  //apuntar al archivo almancenado DD
+        FileReader contenido2 = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea2 = null; //accede linea a linea al contenido
+      String fnombrek;
+   String fnik;
+      String ffechak;
+        String fvalorgastrok;
+    String fvalordecok;
+    String fvalorservk;
+    String fvalorlugk;
+    String fvalortglobk;
+    String fartgastk;
+    String fartgast2k;
+    String fartdecok;
+    String fartservk;
+    String fartlugk;
+    String fpresuk;
+    int valorTglobInk;
+    int nmuIk;
+    String fidk;
+    
+            
+        
+        try {
+            archivoos ob49=new archivoos();
+            
+            archivo2 = new File("src\\archivos\\Cotizaciones Realizadas.txt");
+            contenido2 = new FileReader(archivo2);
+            linea2 = new BufferedReader(contenido2);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            //System.out.println("Entrooo");
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea2.readLine()) != null) { //recorre todo el archivo
+            // System.out.println("Entrooo");
+                 String nmuk[]= cadena.split(";");
+                 nmuIk= Integer.parseInt(nmuk[1]);
+                 String idk[]= cadena.split(";");
+                 fidk= idk[2];
+                 String nombrek[]= cadena.split(";");
+                 fnombrek=nombrek[3];
+                 String nIk[]= cadena.split(";");
+                 fnik= nIk[4];
+                 String fechak[]= cadena.split(";");
+                 ffechak=fechak[5];
+                 String valorGastrok[]= cadena.split(";");
+                 fvalorgastrok=valorGastrok[6];
+                 String valortdaceok[]= cadena.split(";");
+                 fvalordecok=valortdaceok[7];
+                 String valortservk[]= cadena.split(";");
+                 fvalorservk= valortservk[8];
+                 String valortlugk[]= cadena.split(";");
+                 fvalorlugk= valortlugk[9];
+                 String valorTglobk[]= cadena.split(";");
+                 valorTglobInk= Integer.parseInt(valorTglobk[10]);
+                 fvalortglobk=valorTglobk[10];
+                 String artGastk[]= cadena.split(";");
+                 fartgastk= artGastk[11];
+                 String artDecok[]= cadena.split(";");
+                 fartdecok= artDecok[12];
+                 String artServk[]= cadena.split(";");
+                 fartservk= artServk[13];
+                 String artLugk[]= cadena.split(";");
+                 fartlugk= artLugk[14];
+                 String presu2k[]= cadena.split(";");
+                 fpresuk=presu2k[15];
+            
+                     
+                 if (randomico2==nmuIk && prec2==valorTglobInk){
+                    
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////                  
+                int tot_gask=0;
+                  String prec_gastrok[]=fartgastk.split(",");
+                 
+                  
+                for(int i=0;i<fartgastk.length();i++){
+                    if(fartgastk.charAt(i)==','){
+                     tot_gask+=1;   
+                    }
+                }
+                for(int i=0;i<tot_gask;i=i+2){
+                    String arch;
+                    arch=ob49.buscprovcom(prec_gastrok[i]);
+                    ob49.llenarfinal(arch, ffechak);
+                    
+                }
+                   
+                     
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////                   
+                               
+                int tot_decok=0;
+                  String prec_decok[]=fartdecok.split(",");
+                 
+                for(int i=0;i<fartdecok.length();i++){
+                    if(fartdecok.charAt(i)==','){
+                     tot_decok+=1;   
+                    }
+                }
+                for(int i=0;i<tot_decok;i=i+2){
+                  
+                    String arch;
+                    arch=ob49.buscprovdeco(prec_decok[i]);
+                    ob49.llenarfinal(arch, ffechak);
+                    
+                }
+          
+   //////////////////////////////////////////////////////////////////////////////////////////////////////////////                 
+                int tot_servk=0;
+                  String prec_servk[]=fartservk.split(",");
+                 
+                  
+                for(int i=0;i<fartservk.length();i++){
+                    if(fartservk.charAt(i)==','){
+                     tot_servk+=1;   
+                    }
+                }
+                for(int i=0;i<tot_servk;i=i+2){
+                   
+                    String arch;
+                    arch=ob49.buscprovserv(prec_servk[i]);
+                    ob49.llenarfinal(arch, ffechak);              
+
+                }                 
+    ///////////////////////////////////////////////////////////////////////////////////////////                 
+                int tot_lugk=0;
+                  String prec_lugk[]=fartlugk.split(",");
+                  
+                  
+                for(int i=0;i<fartlugk.length();i++){
+                    if(fartlugk.charAt(i)==','){
+                     tot_lugk+=1;   
+                    }
+                }
+                for(int i=0;i<tot_lugk;i=i+2){
+                   System.out.println("Envio: "+prec_lugk[i]);
+                    String arch;
+                     arch=ob49.buscprovlug(prec_lugk[i]);
+                    ob49.llenarfinal(arch, ffechak);   
+                    
+                 
+                }
+                     
+                     
+                     
+           ////////////////////////////////////////////////////////////////////////////////////////////////////////////          
+                    
+                 }
+ 
+            }  
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido2 != null) {
+                    contenido2.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+ 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+       
         File archivo = null;  //apuntar al archivo almancenado DD
         FileReader contenido = null;  //acceder a todo el contenido del archivo
         BufferedReader linea = null; //accede linea a linea al contenido

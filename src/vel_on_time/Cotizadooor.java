@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -41,6 +42,8 @@ private String deocr="";
 private String servi="";
 private String lrgs="";
 private String numI2=" ";
+private int horai2;
+private int horaf2;
 int prec_gastro;
 int prec_deco;
 int prec_serv;
@@ -371,14 +374,21 @@ String serv_rev_uni2=" ";
     
     
     private void ar_car_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_1MouseClicked
-         gastro_rev_uni2 = (String) combo_art_gastro.getSelectedItem();
-        String id[] = gastro_rev_uni2.split(",");
-        String p[] = gastro_rev_uni2.split(",");
+           archivoos obj41= new archivoos();
+        String gastro_rev_uni = (String) combo_art_gastro.getSelectedItem();
+        String id[] = gastro_rev_uni.split(",");
+        String p[] = gastro_rev_uni.split(",");
+        String rev_uni = (String) combo_gastro.getSelectedItem();
+        String idab[]= rev_uni.split(",");
+        boolean acp= obj41.Jacom(idab[0], fecha);
+        if(acp==true){
+             JOptionPane.showMessageDialog(null, "El provedor no esta disponible Seleccione otro");
+        }else{
         gast=gast+id[0]+","+p[1]+",";
-        System.out.println("hola");
         int almax= Integer.parseInt(id[1]);
         cont=cont+almax;
         this.gast=gast;
+        }
        
         
         
@@ -389,24 +399,25 @@ String serv_rev_uni2=" ";
        this.setVisible(false);
        
     }//GEN-LAST:event_volverMouseClicked
-public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano){
+public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano,int horai,int horaf){
          numIn= numI;
-         System.out.println(id+"g");
+         
          id2=id;
+         horai2=horai;
+         horaf2=horaf;
          name2=name;
          pres2=pres;
          dia2=dia;
          mes2=mes;
          ano2=ano;
-         fecha = dia+"/"+mes+"/"+ano;
-         System.out.println(id2+"l");
-         
+         fecha = dia+"/"+mes+"/"+ano+"/"+horai+"/"+horaf;
+         this.horai2=horai2;
+         this.horaf2=horaf2;
          this.id2=id2;
          this.name2=name2;
          this.pres2=pres2;
          this.numIn=numIn;
          this.fecha=fecha;
-      
          
          
     }
@@ -551,43 +562,67 @@ public void llegada(int id,String name,int pres,int numI,int dia,int mes,int ano
     }//GEN-LAST:event_elec_lugarMouseClicked
 
     private void ar_car_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_2MouseClicked
-     lugar_rev_uni2 = (String) combo_art_deco.getSelectedItem();
-    
-        String id[] = lugar_rev_uni2.split(",");
+    String gastro_rev_uni = (String) combo_art_deco.getSelectedItem();
+        archivoos obj41 = new archivoos();
+        String id[] = gastro_rev_uni.split(",");
         int almax= Integer.parseInt(id[1]);
-        String p[] = lugar_rev_uni2.split(",");
+        String p[] = gastro_rev_uni.split(",");
+        String rev_uni = (String) combo_deco.getSelectedItem();
+        String idab[]= rev_uni.split(",");
+        boolean acp= obj41.Jacom(idab[0], fecha);
+        
+        if(acp==true){
+             JOptionPane.showMessageDialog(null, "El provedor no esta disponible Seleccione otro");
+        }else{
+        
         deocr=deocr+id[0]+","+p[1]+",";
         cont2=cont2+almax;
         System.out.println(cont2);
         System.out.println("deocr"+deocr);
         this.deocr=deocr;
+        }
             
     }//GEN-LAST:event_ar_car_2MouseClicked
 
     private void ar_car_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_3MouseClicked
-    serv_rev_uni2 = (String) combo_art_serv.getSelectedItem();
-   
-        String id[] = serv_rev_uni2.split(",");
+     String gastro_rev_uni = (String) combo_art_serv.getSelectedItem();
+        archivoos obj41 = new archivoos();
+        String id[] = gastro_rev_uni.split(",");
         int almax= Integer.parseInt(id[1]);
-        String p[] = serv_rev_uni2.split(",");
+        String p[] = gastro_rev_uni.split(",");
+           String rev_uni = (String) combo_serv.getSelectedItem();
+        String idab[]= rev_uni.split(",");
+        boolean acp= obj41.Jacom(idab[0], fecha);
+        if(acp==true){
+             JOptionPane.showMessageDialog(null, "El provedor no esta disponible Seleccione otro");
+        }else{
         servi=servi+id[0]+","+p[1]+",";
         cont3=cont3+almax;
         System.out.println(cont3);
         System.out.println("serv"+servi);
-        this.servi=servi;
+        this.servi=servi;}
     }//GEN-LAST:event_ar_car_3MouseClicked
 
     private void ar_car_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ar_car_4MouseClicked
-         deco_rev_uni2 = (String) combo_art_lugar.getSelectedItem();
-       
-        String id[] = deco_rev_uni2.split(",");
+           String gastro_rev_uni = (String) combo_art_lugar.getSelectedItem();
+        archivoos obj41 = new archivoos();
+        String id[] = gastro_rev_uni.split(",");
         int almax= Integer.parseInt(id[1]);
-        String p[] = deco_rev_uni2.split(",");
+        String p[] = gastro_rev_uni.split(",");
+        
+        String rev_uni = (String) combo_lugar.getSelectedItem();
+        String idab[]= rev_uni.split(",");
+        boolean acp= obj41.Jacom(idab[0],fecha);
+        if(acp==true){
+             JOptionPane.showMessageDialog(null, "El provedor no esta disponible Seleccione otro");
+        }else{
         lrgs=lrgs+id[0]+","+p[1]+",";
         cont4=cont4+almax;
         System.out.println(cont4);
+       
         System.out.println("lrgs"+lrgs);
         this.lrgs=lrgs;
+       }
     }//GEN-LAST:event_ar_car_4MouseClicked
 
     /**

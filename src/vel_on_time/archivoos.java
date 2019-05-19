@@ -943,7 +943,435 @@ void artlug(int id,String art, int precart, boolean provedor_deco) {
             }
         }
     }
+ //////////////////////////////////////////Modificando cliente////////////////////////////////////////////////////////7
+   
+     void clientemodf(File fAntiguo,String aCadena,String nCadena)
+    {
+           int nmuI;
+        int valorTglobIn;
+        String fid = null;
+        String fnombre;
+        String fni;
+        String ffecha;
+        String fvalorgastro;
+        String fvalordeco;
+        String fvalorserv;
+        String fvalorlug;
+        String fvalortglob;
+        String fartgast;
+        String fartdeco;
+        String fartserv;
+        String fartlug;
+        String fpresu;
+        Random numaleatorio = new Random(3816L);
+        String nFnuevo = fAntiguo.getParent()+"/auxiliar"+String.valueOf(Math.abs(numaleatorio.nextInt()))+".txt";
+          
+           String aux="";
+           // System.out.print(nCadena);
+        File fNuevo= new File(nFnuevo);
+        String anN[]= aCadena.split(";");
+        String dateN[]= aCadena.split(";");
+        System.out.println(anN[0]);
+        System.out.println(dateN[1]+"Fecha");
+        String nID[]=nCadena.split(";");
+        String nNm[]=nCadena.split(";");
+        String nPrest[]=nCadena.split(";");
+        String nNi[]=nCadena.split(";");
+        String ndate[]=nCadena.split(";");
+        BufferedReader br;
+        try
+        {
+           
+            if(fAntiguo.exists())
+            {
+                br = new BufferedReader(new FileReader(fAntiguo));
 
+                String linea;
+
+                while((linea=br.readLine()) != null)
+                {
+                 String nmu[]= linea.split(";");
+                 nmuI= Integer.parseInt(nmu[1]);
+                 String id[]= linea.split(";");
+                 fid= id[2];
+                 String nombre[]= linea.split(";");
+                 fnombre=nombre[3];
+                 String nI[]= linea.split(";");
+                 fni= nI[4];
+                 String fecha[]= linea.split(";");
+                 ffecha=fecha[5];
+                 String valorGastro[]= linea.split(";");
+                 fvalorgastro=valorGastro[6];
+                 String valortdaceo[]= linea.split(";");
+                 fvalordeco=valortdaceo[7];
+                 String valortserv[]= linea.split(";");
+                 fvalorserv= valortserv[8];
+                 String valortlug[]= linea.split(";");
+                 fvalorlug= valortlug[9];
+                 String valorTglob[]= linea.split(";");
+                 valorTglobIn= Integer.parseInt(valorTglob[10]);
+                 fvalortglob=valorTglob[10];
+                 String artGast[]= linea.split(";");
+                 fartgast= artGast[11];
+                 String artDeco[]= linea .split(";");
+                 fartdeco= artDeco[12];
+                 String artServ[]= linea.split(";");
+                 fartserv= artServ[13];
+                 String artLug[]= linea.split(";");
+                 fartlug= artLug[14];
+                 //  String presu2[]= linea.split(";");
+                 if(anN[0].equals(fnombre)&&dateN[1].equals(ffecha)){
+                     String lnwe;
+                     lnwe=aux+";"+nmuI+";"+ nID[0]+";"+nNm[1]+";"+nNi[3]+";"+ndate[4]+";"+fvalorgastro+";"+fvalordeco+";"+fvalorserv+";"+fvalorlug+";"+fvalortglob+";"+fartgast+";"+fartdeco+";"+fartserv+";"+fartlug+";"+nPrest[2]+";"+"\n";                 
+                    
+                     Escribir(fNuevo, lnwe);
+                 }else{
+                      linea=linea+"\n";
+                        Escribir(fNuevo,linea);
+                 } 
+            
+                }
+                 br.close();
+                String nAntiguo = fAntiguo.getName();
+                borrar(fAntiguo);
+                fNuevo.renameTo(fAntiguo);
+            }
+            else
+            {
+                System.out.println("Fichero no Existe");
+            }
+
+        }catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+     
+      void llenarfinal(String id, String fecha2) {
+    
+        String cadena; 
+         String cadena1="";
+        FileWriter fichero = null; 
+        PrintWriter linea = null;  
+        
+        try{
+            fichero = new FileWriter("src\\archivos\\Fechas Finales.txt",true); //crea el archivo 
+            linea = new PrintWriter(fichero); 
+     
+            cadena = cadena1 + ";"+id+";"+fecha2+";";
+            
+            linea.println(cadena); 
+            
+      }catch(IOException e){
+           System.out.print("Error creando archivo");
+        }
+        finally{
+            try{
+                if(fichero != null){
+                    fichero.close();
+                }
+            }catch(IOException e1){
+                System.out.print("Error cerrando archivo");
+            }
+        }
+    }
+    
+    boolean Jacom (String id,String feca){
+        boolean op = false;
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+        String dia[]=feca.split("/");
+        String mes[]=feca.split("/");
+        String año[]=feca.split("/");
+        String horai[]=feca.split("/");
+        String horaf[]= feca.split("/");
+        String hroaFS=dia[0]+mes[1]+año[2];
+        int horaii;
+        int horafi;
+         horaii=Integer.parseInt(horai[3]);
+         horafi=Integer.parseInt(horaf[4]);
+        try {
+            archivo = new File("src\\archivos\\Fechas Finales.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                   String idf[]= cadena.split(";");
+                   String feh[]= cadena.split(";");
+            String dia2[]=feh[2].split("/");
+            String mes2[]=feh[2].split("/");
+            String año2[]=feh[2].split("/");
+            String horai2[]=feh[2].split("/");
+            String horaf2[]= feh[2].split("/");
+            String hroaFS2=dia2[0]+mes2[1]+año2[2];
+            int horaii2;
+            int horafi2;
+            horaii2=Integer.parseInt(horai2[3]);
+            horafi2=Integer.parseInt(horaf2[4]);
+                   if(id.equals(idf[1])&& hroaFS.equals(hroaFS2)){
+                       System.out.println(horaii2);
+                       System.out.println(horaii);
+                       System.out.println(horafi2);
+                      if(horaii2<=horaii&&horaii<=horafi2){
+                       op=true;
+                      }
+                   
+                   }
+                    
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+           
+        }
+         return op;
+}
 ////////////////////////////////////////END /////////////////////////////////////////////////////////////////////////////////////////
+
+    String buscprovcom(String string) {
+     
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+           String result="";
+        try {
+            archivo = new File("src\\archivos\\Articulos Comida.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                    String id[]=cadena.split(";");
+                    String name[]=cadena.split(";");
+                    
+                    
+                if (name[2].equals(string)){
+                  //  System.out.println("Paso por aca");
+                   result=id[1];
+                     
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+        
+        
+        
+        return result;
+        
+    }
+
+    String buscprovdeco(String stringd) {
+        
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+           String result="";
+        try {
+            archivo = new File("src\\archivos\\Articulos servicios.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                    String id[]=cadena.split(";");
+                    String name[]=cadena.split(";");
+                    
+                    
+                if (name[2].equals(stringd)){
+                    
+                   result=id[1];
+                     
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+        
+        
+        
+        return result;
+    }
+
+    String buscprovserv(String stringe) {
+                
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+           String result="";
+        try {
+            archivo = new File("src\\archivos\\Articulos Decoración y ambientación.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                    String id[]=cadena.split(";");
+                    String name[]=cadena.split(";");
+                    
+                    
+                if (name[2].equals(stringe)){
+                  
+                   result=id[1];
+                     
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+        
+        
+        
+        return result;
+    }
+
+    String buscprovlug(String stringf) {
+        
+        File archivo = null;  //apuntar al archivo almancenado DD
+        FileReader contenido = null;  //acceder a todo el contenido del archivo
+        BufferedReader linea = null; //accede linea a linea al contenido
+           String result="";
+        try {
+            archivo = new File("src\\archivos\\lugar.txt");
+            contenido = new FileReader(archivo);
+            linea = new BufferedReader(contenido);
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            
+            String cadena = ""; //variable captura los datos del archivo
+            while ((cadena = linea.readLine()) != null) { //recorre todo el archivo
+                    String id[]=cadena.split(";");
+                    String name[]=cadena.split(";");
+                    
+                    
+                if (name[2].equals(stringf)){
+                  
+                   result=id[1];
+                     
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.print("Error consultando archivo");
+        } finally {
+            try {
+                if (contenido != null) {
+                    contenido.close();
+                }
+            } catch (IOException e1) {
+                System.out.print("Error cerrando archivo");
+            }
+        }
+        
+        
+        
+        return result;
+    }
+    void modificarart2(File fAntiguo,String aCadena,String nCadena)
+    {
+        
+      // System.out.println(aCadena+" \n "+ nCadena);
+        Random numaleatorio = new Random(3816L);
+        String nFnuevo = fAntiguo.getParent()+"/auxiliar"+String.valueOf(Math.abs(numaleatorio.nextInt()))+".txt";
+           
+            System.out.println(nCadena);
+        File fNuevo= new File(nFnuevo);
+        String cadena1= "";
+        BufferedReader br;
+        try
+        {
+           
+            if(fAntiguo.exists())
+            {
+                br = new BufferedReader(new FileReader(fAntiguo));
+
+                String linea;
+
+                while((linea=br.readLine()) != null)
+                {
+                   String id[]= linea.split(";");
+                   String nombre[] = linea.split(";");
+                   String prec[]= linea.split(";");
+                   String serv[]= linea.split(";");
+                   String name[]=nCadena.split(";");
+                   String op[]= linea.split(";");
+                   
+                    System.out.println(aCadena+"f");
+                    System.out.println(nombre[2]);
+                   if(aCadena.equals(nombre[2])){
+                       
+                       String aux;
+                       aux=cadena1+";"+id[1]+";"+nCadena+op[4]+";"+"\n";
+                         Escribir(fNuevo,aux);
+                   }
+                   else {
+                        linea=linea+"\n";
+                        Escribir(fNuevo,linea);
+                    }
+                }
+
+           
+                br.close();
+
+              
+                String nAntiguo = fAntiguo.getName();
+               
+                borrar(fAntiguo);
+                
+                fNuevo.renameTo(fAntiguo);
+
+
+
+
+            }
+            else
+            {
+                System.out.println("Fichero no Existe");
+            }
+
+        }catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
 
 }//FIN CLASE

@@ -1,2 +1,2 @@
-;890;Globos;700;true;
-;890;yumi;7580;true;
+;890;bombas;7000;true;
+;890;peroxido;7580;true;

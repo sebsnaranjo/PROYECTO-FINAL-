@@ -23,6 +23,11 @@ boolean servi=false;
 boolean lugar=false;
 String select_id=" ";
 String id="";
+private String nombre_gastro;
+private String nombre_deco;
+private String nombre_serv;
+private String nombre_lug;
+
     /**
      * Creates new form Mod_art
      */
@@ -140,6 +145,9 @@ String id="";
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 buscarMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buscarMouseEntered(evt);
+            }
         });
         getContentPane().add(buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, -1));
 
@@ -185,6 +193,11 @@ String id="";
         getContentPane().add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 268, 10, -1));
 
         elegir.setText("ELEGIR");
+        elegir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                elegirMouseClicked(evt);
+            }
+        });
         getContentPane().add(elegir, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, -1, -1));
         getContentPane().add(id_prov, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 130, -1));
 
@@ -221,22 +234,22 @@ String id="";
        
         
         if(gastronom==true){
-           
+           obtener();
             gastronomia();
             
        }
         if(decor==true){
-          
+          obtener();
             decoracion();
             
        }
          if(servi==true){
-          
+          obtener();
             servicio();
             
        }
           if(lugar==true){
-           
+           obtener();
             lugar();
             
        }
@@ -245,7 +258,26 @@ String id="";
     }//GEN-LAST:event_buscarMouseClicked
 
     private void modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseClicked
-        
+          if(gastronom==true){
+           
+            cambiogastro2();
+            
+       }
+        if(decor==true){
+          
+            cambiodeco2();
+            
+       }
+         if(servi==true){
+          
+            cambioserv2();
+            
+       }
+          if(lugar==true){
+           
+           cambiolug2();
+            
+       }
     }//GEN-LAST:event_modificarMouseClicked
 
     private void rev_nomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rev_nomKeyTyped
@@ -257,6 +289,33 @@ String id="";
        char c=evt.getKeyChar();
         if(c<'0'|| c>'9')evt.consume();
     }//GEN-LAST:event_rev_precKeyTyped
+
+    private void elegirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_elegirMouseClicked
+         if(gastronom==true){
+           
+            cambio_gastro();
+            
+       }
+        if(decor==true){
+          
+            cambio_deco();
+            
+       }
+         if(servi==true){
+          
+            cambio_serv();
+            
+       }
+          if(lugar==true){
+           
+           cambio_lug();
+            
+       }
+    }//GEN-LAST:event_elegirMouseClicked
+
+    private void buscarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buscarMouseEntered
     void obtener(){
          select_id = (String) id_prov.getSelectedItem();
         id=select_id;
@@ -276,7 +335,81 @@ String id="";
         lugar=true;
     }
     
+     void cambio_gastro(){
          
+         String art = (String) combo_art.getSelectedItem();
+         String nombre[]= art.split(",");
+         String value[]= art.split(",");
+         rev_nom.setText(nombre[0]);
+         nombre_gastro=nombre[0];
+         this.nombre_gastro=nombre_gastro;
+         rev_prec.setText(value[1]);
+        
+        
+         
+     }
+     void cambiogastro2(){
+         
+         archivoos ob45= new archivoos();
+          File fNuevo = new File("src\\archivos\\Articulos Comida.txt");
+         String result2= rev_nom.getText()+";"+rev_prec.getText()+";";
+         ob45.modificarart2(fNuevo,nombre_gastro,result2);
+     }
+     
+     
+     
+     void cambio_deco(){
+            String art = (String) combo_art.getSelectedItem();
+         String nombre[]= art.split(",");
+         String value[]= art.split(",");
+         rev_nom.setText(nombre[0]);
+         nombre_deco=nombre[0];
+         this.nombre_deco=nombre_deco;
+         rev_prec.setText(value[1]);
+     }
+      void cambiodeco2(){
+         
+         archivoos ob45= new archivoos();
+          File fNuevo = new File("src\\archivos\\Articulos Decoración y ambientación.txt");
+         String result2= rev_nom.getText()+";"+rev_prec.getText()+";";
+         ob45.modificarart2(fNuevo,nombre_deco,result2);
+     }
+     void cambio_serv(){
+            String art = (String) combo_art.getSelectedItem();
+         String nombre[]= art.split(",");
+         String value[]= art.split(",");
+         rev_nom.setText(nombre[0]);
+         nombre_serv=nombre[0];
+         this.nombre_serv=nombre_serv;
+         rev_prec.setText(value[1]);
+     }
+       void cambioserv2(){
+         
+         archivoos ob45= new archivoos();
+          File fNuevo = new File("src\\archivos\\Articulos servicios.txt");
+         String result2= rev_nom.getText()+";"+rev_prec.getText()+";";
+         ob45.modificarart2(fNuevo,nombre_serv,result2);
+     }
+     void cambio_lug(){
+            String art = (String) combo_art.getSelectedItem();
+         String nombre[]= art.split(",");
+         String value[]= art.split(",");
+         rev_nom.setText(nombre[0]);
+         nombre_lug=nombre[0];
+         this.nombre_lug=nombre_lug;
+         rev_prec.setText(value[1]);
+     }
+       void cambiolug2(){
+         
+         archivoos ob45= new archivoos();
+          File fNuevo = new File("src\\archivos\\lugar.txt");
+         String result2= rev_nom.getText()+";"+rev_prec.getText()+";";
+         ob45.modificarart2(fNuevo,nombre_lug,result2);
+     }
+     
+     
+     
+     
       void gastronomia(){
           
         String a;
@@ -311,7 +444,8 @@ String id="";
                 op=Boolean.parseBoolean(band[4]);
                
                 if (op==true){
-                    
+                    System.out.println(select_id);
+                    System.out.println(id[1]);
                     if(select_id.equals(id[1])){
                        
                         a="id:"+id3+ "Nombre del articulo: "+info+" Precio: "+prec +"\n";
@@ -333,6 +467,9 @@ String id="";
                 System.out.print("Error cerrando archivo");
             }
         }
+      
+        
+        
     
       }
       
@@ -370,14 +507,12 @@ String id="";
                 String band[] = cadena2.split(";");
                 op=Boolean.parseBoolean(band[5]);
                 if (op==true){
-                    if(serv.equals(" ")){
-                       
-                    }else {
+                
                      
                       c=id3;
                       id_prov.addItem(c);
                       
-                    }
+                    
                      
                 }
              
@@ -395,7 +530,7 @@ String id="";
                 System.out.print("Error cerrando archivo");
             }
         }
-obtener();
+
    }
       
      void decoracion2(){  
