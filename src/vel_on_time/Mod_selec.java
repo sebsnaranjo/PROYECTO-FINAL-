@@ -22,6 +22,7 @@ public class Mod_selec extends javax.swing.JFrame {
         mod_prov.add(selec_servicio);
         mod_prov.add(selec_lugar);
         mod_prov.add(selec_cliente);
+        mod_prov.add(selec_art);
         this.setLocationRelativeTo(null);
     }
   String op;
@@ -46,7 +47,10 @@ public class Mod_selec extends javax.swing.JFrame {
         TIT_USU = new javax.swing.JLabel();
         selec_cliente = new javax.swing.JRadioButton();
         modificar = new javax.swing.JButton();
+        jSeparator2 = new javax.swing.JSeparator();
+        TIT_USU1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        selec_art = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -65,7 +69,7 @@ public class Mod_selec extends javax.swing.JFrame {
                 VOLVERMouseClicked(evt);
             }
         });
-        getContentPane().add(VOLVER, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 70, 30));
+        getContentPane().add(VOLVER, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 530, 70, 30));
 
         deseo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         deseo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -106,8 +110,8 @@ public class Mod_selec extends javax.swing.JFrame {
 
         TIT_USU.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         TIT_USU.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TIT_USU.setText("¿Desea modificar el cliente?");
-        getContentPane().add(TIT_USU, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 530, 30));
+        TIT_USU.setText("¿Desea modificar los articulos?");
+        getContentPane().add(TIT_USU, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 530, 30));
 
         selec_cliente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         selec_cliente.setText("Cliente");
@@ -123,10 +127,19 @@ public class Mod_selec extends javax.swing.JFrame {
                 modificarMouseClicked(evt);
             }
         });
-        getContentPane().add(modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 110, 30));
+        getContentPane().add(modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 530, 110, 30));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 402, 550, 10));
+
+        TIT_USU1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        TIT_USU1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TIT_USU1.setText("¿Desea modificar el cliente?");
+        getContentPane().add(TIT_USU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 530, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/marble-2398946_960_720.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 470));
+
+        selec_art.setText("articulos");
+        getContentPane().add(selec_art, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -166,6 +179,7 @@ public class Mod_selec extends javax.swing.JFrame {
     }//GEN-LAST:event_selec_lugarActionPerformed
 
     private void modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseClicked
+        
         Modificar_archivo_prov ob22 = new Modificar_archivo_prov();
         Modificar_archivo_clien ob23 = new Modificar_archivo_clien();
         if(selec_cliente.isSelected()){
@@ -193,6 +207,11 @@ public class Mod_selec extends javax.swing.JFrame {
             ob22.setVisible(true);
             this.setVisible(false);
               ob22.lugar();
+        }
+         if(selec_art.isSelected()){
+             Mod_art ob49 = new Mod_art();
+            ob49.setVisible(true);
+            this.setVisible(false);
         }
     }//GEN-LAST:event_modificarMouseClicked
 
@@ -235,12 +254,15 @@ public class Mod_selec extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel MODIFI;
     private javax.swing.JLabel TIT_USU;
+    private javax.swing.JLabel TIT_USU1;
     private javax.swing.JButton VOLVER;
     private javax.swing.JLabel deseo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.ButtonGroup mod_prov;
     private javax.swing.JButton modificar;
+    private javax.swing.JRadioButton selec_art;
     private javax.swing.JRadioButton selec_cliente;
     private javax.swing.JRadioButton selec_decoracion;
     private javax.swing.JRadioButton selec_gastronomia;
